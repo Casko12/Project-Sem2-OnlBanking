@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="section-title">
-                    <h2 class="wow fadeInUp">Manage your corporate finances by yourself or in a team</h2>
-                    <p class="wow fadeInUp" data-wow-delay="0.3s">To replace or complement your bank</p>
+                    <h2 class="wow fadeInUp">Dịch vụ chuyển tiền của chúng tôi</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.3s">Không làm bạn thất vọng!</p>
                 </div>
             </div>
         </div>
@@ -16,9 +16,9 @@
 
                         <img src="/user/html/img/corporate-finance/icon-5.svg" alt="icon">
                     </div>
-                    <h5>Freelancers</h5>
-                    <p>The best business account to send and receive payments on a daily basis.</p>
-                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Find Out More</a>
+                    <h5>Tài khoản</h5>
+                    <p>Chúng tôi có nhiều loại tài khoản từ tài khoản thanh toán đến tài khoản tiết kiệm.</p>
+                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Tìm Hiểu Thêm</a>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6">
@@ -27,9 +27,9 @@
 
                         <img src="/user/html/img/corporate-finance/icon-2.svg" alt="icon">
                     </div>
-                    <h5>SMBs & Startups</h5>
-                    <p>Optimize your team's expenses by always staying in control.</p>
-                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Find Out More</a>
+                    <h5>Chuyển tiền</h5>
+                    <p>Tiền sẽ được chuyển đi tất cả các ngân hàng có trong hiên nay.</p>
+                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Tìm Hiểu Thêm</a>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6">
@@ -38,9 +38,9 @@
 
                         <img src="/user/html/img/corporate-finance/icon-3.svg" alt="icon">
                     </div>
-                    <h5>Business Founders</h5>
-                    <p>Open a business account for the online deposit of your share capital.</p>
-                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Find Out More</a>
+                    <h5>Nhận tiền</h5>
+                    <p>Chuyển, nhận tiền một cách nhanh chóng chỉ khoảng 1 vài giây.</p>
+                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Tìm Hiểu Thêm</a>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6">
@@ -49,9 +49,9 @@
 
                         <img src="/user/html/img/corporate-finance/icon-4.svg" alt="icon">
                     </div>
-                    <h5>Microbusinesses</h5>
-                    <p>Stay focused on your core business by managing your finances and accounting.</p>
-                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Find Out More</a>
+                    <h5>Giao dịch</h5>
+                    <p>Giao dịch sẽ được lưu lại để rà soát.</p>
+                    <a href="#" class="theme-btn theme-btn-outlined mt-45">Tìm Hiểu Thêm</a>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@
             </div>
         </div>
         <h2 class="head">BẠN CÓ BIẾT KHÔNG?</h2>
-        <p></p>
+        <p style="color: red"></p>
     </div>
 </div>
 <!-- Header -->

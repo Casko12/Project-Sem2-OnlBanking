@@ -14,4 +14,5 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get("/admin_ql",[App\Http\Controllers\AdminController::class,"admin_ql"]);
-Route::get("/",[App\Http\Controllers\UserController::class,"home"]);
+
+Route::get('/',[App\Http\Controllers\UserController::class,"home"]);

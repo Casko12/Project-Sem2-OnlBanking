@@ -18,6 +18,9 @@ class CreateUsersTable extends Migration
             $table->string("name");
             $table->string("address");
             $table->integer("tel");
+            $table->date("birthday");
+            $table->string("password");
+            $table->tinyInteger("pin");
             $table->unsignedBigInteger("national_id")->unique();
             $table->string("image_face")->nullable();
             $table->string("image_id_1")->nullable();

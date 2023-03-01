@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAccountsTable extends Migration
+class CreateTableAccounts extends Migration
 {
     /**
      * Run the migrations.
@@ -20,8 +20,8 @@ class CreateAccountsTable extends Migration
             $table->foreign("bank_id")->references("id")->on("banks");
             $table->unsignedBigInteger("user_id");
             $table->foreign("user_id")->references("id")->on("users");
-            $table->unsignedBigInteger("type_id");
-            $table->foreign("type_id")->references("id")->on("account_types");
+            $table->unsignedBigInteger("account_type_id");
+            $table->foreign("account_type_id")->references("id")->on("account_types");
             $table->date("date_created");
             $table->integer("balance");
             $table->boolean("status")->default(true);

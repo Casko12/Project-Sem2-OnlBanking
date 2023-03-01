@@ -1,7 +1,7 @@
 <section class="faq-area pt-125 pb-200">
     <div class="container">
         <div class="section-title text-start">
-            <h2 class="mb-0 wow fadeInUp">Frequently asked questions</h2>
+            <h2 class="mb-0 wow fadeInUp">Các câu hỏi thường gặp</h2>
         </div>
 
         <div class="row pt-30 align-items-end">

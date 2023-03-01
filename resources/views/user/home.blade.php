@@ -11,8 +11,8 @@
 <body>
 @include("user.html.header")
 @include("user.html.section-banner")
-@include("user.html.section-feature")
 @include("user.html.section-manage")
+@include("user.html.section-feature")
 @include("user.html.section-how-it-work")
 @include("user.html.section-security")
 @include("user.html.section-faq")

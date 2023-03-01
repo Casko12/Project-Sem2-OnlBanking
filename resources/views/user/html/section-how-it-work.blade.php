@@ -3,9 +3,8 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="section-title">
-                    <h2 class="wow fadeInUp mb-3">Here's how it works.</h2>
-                    <p class="wow fadeInUp" data-wow-delay="0.3s">When you're ready, Cardinal Loans is ready too
-                        - 24 hours a day, 7 days a week.</p>
+                    <h2 class="wow fadeInUp mb-3">Gửi tiết kiệm.</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.3s">Với nhiều mức lãi suất hấp dẫn.</p>
                 </div>
             </div>
         </div>
@@ -18,21 +17,18 @@
                             <img src="/user/html/img/how-works/icon-1.png" alt="icon">
                         </div>
                         <div class="widget-title">
-                            <h4>Apply Online</h4>
-                            <p>That is why we have a wide range of you can apply for a Personal Loan.</p>
+                            <h4>Đăng ký trực tuyến</h4>
+                            <p>Đó là lý do tại sao chúng tôi có nhiều loại bạn có thể đăng ký gửi tiết kiệm cá nhân.</p>
                         </div>
                     </div>
 
                     <ul class="widget-content">
-                        <li class="active"> <span class="number">1</span> <span class="text">Apply Online</span>
+                        <li class="active"> <span class="number">1</span> <span class="text">Đăng ký trực tuyến</span>
                         </li>
-                        <li> <span class="number">2</span> <span class="text">Enter Your Informantion - 10
-                                        min</span> </li>
-                        <li> <span class="number">3</span> <span class="text">Pre-qualify / Pre-Approve - 5
-                                        min</span> </li>
-                        <li> <span class="number">4</span> <span class="text">Help you prepare</span> </li>
-                        <li> <span class="number">5</span> <span class="text">We help your qualify - 15
-                                        days</span></li>
+                        <li> <span class="number">2</span> <span class="text">Nhập thông tin của bạn</span> </li>
+                        <li> <span class="number">3</span> <span class="text">Số tiền cần gửi</span> </li>
+                        <li> <span class="number">4</span> <span class="text">Kì hạn</span> </li>
+                        <li> <span class="number">5</span> <span class="text">Chúng tôi chấp nhận</span></li>
                     </ul>
                 </div>
             </div>
@@ -44,21 +40,20 @@
                             <img src="/user/html/img/how-works/icon-2.png" alt="icon">
                         </div>
                         <div class="widget-title">
-                            <h4>Consultation</h4>
-                            <p>Conis Guide on the supervisory approach to consolidation in the banking sector.
+                            <h4>Tư vấn</h4>
+                            <p>Tư vấn về dịch vụ gửi tiết kiệm cho phù hợp hơn. Để khách hàng nhận thêm mức lãi suất hấp dẫn.
                             </p>
                         </div>
                     </div>
 
                     <ul class="widget-content">
-                        <li class="active"> <span class="number">1</span><span class="text">Schedule a Free
-                                        Consulation</span></li>
-                        <li> <span class="number">2</span> <span class="text">Discuss your Situation</span>
+                        <li class="active"> <span class="number">1</span><span class="text">Đặt lịch tư vấn miễn phí</span></li>
+                        <li> <span class="number">2</span> <span class="text">Thảo luận về tình huống của bạn</span>
                         </li>
-                        <li> <span class="number">3</span> <span class="text">We Review your condition </span>
+                        <li> <span class="number">3</span> <span class="text">Đưa ra cái mong muốn của bạn</span>
                         </li>
-                        <li> <span class="number">4</span> <span class="text">Help you prepare</span> </li>
-                        <li> <span class="number">5</span> <span class="text">We help your qualify</span> </li>
+                        <li> <span class="number">4</span> <span class="text">Chấp nhận ý kiến của bạn </span> </li>
+                        <li> <span class="number">5</span> <span class="text">Chúng tôi sẽ cho bạn mức lãi suất hấp dẫn</span> </li>
                     </ul>
                 </div>
             </div>

@@ -20,7 +20,7 @@
                         </div>
                         <div class="feature-content">
                             <p>LÊN TỚI $5M</p>
-                            <h6>Cho vay cao cấp</h6>
+                            <h6>Cho vay sinh hoạt</h6>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                             <img src="/user/html/img/feature/icon-6.png" alt="">
                         </div>
                         <div class="feature-content">
-                            <p>Từ 7.50%</p>
+                            <p>Lãi suất từ 6.50%</p>
                             <h6>Khi gửi tiết kiệm</h6>
                         </div>
                     </div>
@@ -70,35 +70,31 @@
             <div class="row gy-xl-0 gy-4">
                 <div class="col-xl-5 ">
                     <div class="section-title text-start">
-                        <h2 class="mb-3">Fast, secure & easy loans in just 7 days</h2>
-                        <p>Need some fast cash? Bad cradit history? We dont mind about your past,
-                            just the
-                            future.
-                            Try loan start and feel secure in your future.</p>
+                        <h2 class="mb-3">Khoản vay nhanh chóng, an toàn và dễ dàng chỉ trong 7 ngày</h2>
+                        <p>Cần một số tiền mặt nhanh chóng? lịch sử hồ sơ xấu? Chúng tôi không bận tâm về quá khứ của bạn, chỉ là tương lai.
+                              Hãy thử bắt đầu khoản vay và cảm thấy an tâm trong tương lai của bạn.</p>
                     </div>
                 </div>
 
                 <div class="col-xl-3 col-md-6 offset-xl-1 ">
                     <div class="apply-topics">
                         <ul>
-                            <li><i class="icon_box-checked"></i>Get up to $15,000 Cash Fast</li>
-                            <li><i class="icon_box-checked"></i>15 MinuteOnline Application</li>
-                            <li><i class="icon_box-checked"></i>Centrelink Considered*</li>
-                            <li><i class="icon_box-checked"></i>Bad Credit Considered2</li>
+                            <li><i class="icon_box-checked"></i>Nhận tới 15 triệu tiền mặt nhanh chóng</li>
+                            <li><i class="icon_box-checked"></i>Ứng dụng trực tuyến 15 phút</li>
+                            <li><i class="icon_box-checked"></i>Được chúng tôi cân nhắc*</li>
+                            <li><i class="icon_box-checked"></i>Hồ sơ xấu vẫn được xem xét</li>
                         </ul>
-                        <a href="loan.html" class="theme-btn mt-20 w-100">Apply for loans</a>
+                        <a href="loan.html" class="theme-btn mt-20 w-100">Đăng kí vay</a>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 ">
                     <div class="learn-more">
                         <ul>
-                            <li><span>1.</span> Subject to verifcation, suitability and affordability</li>
-                            <li class="mt-20"><span>2.</span> Your income from Centrelink must be less then 50%
-                                of your total
-                                income in
-                                order to qialify.</li>
+                            <li><span>1.</span> Tùy thuộc vào xác minh, tính phù hợp và khả năng chi trả</li>
+                            <li class="mt-20" style="margin-top: 26px"><span>2.</span> Nếu muốn được duyệt một cách nhanh chóng thì số tiền cần vay của bạn phải nhỏ hơn 50%. Tổng thu nhập của bạn...
+                            </li>
                         </ul>
-                        <a href="#" class="theme-btn theme-btn-light w-100 mt-30">Learn more</a>
+                        <a href="#" class="theme-btn theme-btn-light w-100 mt-30">Tìm hiểu thêm</a>
                     </div>
                 </div>
             </div>

@@ -17,9 +17,8 @@
             <div class="row">
                 <div class="col-xl-6 mx-auto">
                     <img src="/user/html/img/security-tips/security-priority.png" alt="icon">
-                    <h2 class="mt-4 mb-3">Your security. Our priority.</h2>
-                    <p>We always have your security in mind. Rest easy knowing your data is protected with
-                        128-bit encryption. <a href="#">Learn more.</a></p>
+                    <h2 class="mt-4 mb-3">Bảo mật của bạn. Ưu tiên của chúng tôi.</h2>
+                    <p>Chúng tôi luôn nghĩ đến sự an toàn của bạn. Thông tin của bạn sẽ được bảo mật tuyệt đối. <a href="#">Tìm hiểu thêm.</a></p>
                 </div>
             </div>
         </div>

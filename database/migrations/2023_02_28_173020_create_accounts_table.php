@@ -24,6 +24,7 @@ class CreateAccountsTable extends Migration
             $table->foreign("type_id")->references("id")->on("account_types");
             $table->date("date_created");
             $table->integer("balance");
+            $table->boolean("status")->default(true);
             $table->timestamps();
         });
     }

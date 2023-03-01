@@ -17,6 +17,7 @@ class CreateAccountTypesTable extends Migration
             $table->id();
             $table->string("type_name");
             $table->decimal("interest", 5, 3);
+            $table->boolean("status")->default(true);
             $table->timestamps();
         });
     }

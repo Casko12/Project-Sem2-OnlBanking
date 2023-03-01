@@ -22,3 +22,4 @@ Route::get('/',[App\Http\Controllers\UserController::class,"home"]);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/user-page',[App\Http\Controllers\UserController::class,"userPage"]);

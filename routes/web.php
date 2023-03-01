@@ -14,5 +14,11 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get("/admin_ql",[App\Http\Controllers\AdminController::class,"admin_ql"]);
+Route::get("/liststaff",[App\Http\Controllers\AdminController::class,"liststaff"]);
+Route::get("/createstaff",[App\Http\Controllers\AdminController::class,"createstaff"]);
 
 Route::get('/',[App\Http\Controllers\UserController::class,"home"]);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

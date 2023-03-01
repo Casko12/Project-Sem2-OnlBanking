@@ -17,7 +17,7 @@
         <div class="round_spinner">
             <div class="spinner"></div>
             <div class="text">
-                <img src="/user/html/img/logo/Logo-2@2x.png" alt="">
+                <img style="width: 160px"height="40px" src="/user/html/img/logo/mbanking-03.png" alt="" >
             </div>
         </div>
         <h2 class="head">BẠN CÓ BIẾT KHÔNG?</h2>
@@ -68,8 +68,8 @@
     <div class="header-menu header-menu-2" id="sticky">
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="/user/html/img/logo/Logo-2.png" srcset="img/logo/Logo-2@2x.png 2x" alt="logo">
+                <a class="navbar-brand" href="{{url("/")}}">
+                    <img style="width: 160px"height="40px" src="/user/html/img/logo/mbanking-03.png" alt="logo" >
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

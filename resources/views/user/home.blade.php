@@ -18,7 +18,6 @@
 @include("user.html.section-faq")
 @include("user.html.section-help-call")
 @include("user.html.footer")
-
 @include("user.html.js")
 </body>
 </html>

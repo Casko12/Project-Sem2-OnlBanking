@@ -25,3 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/user-page',[App\Http\Controllers\UserController::class,"userPage"]);
 Route::get('/login',[App\Http\Controllers\UserController::class,"login"]);
 Route::get('/trans',[App\Http\Controllers\UserController::class,"trans"]);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

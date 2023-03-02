@@ -12,6 +12,7 @@
 <body>
 @include("user.html.header")
 @include("user.html.section-banner")
+<div class="col-md-5">
 <form>
     <!-- Email input -->
     <div class="form-outline mb-4">
@@ -65,6 +66,7 @@
         </button>
     </div>
 </form>
+</div>
 @include("user.html.footer")
 @include("user.html.js")
 </body>

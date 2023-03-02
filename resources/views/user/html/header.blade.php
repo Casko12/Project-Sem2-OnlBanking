@@ -57,7 +57,7 @@
                                     href="mailto:thanhtvth2203024@fpt.edu.vn">thanhtvth2203024@fpt.edu.vn</a>
                             </li>
                             <li>
-                                <i class="fa-solid fa-right-to-bracket"></i><a href="#">Đăng nhập</a>
+                                <i class="fa-solid fa-right-to-bracket"></i><a href="{{url("login")}}">Đăng nhập</a>
                             </li>
                         </ul>
                     </div>
@@ -110,7 +110,7 @@
                                data-bs-toggle="dropdown"></i>
                         </li>
                         <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="career.html" role="button"
+                            <a class="nav-link dropdown-toggle" href="{{url("trans")}}" role="button"
                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Chuyển khoản
                             </a>

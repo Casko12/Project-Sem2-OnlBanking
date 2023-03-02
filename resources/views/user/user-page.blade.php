@@ -211,13 +211,13 @@
                     ============================== -->
                     <nav class="login-signup navbar navbar-expand">
                         <ul class="navbar-nav">
-                            <li class="dropdown language"> <a class="dropdown-toggle" href="user/user-page/#">En</a>
+                            <li class="dropdown language"> <a class="dropdown-toggle" href="user/user-page/#">Vn</a>
                                 <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="user/user-page/#">Tiếng Việt</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/#">English</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/#">French</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/#">Русский</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/#">简体中文</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#">Türkçe</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown notifications"> <a class="dropdown-toggle" href="user/user-page/#"><span class="text-5"><i class="far fa-bell"></i></span><span class="count">3</span></a>
@@ -233,14 +233,14 @@
                             </li>
                             <li class="dropdown profile ms-2"> <a class="px-0 dropdown-toggle" href="user/user-page/#"><img class="rounded-circle" src="user/user-page/images/profile-thumb-sm.jpg" alt=""></a>
                                 <ul class="dropdown-menu">
-                                    <li class="text-center text-3 py-2">Hi, Smith Rhodes</li>
+                                    <li class="text-center text-3 py-2">Hi, Hung Pham</li>
                                     <li class="dropdown-divider mx-n3"></li>
                                     <li><a class="dropdown-item" href="user/user-page/settings-profile.html"><i class="fas fa-user"></i>My Profile</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/settings-Security.html"><i class="fas fa-shield-alt"></i>Security</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/settings-payment-methods.html"><i class="fas fa-credit-card"></i>Payment Methods</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/settings-notifications.html"><i class="fas fa-bell"></i>Notifications</a></li>
                                     <li class="dropdown-divider mx-n3"></li>
-                                    <li><a class="dropdown-item" href="user/user-page/help.html"><i class="fas fa-life-ring"></i>Need Help?</a></li>
+                                    <li><a class="dropdown-item" href="user/user-page/help.html"><i class="fas fa-life-ring"></i>Bạn cần trợ giúp?</a></li>
                                     <li><a class="dropdown-item" href="user/user-page/#"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>
                                 </ul>
                             </li>
@@ -270,7 +270,7 @@
                                 <input type="file" class="custom-file-input" id="customFile">
                             </div>
                         </div>
-                        <p class="text-3 fw-500 mb-2">Hello, Smith Rhodes</p>
+                        <p class="text-3 fw-500 mb-2">Xin chào, Hung Pham</p>
                         <p class="mb-2"><a href="user/user-page/settings-profile.html" class="text-5 text-light" data-bs-toggle="tooltip" title="Edit Profile"><i class="fas fa-edit"></i></a></p>
                     </div>
                     <!-- Profile Details End -->
@@ -280,9 +280,9 @@
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                         <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
                         <h3 class="text-9 fw-400">$2956.00</h3>
-                        <p class="mb-2 text-muted opacity-8">Available Balance</p>
+                        <p class="mb-2 text-muted opacity-8">Số dư khả dụng</p>
                         <hr class="mx-n3">
-                        <div class="d-flex"><a href="user/user-page/withdraw-money.html" class="btn-link me-auto">Withdraw</a> <a href="user/user-page/deposit-money.html" class="btn-link ms-auto">Deposit</a></div>
+                        <div class="d-flex"><a href="user/user-page/withdraw-money.html" class="btn-link me-auto">Chọn tài khoản khác</a> <a href="user/user-page/deposit-money.html" class="btn-link ms-auto">Chuyển khoản</a></div>
                     </div>
                     <!-- Available Balance End -->
 
@@ -290,10 +290,10 @@
                     =============================== -->
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                         <div class="text-17 text-light my-3"><i class="fas fa-comments"></i></div>
-                        <h3 class="text-5 fw-400 my-4">Need Help?</h3>
-                        <p class="text-muted opacity-8 mb-4">Have questions or concerns regrading your account?<br>
-                            Our experts are here to help!.</p>
-                        <div class="d-grid"><a href="user/user-page/#" class="btn btn-primary">Chate with Us</a></div>
+                        <h3 class="text-5 fw-400 my-4">Bạn cần trợ giúp?</h3>
+                        <p class="text-muted opacity-8 mb-4">Bạn có thắc mắc về tài khoản?<br>
+                            Chúng tôi rất vui lòng được hỗ trợ bạn.</p>
+                        <div class="d-grid"><a href="user/user-page/#" class="btn btn-primary">Chat với nhân viên CSKH</a></div>
                     </div>
                     <!-- Need Help? End -->
 
@@ -307,27 +307,27 @@
                     <!-- Profile Completeness
                     =============================== -->
                     <div class="bg-white shadow-sm rounded p-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Profile Completeness<span class="border text-success rounded-pill fw-500 text-2 px-3 py-1 ms-2">50%</span></h3>
+                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Hồ sơ đã hoàn thành<span class="border text-success rounded-pill fw-500 text-2 px-3 py-1 ms-2">75%</span></h3>
                         <hr class="mb-4 mx-n4">
                         <div class="row gy-4 profile-completeness">
                             <div class="col-sm-6 col-md-3">
                                 <div class="border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-mobile-alt"></i></span> <span class="text-5 d-block text-success mt-4 mb-3"><i class="fas fa-check-circle"></i></span>
-                                    <p class="mb-0">Mobile Added</p>
+                                    <p class="mb-0">SĐT đã xác thực</p>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <div class="border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-envelope"></i></span> <span class="text-5 d-block text-success mt-4 mb-3"><i class="fas fa-check-circle"></i></span>
-                                    <p class="mb-0">Email Added</p>
+                                    <p class="mb-0">Email đã xác thực</p>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <div class="position-relative border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-credit-card"></i></span> <span class="text-5 d-block text-light mt-4 mb-3"><i class="far fa-circle "></i></span>
-                                    <p class="mb-0"><a class="btn-link stretched-link" href="user/user-page/">Add Card</a></p>
+                                    <p class="mb-0"><a class="btn-link stretched-link" href="user/user-page/">Thêm thẻ</a></p>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-3">
-                                <div class="position-relative border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-university"></i></span> <span class="text-5 d-block text-light mt-4 mb-3"><i class="far fa-circle "></i></span>
-                                    <p class="mb-0"><a class="btn-link stretched-link" href="user/user-page/">Add Bank Account</a></p>
+                                <div class="border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-university"></i></span> <span class="text-5 d-block text-success mt-4 mb-3"><i class="fas fa-check-circle"></i></span>
+                                    <p class="mb-0">TK Ngân Hàng đã xác thực</p>
                                 </div>
                             </div>
                         </div>
@@ -337,16 +337,16 @@
                     <!-- Recent Activity
                     =============================== -->
                     <div class="bg-white shadow-sm rounded py-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center px-4 mb-4">Recent Activity</h3>
+                        <h3 class="text-5 fw-400 d-flex align-items-center px-4 mb-4">Lịch sử giao dịch</h3>
 
                         <!-- Title
                         =============================== -->
                         <div class="transaction-title py-2 px-4">
                             <div class="row fw-00">
-                                <div class="col-2 col-sm-1 text-center"><span class="">Date</span></div>
-                                <div class="col col-sm-7">Description</div>
-                                <div class="col-auto col-sm-2 d-none d-sm-block text-center">Status</div>
-                                <div class="col-3 col-sm-2 text-end">Amount</div>
+                                <div class="col-2 col-sm-1 text-center"><span class="">Ngày</span></div>
+                                <div class="col col-sm-7">Nội dung</div>
+                                <div class="col-auto col-sm-2 d-none d-sm-block text-center">Trạng thái</div>
+                                <div class="col-3 col-sm-2 text-end">Số tiền</div>
                             </div>
                         </div>
                         <!-- Title End -->
@@ -468,7 +468,7 @@
 
                         <!-- View all Link
                         =============================== -->
-                        <div class="text-center mt-4"><a href="user/user-page/transactions.html" class="btn-link text-3">View all<i class="fas fa-chevron-right text-2 ms-2"></i></a></div>
+                        <div class="text-center mt-4"><a href="user/user-page/transactions.html" class="btn-link text-3">Xem thêm<i class="fas fa-chevron-right text-2 ms-2"></i></a></div>
                         <!-- View all Link End -->
 
                     </div>

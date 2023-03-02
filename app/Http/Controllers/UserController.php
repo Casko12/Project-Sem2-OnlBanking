@@ -12,4 +12,10 @@ class UserController extends Controller
     public function userPage(){
         return view("user.user-page");
     }
+    public function login(){
+        return view("user.login");
+    }
+    public function trans(){
+        return view("user.trans");
+    }
 }

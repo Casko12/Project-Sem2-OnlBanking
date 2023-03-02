@@ -8,6 +8,7 @@
     <title>Trang đăng nhập</title>
     @include("user.html.css")
 </head>
+
 <body>
 @include("user.html.header")
 @include("user.html.section-banner")

@@ -25,6 +25,7 @@
         <input type="text" class="form-control" >
     </div>
     <div class="mb-3">
+
         <label  class="form-label"> Số Tiền Cần Chuyển </label>
         <input type="text" class="form-control" >
     </div>

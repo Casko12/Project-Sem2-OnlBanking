@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableAccountTypes extends Migration
+class CreateTableAdmins extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTableAccountTypes extends Migration
      */
     public function up()
     {
-        Schema::create('account_types', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string("type_name");
-            $table->decimal("interest", 5, 3);
-            $table->boolean("status")->default(true);
+            $table->unsignedBigInteger("user_id")->unique();
+            $table->string("role");
             $table->timestamps();
+            $table->foreign("user_id")->references("id")->on("users");
         });
     }
 
@@ -29,6 +29,6 @@ class CreateTableAccountTypes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('account_types');
+        Schema::dropIfExists('admins');
     }
 }

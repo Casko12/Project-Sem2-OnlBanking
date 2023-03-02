@@ -7,17 +7,16 @@
                 <div class="col-lg-4 col-sm-6 text-center text-sm-start ms-0 ">
                     <div class="footer-widget wow fadeInLeft mb-30">
                         <div class="footer-text mb-20">
-                            <p>Banca is a leading bank in the worldzone and a prominent international banking
-                                institution</p>
+                            <p>Modern Bank là một ngân hàng hàng đầu trong khu vực thế giới và là một tổ chức ngân hàng quốc tế nổi bật</p>
                         </div>
 
-                        <span class="overline">COTATION</span>
+                        <span class="overline">Trích dẫn</span>
 
                         <div class="footer-bold">
                             <span class="counter">$<span>35.105</span> </span>
                             <span class="counter">-<span>0.46</span>% </span>
                         </div>
-                        <p class="time">2021-01-05 14:00 (INTERNATIONAL TIME)</p>
+                        <p class="time">2021-01-05 14:00 (Giờ quốc tế)</p>
                     </div>
                 </div>
 
@@ -25,15 +24,14 @@
                 <div class="col-lg-2 col-sm-6 text-center text-sm-start ms-lg-5 ">
                     <div class="footer-widget mb-30 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="f-widget-title">
-                            <h5>Banca at a Glance</h5>
+                            <h5>Tổng Quan</h5>
                         </div>
                         <div class="footer-link">
                             <ul>
-                                <li><a href="#"> Our core Businesses
+                                <li><a href="#"> Lĩnh vực kinh doanh cốt lõi của chúng tôi
                                     </a></li>
-                                <li><a href="#"> Our 'company purpose'</a></li>
-                                <li><a href="#"> Jobs & Careers</a></li>
-                                <li><a href="#"> Our Responsibility</a></li>
+                                <li><a href="#"> Công việc & Nghề nghiệp</a></li>
+                                <li><a href="#"> Trách nhiệm của chúng tôi</a></li>
                             </ul>
                         </div>
                     </div>
@@ -41,33 +39,18 @@
                 <div class="col-lg-2  col-sm-6 text-center text-sm-start ms-lg-5">
                     <div class="footer-widget mb-30 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="f-widget-title">
-                            <h5>Publications</h5>
+                            <h5>Truy Cập Trực Tiếp</h5>
                         </div>
                         <div class="footer-link">
                             <ul>
-                                <li><a href="#"> Compliance Publications</a></li>
-                                <li><a href="#"> Annual Reports</a></li>
-                                <li><a href="#"> CSR Reports</a></li>
-                                <li><a href="#"> Financial documentation</a></li>
+                                <li><a href="#"> Tin tức của chúng tôi</a></li>
+                                <li><a href="#"> Thông báo của chúng tôi</a></li>
+                                <li><a href="#"> Lời mời làm việc của chúng tôi</a></li>
+                                <li><a href="#"> Trang web của chúng tôi</a></li>
                             </ul>
                         </div>
                     </div>
 
-                </div>
-                <div class="col-lg-2 col-sm-6 text-center text-sm-start me-0 ms-lg-5">
-                    <div class="footer-widget mb-30 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="f-widget-title">
-                            <h5>Direct Access</h5>
-                        </div>
-                        <div class="footer-link">
-                            <ul>
-                                <li><a href="#">Our news</a></li>
-                                <li><a href="#">Our press releases</a></li>
-                                <li><a href="#">Our job offers</a></li>
-                                <li><a href="#">Our websites</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -77,11 +60,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3 text-center text-lg-start">
-                    <a href="index.html" class="p-0 m-0"><img src="/user/html/img/logo/Logo.png" alt="logo"></a>
+                    <img class="p-0 m-0" style="width: 160px"height="40px" src="/user/html/img/logo/mbanking-03.png" alt="logo" >
                 </div>
                 <div class="col-lg-5 text-center my-3 my-sm-0">
                     <div class="copyright-text">
-                        <p>Copyright&copy; Banca 2021. <br class="d-sm-none"> <a class="ms-2" href="#">Privecy</a> |
+                        <p>Copyright&copy; Modern 2021. <br class="d-sm-none"> <a class="ms-2" href="#">Privecy</a> |
                             <a class="ms-0" href="#">Term of
                                 Use</a>
                         </p>

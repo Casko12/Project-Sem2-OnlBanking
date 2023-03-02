@@ -9,4 +9,7 @@ class UserController extends Controller
    public function home(){
        return view("user.home");
    }
+    public function userPage(){
+        return view("user.user-page");
+    }
 }

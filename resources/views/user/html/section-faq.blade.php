@@ -13,18 +13,14 @@
                                 <div class="faq-header" id="headingOne">
                                     <h4 class="mb-0" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                         aria-expanded="true" aria-controls="collapseOne">
-                                        Can I pay off my loan early?<i class="icon_plus"></i><i
+                                        Tôi có thể trả hết khoản vay trước hạn không?<i class="icon_plus"></i><i
                                             class=" icon_minus-06"></i>
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                      data-bs-parent="#accordionExample">
                                     <div class="faq-body">
-                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                            terry
-                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard
-                                            dolor brunch.</p>
+                                        <p>Bạn hoàn có thể trả hết khoản vay trước hạn nhưng về lãi suất thì vẫn không thay đổi.</p>
                                     </div>
                                 </div>
                             </div>
@@ -36,18 +32,15 @@
                                     <h4 class="mb-0 collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="true"
                                         aria-controls="collapseTwo">
-                                        How much can I Banca?<i class="icon_plus"></i><i
+                                        Gặp sự cố về chuyển khoản?<i class="icon_plus"></i><i
                                             class=" icon_minus-06"></i>
                                     </h4>
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                      data-bs-parent="#accordionExample">
                                     <div class="faq-body">
-                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                            terry
-                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard
-                                            dolor brunch.</p>
+                                        <p>Nếu gặp vấn đề về chuyển khoản hãy liên hệ cho chúng tôi qua đường dây nóng.
+                                        Chúng tôi sẵn sàng phục vụ bạn mọi lúc.</p>
                                     </div>
                                 </div>
                             </div>
@@ -59,18 +52,15 @@
                                     <h4 class="mb-0 collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="true"
                                         aria-controls="collapseThree">
-                                        Do you offering refinancing ?<i class="icon_plus"></i><i
+                                        Nhập sai thông tin đăng nhập nhiều lần ?<i class="icon_plus"></i><i
                                             class=" icon_minus-06"></i>
                                     </h4>
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                      data-bs-parent="#accordionExample">
                                     <div class="faq-body">
-                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                            terry
-                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard
-                                            dolor brunch.</p>
+                                        <p>Tài khoản sẽ bị khóa sau khi nhập mật khẩu sai quá 3 lần.
+                                        Hãy liên hệ cho chúng tôi.</p>
                                     </div>
                                 </div>
                             </div>
@@ -82,45 +72,19 @@
                                     <h4 class="mb-0 collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="true"
                                         aria-controls="collapseFour">
-                                        Can I do all of my banking with you?<i class="icon_plus"></i><i
+                                        Tôi có thể giới thiệu ngân hàng của bạn đến với mọi người không?<i class="icon_plus"></i><i
                                             class=" icon_minus-06"></i>
                                     </h4>
                                 </div>
                                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                                      data-bs-parent="#accordionExample">
                                     <div class="faq-body">
-                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                            terry
-                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard
-                                            dolor brunch.</p>
+                                        <p>Chúng tôi luôn nỗ lực vì bạn nếu được sự giúp đỡ đến từ bạn chúng tôi cảm thấy rất may mắn và cảm ơn.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="single-widget-one wow fadeInUp" data-wow-delay="0.9s">
-                            <div class="w-100">
-                                <div class="faq-header" id="headingFive">
-                                    <h4 class="mb-0 collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="true"
-                                        aria-controls="collapseFive">
-                                        When should i apply?<i class="icon_plus"></i><i
-                                            class=" icon_minus-06"></i>
-                                    </h4>
-                                </div>
-                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                                     data-bs-parent="#accordionExample">
-                                    <div class="faq-body">
-                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                            terry
-                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                            skateboard
-                                            dolor brunch.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

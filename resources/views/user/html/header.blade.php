@@ -131,6 +131,7 @@
                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Về chúng tôi
                             </a>
+
                             <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
                                data-bs-toggle="dropdown"></i>
                             <ul class="dropdown-menu ">

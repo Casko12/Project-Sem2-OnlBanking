@@ -40,7 +40,7 @@
                 <div class="header-column justify-content-start">
                     <!-- Logo
                     ============================= -->
-                    <div class="logo me-3"> <a class="d-flex" href="user/user-page/index.html" title="Payyed - HTML Template"><img src="user/user-page/images/logo.png" alt="Modern Bank" /></a> </div>
+                    <div class="logo me-3"> <a class="d-flex" href="user/user-page/index.html" title="Payyed - HTML Template"><img src="user/user-page/images/mbanking-03.png" alt="Modern Bank" /></a> </div>
                     <!-- Logo end -->
                     <!-- Collapse Button
                     ============================== -->

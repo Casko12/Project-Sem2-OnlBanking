@@ -12,10 +12,11 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(["auth","admin"])->group(function (){
 
-Route::get("/admin_ql",[App\Http\Controllers\AdminController::class,"admin_ql"]);
-Route::get("/liststaff",[App\Http\Controllers\AdminController::class,"liststaff"]);
-Route::get("/createstaff",[App\Http\Controllers\AdminController::class,"createstaff"]);
+
+});
+@include_once ("admin.php");
 
 Route::get('/',[App\Http\Controllers\UserController::class,"home"]);
 

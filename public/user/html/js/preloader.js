@@ -3,7 +3,7 @@
 
   /*============= preloader js css =============*/
   var cites = [];
-  cites[0] = "Chúng tôi luôn sẵn sàng được phục vụ quý khách.";
+  cites[0] = "Chúng tôi luôn sẵn sàng được phục vụ bạn.";
   var cite = cites[Math.floor(Math.random() * cites.length)];
   $("#preloader p").text(cite);
   $("#preloader").addClass("loading");

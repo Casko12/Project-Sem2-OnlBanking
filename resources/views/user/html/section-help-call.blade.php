@@ -18,8 +18,8 @@
                     <div class="row align-items-center">
                         <div class="col-md-7">
                             <div class="cta-content wow fadeInRight">
-                                <h2 class="mb-10">Have any question?</h2>
-                                <p>Ask us anythisg.Do you have a love question you want us to answer?</p>
+                                <h2 class="mb-10">Bạn còn câu hỏi?</h2>
+                                <p>Hãy hỏi chúng tôi bất cứ điều gì. Bạn có câu hỏi nào về ngân hàng muốn chúng tôi trả lời không?</p>
                             </div>
                         </div>
 

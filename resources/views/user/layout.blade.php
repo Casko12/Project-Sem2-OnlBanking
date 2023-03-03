@@ -1,5 +1,12 @@
-@yield("custom_css")
 
+<link rel="stylesheet" type="text/css" href="/user/html/css/bootstrap.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/user/html/css/elegant-icons.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/user/html/css/all.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/user/html/css/animate.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/user/html/css/nice-select.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/user/html/css/default.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/user/html/css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/user/html/css/responsive.css" media="all" />
 <!-- Preloader -->
 <div id="preloader">
     <div id="ctn-preloader" class="ctn-preloader">
@@ -235,5 +242,16 @@
 
 <!-- Back to top button -->
 <a id="back-to-top" title="Back to Top"></a>
-@yield("custom_js")
+<script type="text/javascript" src="/user/html/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/user/html/js/preloader.js"></script>
+<script type="text/javascript" src="/user/html/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/user/html/js/jquery.smoothscroll.min.js"></script>
+<script type="text/javascript" src="/user/html/js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="/user/html/js/jquery.counterup.min.js"></script>
+<script type="text/javascript" src="/user/html/js/jquery.nice-select.min.js"></script>
+<script type="text/javascript" src="/user/html/js/parallax.js"></script>
+<script type="text/javascript" src="/user/html/js/jquery.parallax-scroll.js"></script>
+<script type="text/javascript" src="/user/html/js/wow.min.js"></script>
+
+<script type="text/javascript" src="/user/html/js/custom.js"></script>
 

@@ -21,4 +21,11 @@ class UserController extends Controller
     public function veChungToi(){
         return view("user.ve-chung-toi");
     }
+    public function phatTrien(){
+       return view("user.phat-trien");
+    }
+    public function anToan(){
+        return view("user.an-toan");
+    }
+
 }

@@ -132,8 +132,8 @@
                                data-bs-toggle="dropdown"></i>
                             <ul class="dropdown-menu ">
                                 <li class="nav-item"><a  class="nav-link" href="{{url("/ve-chung-toi")}}">Giới thiệu</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog-details.html">Sự tin cậy</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog-details.html">An toàn và bảo mật</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/phat-trien")}}">Phát triển bền vững</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/an-toan")}}">An toàn và bảo mật</a></li>
                             </ul>
                         </li>
 

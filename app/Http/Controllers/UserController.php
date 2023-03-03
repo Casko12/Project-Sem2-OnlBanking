@@ -18,4 +18,7 @@ class UserController extends Controller
     public function trans(){
         return view("user.trans");
     }
+    public function veChungToi(){
+        return view("user.ve-chung-toi");
+    }
 }

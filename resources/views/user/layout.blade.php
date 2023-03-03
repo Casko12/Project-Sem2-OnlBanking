@@ -131,12 +131,12 @@
                             <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
                                data-bs-toggle="dropdown"></i>
                             <ul class="dropdown-menu ">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Giới thiệu</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog-details.html">Sự tin cậy</a>
-                                <li class="nav-item"><a class="nav-link" href="blog-details.html">An toàn và bảo mật</a>
-                                </li>
+                                <li class="nav-item"><a  class="nav-link" href="{{url("/ve-chung-toi")}}">Giới thiệu</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog-details.html">Sự tin cậy</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog-details.html">An toàn và bảo mật</a></li>
                             </ul>
                         </li>
+
                     </ul>
                     <a class="theme-btn" href="loan.html">Nhận thêm khoản vay mới</a>
                 </div>
@@ -146,9 +146,11 @@
 </header>
 <!-- Header end-->
 <div class="container">
+    <div class="row">
 
+        @yield("main_content")
 
-                @yield("main_content")
+    </div>
 
 </div>
 

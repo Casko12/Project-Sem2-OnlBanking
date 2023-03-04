@@ -9,10 +9,25 @@ class AdminController extends Controller
     public function admin_ql(){
         return view("admin.admin");
     }
- public function liststaff(){
-        return view("admin.staff.liststaff");
+
+    public function listStaff(){
+        return view("admin.nhanvien.list");
     }
- public function createstaff(){
-        return view("admin.staff.createstaff");
+    public function createStaff(){
+        return view("admin.nhanvien.create");
     }
+
+    public function editStaff(){
+        return view("admin.nhanvien.edit");
+    }
+    public function listUser(){
+        return view("admin.user.list");
+    }
+    public function createUser(){
+        return view("admin.user.create");
+    }
+    public function editUser(){
+        return view("admin.user.edit");
+    }
+
 }

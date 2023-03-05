@@ -155,13 +155,10 @@
                         <div class="row mt-60">
                             <div class="col-md-12">
                                 <div class="nav-btn d-flex flex-wrap justify-content-between">
-                                    <a href="loan-details.html"
-                                       class=" prev-btn theme-btn-primary_alt theme-btn"><i
-                                            class="arrow_left"></i>Trở lại
-                                    </a>
-                                    <button type="submit"
-                                            class=" next-btn theme-btn-primary_alt theme-btn ">Đăng kí<i
-                                            class="arrow_right"></i></button>
+                                    <button type="submit" class="theme-btn" style="color: white"><a href="loan-details.html" class=theme-btn" style="color: white"><i class="arrow_left"></i>Trở lại
+                                        </a></button>
+
+                                    <button type="submit" class="theme-btn" style="color: white">Đăng kí <i class="arrow_right"></i></button>
                                 </div>
                             </div>
                         </div>

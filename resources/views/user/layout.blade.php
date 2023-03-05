@@ -98,7 +98,7 @@
                             {{--                            </ul>--}}
                         </li>
                         <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="loan.html" role="button"
+                            <a class="nav-link dropdown-toggle" href="{{url("/loan")}}" role="button"
                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Khoản vay
                             </a>

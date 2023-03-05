@@ -29,6 +29,9 @@ Route::get('/trans',[App\Http\Controllers\UserController::class,"trans"]);
 Route::get('/ve-chung-toi',[App\Http\Controllers\UserController::class,"veChungToi"]);
 Route::get('/phat-trien',[App\Http\Controllers\UserController::class,"phatTrien"]);
 Route::get('/an-toan',[App\Http\Controllers\UserController::class,"anToan"]);
+Route::get('/loan',[App\Http\Controllers\UserController::class,"loan"]);
+Route::get('/personal',[App\Http\Controllers\UserController::class,"personal"]);
+Route::get('/documantUp',[App\Http\Controllers\UserController::class,"documantUp"]);
 
 Route::get('/admin/listStaff',[App\Http\Controllers\AdminController::class,"listStaff"]);
 Route::get('/admin/createStaff',[App\Http\Controllers\AdminController::class,"createStaff"]);

@@ -134,12 +134,10 @@
                                 <input class="form-control" type="email" id='emailName'
                                        placeholder="examplename@example.com" required>
                             </div>
-
                             <div class="col-md-12">
                                 <label class="label" for="pAddress">Địa chỉ*</label>
                                 <input id="pAddress" class="form-control" type="text">
                             </div>
-
                             <div class="col-md-6">
                                 <label class="label" for="inputPhoneNumber">Số điện thoại*</label>
                                 <input id="inputPhoneNumber" class="form-control w-100" type="number">
@@ -148,16 +146,12 @@
                                 <label class="label" for="inputPhoneNumber">Trạng thái*</label>
                                 <input id="inputPhoneNumber" class="form-control w-100" type="number">
                             </div>
-
-
-
                         </div>
                         <div class="row mt-60">
                             <div class="col-md-12">
                                 <div class="nav-btn d-flex flex-wrap justify-content-between">
                                     <button type="submit" class="theme-btn" style="color: white"><a href="loan-details.html" class=theme-btn" style="color: white"><i class="arrow_left"></i>Trở lại
                                         </a></button>
-
                                     <button type="submit" class="theme-btn" style="color: white">Đăng kí <i class="arrow_right"></i></button>
                                 </div>
                             </div>

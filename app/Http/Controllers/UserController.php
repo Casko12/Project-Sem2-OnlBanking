@@ -27,5 +27,16 @@ class UserController extends Controller
     public function anToan(){
         return view("user.an-toan");
     }
+    public function loan(){
+        return view("user.loan.loan");
+    }
+    public function personal(){
+        return view("user.loan.personal");
+
+   }
+    public function documantUp(){
+        return view("user.loan.documantsUpload");
+
+    }
 
 }

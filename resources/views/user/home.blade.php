@@ -19,7 +19,7 @@
                 </div>
                 <div class=" col-md-6 col-lg-5 offset-lg-1 pt-40">
                     <div class="banner-img">
-                        <img class="main-img img-fluid wow fadeInRight" src="/user/html/img/banner/banner-img-2.png"
+                        <img class="main-img img-fluid wow fadeInRight" src="/user/html/img/banner/online_bank.png"
                              alt="banner-img">
                         <div class="shapes">
                             <img data-parallax='{"x": 0, "y": 130, "rotateZ":0}' class="shape-1"

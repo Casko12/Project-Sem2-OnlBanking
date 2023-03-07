@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{{--    <meta charset="UTF-8" />--}}
-{{--    <meta http-equiv="X-UA-Compatible" content="IE=edge">--}}
-{{--    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">--}}
-{{--    <link href="user/user-page/images/logomba.png" rel="icon" />--}}
-{{--    <title>User Page</title>--}}
-{{--    <meta name="description" content="This professional design html template is for build a Money Transfer and online payments website.">--}}
-{{--    <meta name="author" content="harnishdesign.net">--}}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="user/user-page/images/logomba.png" rel="icon" />
+    <title>User Page</title>
+    <meta name="description" content="This professional design html template is for build a Money Transfer and online payments website.">
+    <meta name="author" content="harnishdesign.net">
 
     <!-- Web Fonts
     ============================================= -->
@@ -15,17 +15,18 @@
 
     <!-- Stylesheet
     ============================================= -->
-{{--    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css" />--}}
-{{--    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />--}}
-{{--    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />--}}
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
     <!-- Colors Css -->
-
+    @extends("user.layout")
 </head>
+
 <body>
 
 <!-- Preloader -->
-@extends("user.layout")
+
 
 <!-- Preloader End -->
 

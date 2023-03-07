@@ -20,14 +20,11 @@
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap-select/css/bootstrap-select.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/currency-flags/css/currency-flags.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
+    @extends("user.layout")
 </head>
 <body>
 
-<!-- Preloader -->
-<div id="preloader">
-    <div data-loader="dual-ring"></div>
-</div>
-<!-- Preloader End -->
+
 
 <!-- Document Wrapper
 ============================================= -->

@@ -4,22 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-    <link href="user/user-page/images/favicon.png" rel="icon" />
-    <title>Payyed - Money Transfer and Online Payments HTML Template</title>
+    <link href="user/user-page/images/logomba.png" rel="icon" />
+    <title>Transacion History</title>
     <meta name="description" content="This professional design html template is for build a Money Transfer and online payments website.">
     <meta name="author" content="harnishdesign.net">
 
     <!-- Web Fonts
     ============================================= -->
-    <link rel="stylesheet" href="user/user-page/https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
     <!-- Stylesheet
     ============================================= -->
-    <link rel="stylesheet" href="user/user-page/user/user-page/vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="user/user-page/user/user-page/vendor/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" href="user/user-page/user/user-page/css/stylesheet.css" />
-    <!-- Colors Css -->
-
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
 </head>
 <body>
 
@@ -32,6 +31,7 @@
 <!-- Document Wrapper
 ============================================= -->
 <div id="main-wrapper">
+
     <!-- Header
     ============================================= -->
     <header id="header">
@@ -40,7 +40,7 @@
                 <div class="header-column justify-content-start">
                     <!-- Logo
                     ============================= -->
-                    <div class="logo me-3"> <a class="d-flex" href="user/user-page/user/user-page/index.html" title="Payyed - HTML Template"><img src="user/user-page/images/mbanking-03.png" alt="Modern Bank" /></a> </div>
+                    <div class="logo me-3"> <a class="d-flex" href="index.html" title="Payyed - HTML Template"><img src="user/user-page/images/logo.png" alt="Payyed" /></a> </div>
                     <!-- Logo end -->
                     <!-- Collapse Button
                     ============================== -->
@@ -52,146 +52,146 @@
                     <nav class="primary-menu navbar navbar-expand-lg">
                         <div id="header-nav" class="collapse navbar-collapse">
                             <ul class="navbar-nav me-auto">
-                                <li class="active"><a href="user/user-page/dashboard.html">Dashboard</a></li>
-                                <li><a href="user/user-page/transactions.html">Transactions</a></li>
-                                <li><a href="user/user-page/send-money.html">Send/Request</a></li>
-                                <li><a href="user/user-page/help.html">Help</a></li>
-                                <li class="dropdown"> <a class="dropdown-toggle" href="user/user-page/#">Features</a>
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li class="active"><a href="transactions.html">Transactions</a></li>
+                                <li><a href="send-money.html">Send/Request</a></li>
+                                <li><a href="help.html">Help</a></li>
+                                <li class="dropdown"> <a class="dropdown-toggle" href="#">Features</a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Headers</a>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Headers</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="user/user-page/index.html">Light Version (Default)</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-header-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-header-primary.html">Primary Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/index-2.html">Transparent Version</a></li>
+                                                <li><a class="dropdown-item" href="index.html">Light Version (Default)</a></li>
+                                                <li><a class="dropdown-item" href="feature-header-dark.html">Dark Version</a></li>
+                                                <li><a class="dropdown-item" href="feature-header-primary.html">Primary Version</a></li>
+                                                <li><a class="dropdown-item" href="index-2.html">Transparent Version</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Navigation DropDown</a>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Navigation DropDown</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="user/user-page/index.html">Light Version (Default)</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-navigation-dropdown-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-navigation-dropdown-primary.html">Primary Version</a></li>
+                                                <li><a class="dropdown-item" href="index.html">Light Version (Default)</a></li>
+                                                <li><a class="dropdown-item" href="feature-navigation-dropdown-dark.html">Dark Version</a></li>
+                                                <li><a class="dropdown-item" href="feature-navigation-dropdown-primary.html">Primary Version</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Second Navigation</a>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Second Navigation</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="user/user-page/send-money.html">Default Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/deposit-money.html">Alternate Version</a></li>
+                                                <li><a class="dropdown-item" href="send-money.html">Default Version</a></li>
+                                                <li><a class="dropdown-item" href="deposit-money.html">Alternate Version</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Page Headers</a>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Page Headers</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="user/user-page/feature-page-header-left-alignment.html">Left Alignment</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-page-header-center-alignment.html">Center Alignment</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-page-header-light.html">Light Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-page-header-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-page-header-primary.html">Primary Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-page-header-custom-background.html">Custom Background</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-page-header-custom-background-with-transparent-header.html">Custom Background 2</a></li>
+                                                <li><a class="dropdown-item" href="feature-page-header-left-alignment.html">Left Alignment</a></li>
+                                                <li><a class="dropdown-item" href="feature-page-header-center-alignment.html">Center Alignment</a></li>
+                                                <li><a class="dropdown-item" href="feature-page-header-light.html">Light Version</a></li>
+                                                <li><a class="dropdown-item" href="feature-page-header-dark.html">Dark Version</a></li>
+                                                <li><a class="dropdown-item" href="feature-page-header-primary.html">Primary Version</a></li>
+                                                <li><a class="dropdown-item" href="feature-page-header-custom-background.html">Custom Background</a></li>
+                                                <li><a class="dropdown-item" href="feature-page-header-custom-background-with-transparent-header.html">Custom Background 2</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Footer</a>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Footer</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="user/user-page/index.html">Light Version Default</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/index-2.html">Alternate Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-footer-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="user/user-page/feature-footer-primary.html">Primary Version</a></li>
+                                                <li><a class="dropdown-item" href="index.html">Light Version Default</a></li>
+                                                <li><a class="dropdown-item" href="index-2.html">Alternate Version</a></li>
+                                                <li><a class="dropdown-item" href="feature-footer-dark.html">Dark Version</a></li>
+                                                <li><a class="dropdown-item" href="feature-footer-primary.html">Primary Version</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item" href="user/user-page/feature-layout-boxed.html">Layout Boxed</a></li>
+                                        <li><a class="dropdown-item" href="feature-layout-boxed.html">Layout Boxed</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown dropdown-mega"> <a class="dropdown-toggle" href="user/user-page/#">Pages</a>
+                                <li class="dropdown dropdown-mega"> <a class="dropdown-toggle" href="#">Pages</a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="dropdown-mega-content">
                                                 <div class="row">
                                                     <div class="col-lg"> <span class="sub-title">Homepage</Span>
                                                         <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="user/user-page/index.html">Home Version 1</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/index-2.html">Home Version 2</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/landing-page-send.html">Landing Page - Send</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/landing-page-receive.html">Landing Page - Receive</a></li>
+                                                            <li><a class="dropdown-item" href="index.html">Home Version 1</a></li>
+                                                            <li><a class="dropdown-item" href="index-2.html">Home Version 2</a></li>
+                                                            <li><a class="dropdown-item" href="landing-page-send.html">Landing Page - Send</a></li>
+                                                            <li><a class="dropdown-item" href="landing-page-receive.html">Landing Page - Receive</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="col-lg"> <span class="sub-title">Account</Span>
                                                         <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="user/user-page/settings-profile.html">My Profile</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/settings-security.html">Security</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/settings-payment-methods.html">Payment Methods</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/settings-notifications.html">Notifications</a></li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Login</a>
+                                                            <li><a class="dropdown-item" href="settings-profile.html">My Profile</a></li>
+                                                            <li><a class="dropdown-item" href="settings-security.html">Security</a></li>
+                                                            <li><a class="dropdown-item" href="settings-payment-methods.html">Payment Methods</a></li>
+                                                            <li><a class="dropdown-item" href="settings-notifications.html">Notifications</a></li>
+                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Login</a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="user/user-page/login.html">Login Page 1</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/login-2.html">Login Page 2</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/login-3.html">Login Page 3</a></li>
+                                                                    <li><a class="dropdown-item" href="login.html">Login Page 1</a></li>
+                                                                    <li><a class="dropdown-item" href="login-2.html">Login Page 2</a></li>
+                                                                    <li><a class="dropdown-item" href="login-3.html">Login Page 3</a></li>
                                                                 </ul>
                                                             </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Signup</a>
+                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Signup</a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="user/user-page/signup.html">Signup Page 1</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/signup-2.html">Signup Page 2 </a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/signup-3.html">Signup Page 3 </a></li>
+                                                                    <li><a class="dropdown-item" href="signup.html">Signup Page 1</a></li>
+                                                                    <li><a class="dropdown-item" href="signup-2.html">Signup Page 2 </a></li>
+                                                                    <li><a class="dropdown-item" href="signup-3.html">Signup Page 3 </a></li>
                                                                 </ul>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div class="col-lg"> <span class="sub-title">Dashboard</Span>
                                                         <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="user/user-page/dashboard.html">Dashboard</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/transactions.html">Transactions</a></li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Send Money</a>
+                                                            <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                                                            <li><a class="dropdown-item" href="transactions.html">Transactions</a></li>
+                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Send Money</a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="user/user-page/send-money.html">Send Money</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/send-money-confirm.html">Send Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/send-money-success.html">Send Money Success </a></li>
+                                                                    <li><a class="dropdown-item" href="send-money.html">Send Money</a></li>
+                                                                    <li><a class="dropdown-item" href="send-money-confirm.html">Send Money Confirm</a></li>
+                                                                    <li><a class="dropdown-item" href="send-money-success.html">Send Money Success </a></li>
                                                                 </ul>
                                                             </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Request Money</a>
+                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Request Money</a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="user/user-page/request-money.html">Request Money</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/request-money-confirm.html">Request Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/request-money-success.html">Request Money Success </a></li>
+                                                                    <li><a class="dropdown-item" href="request-money.html">Request Money</a></li>
+                                                                    <li><a class="dropdown-item" href="request-money-confirm.html">Request Money Confirm</a></li>
+                                                                    <li><a class="dropdown-item" href="request-money-success.html">Request Money Success </a></li>
                                                                 </ul>
                                                             </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Deposit Money</a>
+                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Deposit Money</a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="user/user-page/deposit-money.html">Deposit Money</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/deposit-money-confirm.html">Deposit Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/deposit-money-success.html">Deposit Money Success </a></li>
+                                                                    <li><a class="dropdown-item" href="deposit-money.html">Deposit Money</a></li>
+                                                                    <li><a class="dropdown-item" href="deposit-money-confirm.html">Deposit Money Confirm</a></li>
+                                                                    <li><a class="dropdown-item" href="deposit-money-success.html">Deposit Money Success </a></li>
                                                                 </ul>
                                                             </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Withdraw Money</a>
+                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Withdraw Money</a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="user/user-page/withdraw-money.html">Withdraw Money</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/withdraw-money-confirm.html">Withdraw Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/withdraw-money-success.html">Withdraw Money Success </a></li>
+                                                                    <li><a class="dropdown-item" href="withdraw-money.html">Withdraw Money</a></li>
+                                                                    <li><a class="dropdown-item" href="withdraw-money-confirm.html">Withdraw Money Confirm</a></li>
+                                                                    <li><a class="dropdown-item" href="withdraw-money-success.html">Withdraw Money Success </a></li>
                                                                 </ul>
                                                             </li>
-                                                            <li><a class="dropdown-item" href="user/user-page/notifications.html">Notifications</a></li>
+                                                            <li><a class="dropdown-item" href="notifications.html">Notifications</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="col-lg"> <span class="sub-title">Blog</Span>
                                                         <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="user/user-page/blog.html">Blog Standard</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/blog-grid.html">Blog Grid</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/blog-list.html">Blog List</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/blog-single.html">Blog Single Right Sidebar</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li>
+                                                            <li><a class="dropdown-item" href="blog.html">Blog Standard</a></li>
+                                                            <li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
+                                                            <li><a class="dropdown-item" href="blog-list.html">Blog List</a></li>
+                                                            <li><a class="dropdown-item" href="blog-single.html">Blog Single Right Sidebar</a></li>
+                                                            <li><a class="dropdown-item" href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="col-lg"> <span class="sub-title">Others</Span>
                                                         <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="user/user-page/about-us.html">About Us</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/fees.html">Fees</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/help.html">Help</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/contact-us.html">Contact Us</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/404.html">404</a></li>
-                                                            <li><a class="dropdown-item" href="user/user-page/coming-soon.html" target="_blank">Coming Soon</a></li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="user/user-page/#">Elements</a>
+                                                            <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                                            <li><a class="dropdown-item" href="fees.html">Fees</a></li>
+                                                            <li><a class="dropdown-item" href="help.html">Help</a></li>
+                                                            <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                                                            <li><a class="dropdown-item" href="404.html">404</a></li>
+                                                            <li><a class="dropdown-item" href="coming-soon.html" target="_blank">Coming Soon</a></li>
+                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Elements</a>
                                                                 <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="user/user-page/elements.html">Elements 1</a></li>
-                                                                    <li><a class="dropdown-item" href="user/user-page/elements-2.html">Elements 2</a></li>
+                                                                    <li><a class="dropdown-item" href="elements.html">Elements 1</a></li>
+                                                                    <li><a class="dropdown-item" href="elements-2.html">Elements 2</a></li>
                                                                 </ul>
                                                             </li>
                                                         </ul>
@@ -211,37 +211,37 @@
                     ============================== -->
                     <nav class="login-signup navbar navbar-expand">
                         <ul class="navbar-nav">
-                            <li class="dropdown language"> <a class="dropdown-toggle" href="user/user-page/#">Vn</a>
+                            <li class="dropdown language"> <a class="dropdown-toggle" href="#">En</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="user/user-page/#">Tiếng Việt</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#">English</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#">French</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#">Русский</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#">简体中文</a></li>
+                                    <li><a class="dropdown-item" href="#">English</a></li>
+                                    <li><a class="dropdown-item" href="#">French</a></li>
+                                    <li><a class="dropdown-item" href="#">Русский</a></li>
+                                    <li><a class="dropdown-item" href="#">简体中文</a></li>
+                                    <li><a class="dropdown-item" href="#">Türkçe</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown notifications"> <a class="dropdown-toggle" href="user/user-page/#"><span class="text-5"><i class="far fa-bell"></i></span><span class="count">3</span></a>
+                            <li class="dropdown notifications"> <a class="dropdown-toggle" href="#"><span class="text-5"><i class="far fa-bell"></i></span><span class="count">3</span></a>
                                 <ul class="dropdown-menu">
                                     <li class="text-center text-3 py-2">Notifications (3)</li>
                                     <li class="dropdown-divider mx-n3"></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#"><i class="fas fa-bell"></i>A new digital FIRC document is available for you to download<span class="text-1 text-muted d-block">22 Jul 2021</span></a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#"><i class="fas fa-bell"></i>Updates to our privacy policy. Please read.<span class="text-1 text-muted d-block">04 March 2021</span></a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#"><i class="fas fa-bell"></i>Update about Payyed fees<span class="text-1 text-muted d-block">18 Feb 2021</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-bell"></i>A new digital FIRC document is available for you to download<span class="text-1 text-muted d-block">22 Jul 2021</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-bell"></i>Updates to our privacy policy. Please read.<span class="text-1 text-muted d-block">04 March 2021</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-bell"></i>Update about Payyed fees<span class="text-1 text-muted d-block">18 Feb 2021</span></a></li>
                                     <li class="dropdown-divider mx-n3"></li>
-                                    <li><a class="dropdown-item text-center text-primary px-0" href="user/user-page/notifications.html">See all Notifications</a></li>
+                                    <li><a class="dropdown-item text-center text-primary px-0" href="notifications.html">See all Notifications</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown profile ms-2"> <a class="px-0 dropdown-toggle" href="user/user-page/#"><img class="rounded-circle" src="user/user-page/user/user-page/images/profile-thumb-sm.jpg" alt=""></a>
+                            <li class="dropdown profile ms-2"> <a class="px-0 dropdown-toggle" href="#"><img class="rounded-circle" src="user/user-page/images/profile-thumb-sm.jpg" alt=""></a>
                                 <ul class="dropdown-menu">
-                                    <li class="text-center text-3 py-2">Hi, Hung Pham</li>
+                                    <li class="text-center text-3 py-2">Hi, Smith Rhodes</li>
                                     <li class="dropdown-divider mx-n3"></li>
-                                    <li><a class="dropdown-item" href="user/user-page/settings-profile.html"><i class="fas fa-user"></i>My Profile</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/settings-Security.html"><i class="fas fa-shield-alt"></i>Security</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/settings-payment-methods.html"><i class="fas fa-credit-card"></i>Payment Methods</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/settings-notifications.html"><i class="fas fa-bell"></i>Notifications</a></li>
+                                    <li><a class="dropdown-item" href="settings-profile.html"><i class="fas fa-user"></i>My Profile</a></li>
+                                    <li><a class="dropdown-item" href="settings-Security.html"><i class="fas fa-shield-alt"></i>Security</a></li>
+                                    <li><a class="dropdown-item" href="settings-payment-methods.html"><i class="fas fa-credit-card"></i>Payment Methods</a></li>
+                                    <li><a class="dropdown-item" href="settings-notifications.html"><i class="fas fa-bell"></i>Notifications</a></li>
                                     <li class="dropdown-divider mx-n3"></li>
-                                    <li><a class="dropdown-item" href="user/user-page/help.html"><i class="fas fa-life-ring"></i>Bạn cần trợ giúp?</a></li>
-                                    <li><a class="dropdown-item" href="user/user-page/#"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>
+                                    <li><a class="dropdown-item" href="help.html"><i class="fas fa-life-ring"></i>Need Help?</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -258,6 +258,7 @@
     <div id="content" class="py-4">
         <div class="container">
             <div class="row">
+
                 <!-- Left Panel
                 ============================================= -->
                 <aside class="col-lg-3">
@@ -265,13 +266,13 @@
                     <!-- Profile Details
                     =============================== -->
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-                        <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" src="user/user-page/user/user-page/images/profile-thumb.jpg" alt="">
+                        <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" src="user/user-page/images/profile-thumb.jpg" alt="">
                             <div class="profile-thumb-edit bg-primary text-white" data-bs-toggle="tooltip" title="Change Profile Picture"> <i class="fas fa-camera position-absolute"></i>
                                 <input type="file" class="custom-file-input" id="customFile">
                             </div>
                         </div>
-                        <p class="text-3 fw-500 mb-2">Xin chào, Hung Pham</p>
-                        <p class="mb-2"><a href="user/user-page/settings-profile.html" class="text-5 text-light" data-bs-toggle="tooltip" title="Edit Profile"><i class="fas fa-edit"></i></a></p>
+                        <p class="text-3 fw-500 mb-2">Hello, Smith Rhodes</p>
+                        <p class="mb-2"><a href="settings-profile.html" class="text-5 text-light" data-bs-toggle="tooltip" title="Edit Profile"><i class="fas fa-edit"></i></a></p>
                     </div>
                     <!-- Profile Details End -->
 
@@ -280,9 +281,9 @@
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                         <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
                         <h3 class="text-9 fw-400">$2956.00</h3>
-                        <p class="mb-2 text-muted opacity-8">Số dư khả dụng</p>
+                        <p class="mb-2 text-muted opacity-8">Available Balance</p>
                         <hr class="mx-n3">
-                        <div class="d-flex"><a href="user/user-page/withdraw-money.html" class="btn-link me-auto">Chọn tài khoản khác</a> <a href="user/user-page/deposit-money.html" class="btn-link ms-auto">Chuyển khoản</a></div>
+                        <div class="d-flex"><a href="withdraw-money.html" class="btn-link me-auto">Withdraw</a> <a href="deposit-money.html" class="btn-link ms-auto">Deposit</a></div>
                     </div>
                     <!-- Available Balance End -->
 
@@ -290,10 +291,10 @@
                     =============================== -->
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                         <div class="text-17 text-light my-3"><i class="fas fa-comments"></i></div>
-                        <h3 class="text-5 fw-400 my-4">Bạn cần trợ giúp?</h3>
-                        <p class="text-muted opacity-8 mb-4">Bạn có thắc mắc về tài khoản?<br>
-                            Chúng tôi rất vui lòng được hỗ trợ bạn.</p>
-                        <div class="d-grid"><a href="user/user-page/#" class="btn btn-primary">Chat với nhân viên CSKH</a></div>
+                        <h3 class="text-5 fw-400 my-4">Need Help?</h3>
+                        <p class="text-muted opacity-8 mb-4">Have questions or concerns regrading your account?<br>
+                            Our experts are here to help!.</p>
+                        <div class="d-grid"><a href="#" class="btn btn-primary">Chate with Us</a></div>
                     </div>
                     <!-- Need Help? End -->
 
@@ -303,50 +304,81 @@
                 <!-- Middle Panel
                 ============================================= -->
                 <div class="col-lg-9">
+                    <h2 class="fw-400 mb-3">Transactions</h2>
 
-                    <!-- Profile Completeness
-                    =============================== -->
-                    <div class="bg-white shadow-sm rounded p-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Hồ sơ đã hoàn thành<span class="border text-success rounded-pill fw-500 text-2 px-3 py-1 ms-2">75%</span></h3>
-                        <hr class="mb-4 mx-n4">
-                        <div class="row gy-4 profile-completeness">
-                            <div class="col-sm-6 col-md-3">
-                                <div class="border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-mobile-alt"></i></span> <span class="text-5 d-block text-success mt-4 mb-3"><i class="fas fa-check-circle"></i></span>
-                                    <p class="mb-0">SĐT đã xác thực</p>
+                    <!-- Filter
+                    ============================================= -->
+                    <div class="row">
+                        <div class="col mb-2">
+                            <form id="filterTransactions" method="post">
+                                <div class="row g-3 mb-3">
+                                    <!-- Date Range
+                                    ========================= -->
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="position-relative">
+                                            <input id="dateRange" type="text" class="form-control" placeholder="Date Range">
+                                            <span class="icon-inside"><i class="fas fa-calendar-alt"></i></span>
+                                        </div>
+                                    </div>
+                                    <!-- All Filters Link
+                                    ========================= -->
+                                    <div class="col-auto d-flex align-items-center me-auto form-group" data-bs-toggle="collapse"> <a class="btn-link" data-bs-toggle="collapse" href="#allFilters" aria-expanded="false" aria-controls="allFilters">All Filters<i class="fas fa-sliders-h text-3 ms-1"></i></a> </div>
+
+                                    <!-- Statements Link
+                                    ========================= -->
+                                    <div class="col-auto d-flex align-items-center ms-auto">
+                                        <div class="dropdown"> <a class="text-muted btn-link" href="#" role="button" id="statements" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-file-download text-3 me-1"></i>Statements</a>
+                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="statements"> <a class="dropdown-item" href="#">CSV</a> <a class="dropdown-item" href="#">PDF</a> </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- All Filters collapse
+                                    ================================ -->
+                                    <div class="col-12 collapse" id="allFilters">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="allTransactions" name="allFilters" checked>
+                                            <label class="form-check-label" for="allTransactions">All Transactions</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="paymentsSend" name="allFilters">
+                                            <label class="form-check-label" for="paymentsSend">Payments Send</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="paymentsReceived" name="allFilters">
+                                            <label class="form-check-label" for="paymentsReceived">Payments Received</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="refunds" name="allFilters">
+                                            <label class="form-check-label" for="refunds">Refunds</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="withdrawal" name="allFilters">
+                                            <label class="form-check-label" for="withdrawal">Withdrawal</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="deposit" name="allFilters">
+                                            <label class="form-check-label" for="deposit">Deposit</label>
+                                        </div>
+                                    </div>
+                                    <!-- All Filters collapse End -->
                                 </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-envelope"></i></span> <span class="text-5 d-block text-success mt-4 mb-3"><i class="fas fa-check-circle"></i></span>
-                                    <p class="mb-0">Email đã xác thực</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="position-relative border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-credit-card"></i></span> <span class="text-5 d-block text-light mt-4 mb-3"><i class="far fa-circle "></i></span>
-                                    <p class="mb-0"><a class="btn-link stretched-link" href="user/user-page/">Thêm thẻ</a></p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="border rounded text-center px-3 py-4"> <span class="d-block text-10 text-light mt-2 mb-3"><i class="fas fa-university"></i></span> <span class="text-5 d-block text-success mt-4 mb-3"><i class="fas fa-check-circle"></i></span>
-                                    <p class="mb-0">TK Ngân Hàng đã xác thực</p>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
-                    <!-- Profile Completeness End -->
+                    <!-- Filter End -->
 
-                    <!-- Recent Activity
-                    =============================== -->
+                    <!-- All Transactions
+                    ============================================= -->
                     <div class="bg-white shadow-sm rounded py-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center px-4 mb-4">Lịch sử giao dịch</h3>
-
+                        <h3 class="text-5 fw-400 d-flex align-items-center px-4 mb-4">All Transactions</h3>
                         <!-- Title
                         =============================== -->
                         <div class="transaction-title py-2 px-4">
-                            <div class="row fw-00">
-                                <div class="col-2 col-sm-1 text-center"><span class="">Ngày</span></div>
-                                <div class="col col-sm-7">Nội dung</div>
-                                <div class="col-auto col-sm-2 d-none d-sm-block text-center">Trạng thái</div>
-                                <div class="col-3 col-sm-2 text-end">Số tiền</div>
+                            <div class="row">
+                                <div class="col-2 col-sm-1 text-center"><span class="">Date</span></div>
+                                <div class="col col-sm-7">Description</div>
+                                <div class="col-auto col-sm-2 d-none d-sm-block text-center">Status</div>
+                                <div class="col-3 col-sm-2 text-end">Amount</div>
                             </div>
                         </div>
                         <!-- Title End -->
@@ -466,15 +498,23 @@
                         </div>
                         <!-- Transaction Item Details Modal End -->
 
-                        <!-- View all Link
-                        =============================== -->
-                        <div class="text-center mt-4"><a href="user/user-page/transactions.html" class="btn-link text-3">Xem thêm<i class="fas fa-chevron-right text-2 ms-2"></i></a></div>
-                        <!-- View all Link End -->
+                        <!-- Pagination
+                        ============================================= -->
+                        <ul class="pagination justify-content-center mt-4 mb-0">
+                            <li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a> </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item d-flex align-content-center flex-wrap text-muted text-5 mx-1">......</li>
+                            <li class="page-item"><a class="page-link" href="#">15</a></li>
+                            <li class="page-item"> <a class="page-link" href="#"><i class="fas fa-angle-right"></i></a> </li>
+                        </ul>
+                        <!-- Paginations end -->
 
                     </div>
-                    <!-- Recent Activity End -->
+                    <!-- All Transactions End -->
                 </div>
-                <!-- Middle Panel End -->
+                <!-- Middle End -->
             </div>
         </div>
     </div>
@@ -487,33 +527,33 @@
             <div class="row">
                 <div class="col-lg d-lg-flex align-items-center">
                     <ul class="nav justify-content-center justify-content-lg-start text-3">
-                        <li class="nav-item"> <a class="nav-link active" href="user/user-page/#">About Us</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="user/user-page/#">Support</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="user/user-page/#">Help</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="user/user-page/#">Careers</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="user/user-page/#">Affiliate</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="user/user-page/#">Fees</a></li>
+                        <li class="nav-item"> <a class="nav-link active" href="#">About Us</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Support</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Help</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Careers</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Affiliate</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Fees</a></li>
                     </ul>
                 </div>
                 <div class="col-lg d-lg-flex justify-content-lg-end mt-3 mt-lg-0">
                     <ul class="social-icons justify-content-center">
-                        <li class="social-icons-facebook"><a data-bs-toggle="tooltip" href="user/user-page/http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="social-icons-twitter"><a data-bs-toggle="tooltip" href="user/user-page/http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li class="social-icons-google"><a data-bs-toggle="tooltip" href="user/user-page/http://www.google.com/" target="_blank" title="Google"><i class="fab fa-google"></i></a></li>
-                        <li class="social-icons-youtube"><a data-bs-toggle="tooltip" href="user/user-page/http://www.youtube.com/" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                        <li class="social-icons-facebook"><a data-bs-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-icons-twitter"><a data-bs-toggle="tooltip" href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li class="social-icons-google"><a data-bs-toggle="tooltip" href="http://www.google.com/" target="_blank" title="Google"><i class="fab fa-google"></i></a></li>
+                        <li class="social-icons-youtube"><a data-bs-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-copyright pt-3 pt-lg-2 mt-2">
                 <div class="row">
                     <div class="col-lg">
-                        <p class="text-center text-lg-start mb-2 mb-lg-0">Copyright &copy; 2022 <a href="user/user-page/#">Payyed</a>. All Rights Reserved.</p>
+                        <p class="text-center text-lg-start mb-2 mb-lg-0">Copyright &copy; 2022 <a href="#">Payyed</a>. All Rights Reserved.</p>
                     </div>
                     <div class="col-lg d-lg-flex align-items-center justify-content-lg-end">
                         <ul class="nav justify-content-center">
-                            <li class="nav-item"> <a class="nav-link active" href="user/user-page/#">Security</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="user/user-page/#">Terms</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="user/user-page/#">Privacy</a></li>
+                            <li class="nav-item"> <a class="nav-link active" href="#">Security</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Terms</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Privacy</a></li>
                         </ul>
                     </div>
                 </div>
@@ -527,11 +567,40 @@
 
 <!-- Back to Top
 ============================================= -->
-<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="user/user-page/javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 
 <!-- Script -->
-<script src="user/user-page/user/user-page/vendor/jquery/jquery.min.js"></script>
-<script src="user/user-page/user/user-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src=user/user-page/user/user-page/js/theme.js"></script>
+<script src="user/user-page/vendor/jquery/jquery.min.js"></script>
+<script src="user/user-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="user/user-page/vendor/daterangepicker/moment.min.js"></script>
+<script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
+<script>
+    $(function() {
+        'use strict';
+
+        // Date Range Picker
+        $(function() {
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+            function cb(start, end) {
+                $('#dateRange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+            $('#dateRange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }, cb);
+            cb(start, end);
+        });
+    });
+</script>
+<script src="user/user-page/js/theme.js"></script>
 </body>
 </html>

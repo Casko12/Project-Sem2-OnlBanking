@@ -16,7 +16,9 @@ Route::middleware(["auth","admin"])->group(function (){
 
 
 });
-@include_once ("admin.php");
+
+@include_once "admin.php";
+
 
 Route::get('/',[App\Http\Controllers\UserController::class,"home"]);
 
@@ -37,13 +39,7 @@ Route::get('/transfer-confirm',[App\Http\Controllers\UserController::class,"tran
 Route::get('/transaction-history',[App\Http\Controllers\UserController::class,"transactionHistory"]);
 Route::get('/transfer-success',[App\Http\Controllers\UserController::class,"transferSuccess"]);
 
-Route::get('/admin/listStaff',[App\Http\Controllers\AdminController::class,"listStaff"]);
-Route::get('/admin/createStaff',[App\Http\Controllers\AdminController::class,"createStaff"]);
-Route::get('/admin/editStaff',[App\Http\Controllers\AdminController::class,"editStaff"]);
 
-Route::get('/admin/listUser',[App\Http\Controllers\AdminController::class,"listUser"]);
-Route::get('/admin/createUser',[App\Http\Controllers\AdminController::class,"createUser"]);
-Route::get('/admin/editUser',[App\Http\Controllers\AdminController::class,"editUser"]);
 
 
 

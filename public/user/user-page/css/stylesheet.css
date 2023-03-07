@@ -716,7 +716,7 @@ hr {
 }
 
 .primary-menu ul.navbar-nav > li:hover > a:not(.btn), .primary-menu ul.navbar-nav > li.active > a:not(.btn), .login-signup ul.navbar-nav > li:hover > a:not(.btn), .login-signup ul.navbar-nav > li.active > a:not(.btn) {
-  color: #3366CC;
+  color: #2dbe60;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -3774,7 +3774,7 @@ select.form-control:not([size]):not([multiple]):not(.form-control-sm) {
 }
 
 .text-primary, .btn-light, .btn-outline-light:hover, .btn-link, .link-primary {
-  color: #3366cc !important;
+  color: #2dbe60 !important;
 }
 
 a.text-primary:focus, a.text-primary:hover, .btn-link:hover, .link-primary:hover, .link-primary:focus {
@@ -3810,13 +3810,13 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
 }
 
 .btn-primary {
-  background-color: #3366cc;
-  border-color: #3366cc;
+  background-color: #2dbe60;
+  border-color: #2dbe60;
 }
 
 .btn-primary:hover {
-  background-color: #274E9C;
-  border-color: #274E9C;
+  background-color: #26a151;
+  border-color: #26a151;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active {

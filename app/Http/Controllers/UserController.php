@@ -38,5 +38,16 @@ class UserController extends Controller
         return view("user.loan.documantsUpload");
 
     }
-
+    public function transferForm(){
+       return view("user.transfer-form");
+    }
+    public function transferConfirm(){
+        return view("user.transfer-confirm");
+    }
+    public function transactionHistory(){
+        return view("user.transaction-history");
+    }
+    public function transferSuccess(){
+        return view("user.transfer-success");
+    }
 }

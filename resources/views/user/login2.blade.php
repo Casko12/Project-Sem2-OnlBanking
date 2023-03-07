@@ -20,26 +20,12 @@
     <link rel="stylesheet" type="text/css" href="user/userlogin/css/stylesheet.css" />
 </head>
 <body>
-
-<!-- Preloader -->
-<div id="preloader">
-    <div data-loader="dual-ring"></div>
-</div>
-<!-- Preloader End -->
-
-<!-- Preloader -->
-<div id="preloader">
-    <div data-loader="dual-ring"></div>
-</div>
-<!-- Preloader End -->
-
 <div id="main-wrapper" class="min-vh-100 d-flex flex-column">
     <!-- Login Form
     ============================================= -->
     <div class="container my-auto">
         <div class="row g-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-5 col-xl-4 m-auto py-5">
-                <div class="logo text-center"> <a href="index.html" title="Payyed - HTML Template"><img src="images/logo-lg.png" alt="Payyed"></a> </div>
                 <p class="lead text-center mb-4">We are glad to see you again!</p>
                 <form id="loginForm" method="post">
                     <div class="vertical-input-group">
@@ -52,7 +38,7 @@
                     </div>
                     <div class="d-grid my-4"><button class="btn btn-primary shadow-none" type="submit">Login</button></div>
                 </form>
-                <p class="text-3 text-center text-muted mb-2">Don't have an account? <a class="btn-link" href="signup-2.html">Sign Up</a></p>
+                <p class="text-3 text-center text-muted mb-2">Don't have an account? <a class="btn-link" href="{{url("signup")}}">Sign Up</a></p>
                 <p class="text-center mb-0"><a class="btn-link" href="#">Forgot Password?</a></p>
             </div>
         </div>

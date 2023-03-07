@@ -54,7 +54,7 @@
                                     href="mailto:thanhtvth2203024@fpt.edu.vn">thanhtvth2203024@fpt.edu.vn</a>
                             </li>
                             <li>
-                                <i class="fa-solid fa-right-to-bracket"></i><a href="{{url("login")}}">Đăng nhập</a>
+                                <i class="fa-solid fa-right-to-bracket"></i><a href="{{url("login2")}}">Đăng nhập</a>
                             </li>
                         </ul>
                     </div>

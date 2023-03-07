@@ -12,11 +12,11 @@ class UserController extends Controller
     public function userPage(){
         return view("user.user-page");
     }
-    public function login(){
-        return view("user.login");
+    public function login2(){
+        return view("user.login2");
     }
-    public function trans(){
-        return view("user.trans");
+    public function signup(){
+        return view("user.signup");
     }
     public function veChungToi(){
         return view("user.ve-chung-toi");

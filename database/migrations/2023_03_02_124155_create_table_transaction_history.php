@@ -15,7 +15,6 @@ class CreateTableTransactionHistory extends Migration
     {
         Schema::create('transaction_history', function (Blueprint $table) {
             $table->id();
-            $table->dateTime("time");
             $table->unsignedBigInteger("transfer_id");
             $table->foreign("transfer_id")->references("id")->on("accounts");
             $table->unsignedBigInteger("receive_id");

@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/user/html/css/default.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/user/html/css/style.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/user/html/css/responsive.css" media="all" />
+<link href="user/user-page/images/logomba.png" rel="icon" />
 <!-- Preloader -->
 <div id="preloader">
     <div id="ctn-preloader" class="ctn-preloader">

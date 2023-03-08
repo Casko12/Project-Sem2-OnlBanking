@@ -42,7 +42,27 @@
 
                                     <div id="dropzone" class="dropzone">
                                         <form action="upload.php" method="post" enctype="multipart/form-data">
-                                            Select image to upload:
+                                            Tải nên ảnh chân dung:
+                                            <input type="file" name="image">
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+
+                                    <div id="dropzone" class="dropzone">
+                                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                                            Tải nên mă trước của CMT:
+                                            <input type="file" name="image">
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+
+                                    <div id="dropzone" class="dropzone">
+                                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                                            Tải nên mặt sau của CMT:
                                             <input type="file" name="image">
                                         </form>
                                     </div>

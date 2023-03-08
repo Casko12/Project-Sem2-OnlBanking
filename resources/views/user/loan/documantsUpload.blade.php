@@ -52,7 +52,7 @@
 
                                     <div id="dropzone" class="dropzone">
                                         <form action="upload.php" method="post" enctype="multipart/form-data">
-                                            Tải nên mă trước của CMT:
+                                            Tải nên mặt trước của CMT:
                                             <input type="file" name="image">
                                         </form>
                                     </div>

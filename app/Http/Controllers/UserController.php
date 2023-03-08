@@ -27,7 +27,7 @@ class UserController extends Controller
        $user->telephone = $request->telephone;
        $user->national_id = $request->national_id;
        $user->save();
-        return redirect()->action('signup');
+        return redirect()->action('signup')->with("Success","Tạo Tài Khoản Thành Công");
     }
     public function signup(){
         return view("user.signup");

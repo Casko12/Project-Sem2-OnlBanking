@@ -18,16 +18,32 @@ class UserController extends Controller
         return view("user.login2");
     }
     public function store(Request $request){
-       $user = new User();
-       $user->name = $request->name;
-       $user->birthday = $request->birthday;
-       $user->email = $request->email;
-       $user->password = $request->password;
-       $user->address = $request->address;
-       $user->telephone = $request->telephone;
-       $user->national_id = $request->national_id;
-       $user->save();
-        return redirect()->action('signup')->with("Success","Tạo Tài Khoản Thành Công");
+       $request->validate([
+            "name"=>"required|string",
+            "email"=>"required|numeric",
+            "password"=>"required|numeric",
+            "telephone"=>"required|numeric",
+            "birthday"=>"required|numeric",
+            "address"=>"string|required|numeric",
+            "national_id"=>"required"
+        ],[
+            "required"=>"Vui lòng nhập thông tin",
+            "string"=> "Phải nhập vào là một chuỗi văn bản"
+        ]);
+        try {
+            User::create([
+                "name"=>$request->get("name"),
+                "email"=>$request->get("email"),
+                "address"=>$request->get("address"),
+                "password"=>$request->get("password"),
+                "telephone"=>$request->get("telephone"),
+                "birthday"=>$request->get("birthday"),
+                "national_id"=>$request->get("national_id"),
+            ]);
+            return redirect()->action("user/signup")->with("success","Tạo Tài Khoản Thành Công");
+        }catch (\Exception $e){
+            return redirect()->back()->with("error",$e->getMessage());
+        }
     }
     public function signup(){
         return view("user.signup");

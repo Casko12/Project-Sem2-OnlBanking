@@ -70,27 +70,25 @@
                         <!-- Send Money Form
                         ============================ -->
                         <form id="form-send-money" method="post">
+                            @csrf
                             <div class="mb-3">
                                 <label for="bankID" class="form-label">Chọn Ngân Hàng</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" id="bank_id" aria-label="Default select example">
                                     <option selected>Vui Lòng Chọn Ngân Hàng</option>
-                                    <option value="1">MB</option>
-                                    <option value="2">Agribank</option>
-                                    <option value="3">Techcombank</option>
-                                    <option value="4">Vietcombank</option>
-                                    <option value="5">BIDV</option>
-                                    <option value="6">TPBank</option>
+                                    @foreach($bank as $b)
+                                    <option name="bank_id" value="{{$b->id}}">{{$b->name}}</option>
+                                    @endforeach
                                 </select></div>
                             <div class="mb-3">
                                 <label for="recieverID" class="form-label">Số Tài Khoản</label>
                                 <div class="input-group">
-                                    <input type="text" required class="form-control" data-bv-field="ReceiverID" id="receiverID" value="" placeholder="Số tài khoản">
+                                    <input type="text" required class="form-control" data-bv-field="ReceiverID" id="receiverID" name="account" placeholder="Số tài khoản">
 
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="recieverID" class="form-label">Tên Tài Khoản</label>
-                                <p class="lead text-left mb-4">Hà Hoàng Hưng</p>
+                                <input type="button" onclick="findName()" class="form-control" value="" id="userName">
 
                             </div>
                             <div class="mb-3">
@@ -131,5 +129,18 @@
 <script src="user/user-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="user/user-page/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
 <script src="user/user-page/js/theme.js"></script>
+<script>
+    function findName() {
+        var bank = $( "#bank_id" ).val();
+        var account = $("#receiverID").val();
+        $.ajax({
+            url:"/findname"+"?bank_id="+bank+"&account="+account,
+            method:"get",
+            success: function (rs){
+                $("#userName").val(rs.user)
+            }
+        })
+    }
+</script>
 </body>
 </html>

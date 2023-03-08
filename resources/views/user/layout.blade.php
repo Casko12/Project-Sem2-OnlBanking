@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="/user/html/css/style.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/user/html/css/responsive.css" media="all" />
 <link href="user/user-page/images/logomba.png" rel="icon" />
+@yield("custom_css")
 <!-- Preloader -->
 <div id="preloader">
     <div id="ctn-preloader" class="ctn-preloader">
@@ -257,4 +258,4 @@
 <script type="text/javascript" src="/user/html/js/wow.min.js"></script>
 
 <script type="text/javascript" src="/user/html/js/custom.js"></script>
-
+@yield("custom_js")

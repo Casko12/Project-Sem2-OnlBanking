@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
+use App\Models\Bank;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -39,7 +42,24 @@ class UserController extends Controller
 
     }
     public function transferForm(){
-       return view("user.transfer-form");
+       $bank = Bank::all();
+       return view("user.transfer-form",[
+           "bank"=>$bank
+       ]);
+    }
+
+    public function findName(Request $request){
+       $account = $request->get("account");
+       $bank_id = $request->get("bank_id");
+       $search = Account::where("bank_id",$bank_id)->where("account_number",$account)->first()->user_id;
+       $user = User::find($search);
+       dd($user);
+
+       if($user != null){
+           return response()->json(["user"=>$user->name]);
+       }else{
+           return response()->json(["user"=> ""]);
+       }
     }
     public function transferConfirm(){
         return view("user.transfer-confirm");

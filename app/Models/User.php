@@ -50,4 +50,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Account(){
+        return $this->hasMany(Account::class);
+    }
+    public function scopeSearch($query,$search){
+        if($search && $search !=""){
+            return $query->where("name",'like',"$search");
+        }
+        return $query;
+    }
 }

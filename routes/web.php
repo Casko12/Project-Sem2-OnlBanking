@@ -35,6 +35,7 @@ Route::get('/loan',[App\Http\Controllers\UserController::class,"loan"]);
 Route::get('/personal',[App\Http\Controllers\UserController::class,"personal"]);
 Route::get('/documantUp',[App\Http\Controllers\UserController::class,"documantUp"]);
 Route::get('/money-transfer',[App\Http\Controllers\UserController::class,"transferForm"]);
+Route::get('/findname',[App\Http\Controllers\UserController::class,"findName"]);
 Route::get('/transfer-confirm',[App\Http\Controllers\UserController::class,"transferConfirm"]);
 Route::get('/transaction-history',[App\Http\Controllers\UserController::class,"transactionHistory"]);
 Route::get('/transfer-success',[App\Http\Controllers\UserController::class,"transferSuccess"]);

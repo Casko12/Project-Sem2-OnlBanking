@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,6 +16,18 @@ class UserController extends Controller
     }
     public function login2(){
         return view("user.login2");
+    }
+    public function store(Request $request){
+       $user = new User();
+       $user->name = $request->name;
+       $user->birthday = $request->birthday;
+       $user->email = $request->email;
+       $user->password = $request->password;
+       $user->address = $request->address;
+       $user->telephone = $request->telephone;
+       $user->national_id = $request->national_id;
+       $user->save();
+        return redirect()->action('signup');
     }
     public function signup(){
         return view("user.signup");

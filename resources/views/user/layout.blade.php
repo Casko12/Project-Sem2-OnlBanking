@@ -22,7 +22,7 @@
     </div>
 </div>
 <!-- Header -->
-<header class="header">
+<header class="header" >
     <div class="header-top py-2">
         <div class="container">
             <div class="row align-items-center">
@@ -62,15 +62,15 @@
             </div>
         </div>
     </div>
-    <div class="header-menu header-menu-2" id="sticky">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container">
-                <a class="navbar-brand" href="{{url("/")}}">
-                    <img style="width: 160px"height="40px" src="/user/html/img/logo/mbanking-03.png" alt="logo" >
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <div class="header-menu header-menu-2" id="sticky">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container" >
+                    <a class="navbar-brand" href="{{url("/")}}">
+                        <img style="width: 160px"height="40px" src="/user/html/img/logo/mbanking-03.png" alt="logo" >
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu_toggle">
                             <span class="hamburger">
                                 <span></span>
@@ -82,68 +82,68 @@
                                 <span></span>
                             </span>
                         </span>
-                </button>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav menu ms-auto">
-                        <li class="nav-item dropdown submenu ">
-                            <a href="#" class="nav-link dropdown-toggle active" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trang chủ</a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="true"
-                               data-bs-toggle="dropdown"></i>
-                            {{--                            <ul class="dropdown-menu">--}}
-                            {{--                                <li class="nav-item "><a href="index.html" class="nav-link ">Demo 01</a>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li class="nav-item "><a href="index-2.html" class="nav-link active">Demo 02</a>--}}
-                            {{--                                </li>--}}
-                            {{--                            </ul>--}}
-                        </li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="{{url("/loan")}}" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Khoản vay
-                            </a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
-                               data-bs-toggle="dropdown"></i>
-                        </li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="{{url("trans")}}" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Chuyển khoản
-                            </a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
-                               data-bs-toggle="dropdown"></i>
-                        </li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false">
-                                Gửi tiết kiệm
-                            </a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
-                               data-bs-toggle="dropdown"></i>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav menu ms-auto">
+                            <li class="nav-item dropdown submenu ">
+                                <a href="/" class="nav-link dropdown-toggle active" role="button"
+                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trang chủ</a>
+                                <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="true"
+                                   data-bs-toggle="dropdown"></i>
+                                {{--                            <ul class="dropdown-menu">--}}
+                                {{--                                <li class="nav-item "><a href="index.html" class="nav-link ">Demo 01</a>--}}
+                                {{--                                </li>--}}
+                                {{--                                <li class="nav-item "><a href="index-2.html" class="nav-link active">Demo 02</a>--}}
+                                {{--                                </li>--}}
+                                {{--                            </ul>--}}
+                            </li>
+                            <li class="nav-item dropdown submenu">
+                                <a class="nav-link dropdown-toggle" href="{{url("/loan")}}" role="button"
+                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Khoản vay
+                                </a>
+                                <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                                   data-bs-toggle="dropdown"></i>
+                            </li>
+                            <li class="nav-item dropdown submenu">
+                                <a class="nav-link dropdown-toggle" href="{{url("trans")}}" role="button"
+                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Chuyển khoản
+                                </a>
+                                <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                                   data-bs-toggle="dropdown"></i>
+                            </li>
+                            <li class="nav-item dropdown submenu">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    Gửi tiết kiệm
+                                </a>
+                                <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                                   data-bs-toggle="dropdown"></i>
 
-                        </li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Về chúng tôi
-                            </a>
+                            </li>
+                            <li class="nav-item dropdown submenu">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Về chúng tôi
+                                </a>
 
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
-                               data-bs-toggle="dropdown"></i>
-                            <ul class="dropdown-menu ">
-                                <li class="nav-item"><a  class="nav-link" href="{{url("/ve-chung-toi")}}">Giới thiệu</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{url("/phat-trien")}}">Phát triển bền vững</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{url("/an-toan")}}">An toàn và bảo mật</a></li>
-                            </ul>
-                        </li>
+                                <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                                   data-bs-toggle="dropdown"></i>
+                                <ul class="dropdown-menu ">
+                                    <li class="nav-item"><a  class="nav-link" href="{{url("/ve-chung-toi")}}">Giới thiệu</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{url("/phat-trien")}}">Phát triển bền vững</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{url("/an-toan")}}">An toàn và bảo mật</a></li>
+                                </ul>
+                            </li>
 
-                    </ul>
-                    <a class="theme-btn" href="loan.html">Nhận thêm khoản vay mới</a>
+                        </ul>
+                        <a class="theme-btn" href="{{url("/loan")}}">Nhận thêm khoản vay mới</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
+            </nav>
+        </div>
 </header>
 <!-- Header end-->
 <div class="container">

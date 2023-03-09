@@ -1,4 +1,7 @@
 @extends("admin.layout")
+@section("title")
+    Chỉnh sửa
+@endsection
 @section("main_content")
     <div>
         <!-- general form elements -->

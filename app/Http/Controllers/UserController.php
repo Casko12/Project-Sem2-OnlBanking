@@ -12,11 +12,11 @@ class UserController extends Controller
    public function home(){
        return view("user.home");
    }
-    public function userPage(User $user){
+    public function userInfo(User $user){
        $user_id= $user->id;
-        $account = Account::where("user_id",$user_id)->where("account_type_id",1)->where("account_number",2130284)->first();
+        $account = Account::where("user_id",$user_id)->first();
 
-        return view("user.user-page",[
+        return view("user.user-info",[
             "user"=>$user,
                 "account"=>$account
         ]);

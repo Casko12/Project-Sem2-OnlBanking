@@ -1,8 +1,10 @@
 @extends("user.layout")
+@section("title")
+    Trang chủ
+@endsection
 @section("main_content")
     <section class="banner-area-2 pt-200 pb-95" id="banner_animation"
              style="background-size: auto; background-position: top left;">
-
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">

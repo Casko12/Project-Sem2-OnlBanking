@@ -1,4 +1,7 @@
 @extends("user.layout")
+@section("title")
+    Chỉnh sửa người dùng
+@endsection
 @section("main_content")
 
     <div style="margin-top: 200px;margin-bottom: 100px">

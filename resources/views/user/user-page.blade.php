@@ -130,7 +130,9 @@
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Trạng thái tài khoản:</p>
                             @if($account->status ==1)
-                            <p class="col-sm-9 text-3"><span class="bg-success text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-check-circle"></i> Active</span></p>
+                                <p class="col-sm-9 text-3"><span class="bg-success text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-check-circle"></i> Active</span></p>
+                            @elseif($account->status ==2)
+                                <p class="col-sm-9 text-3"><span class="bg-info text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-exclamation-circle"></i> Pending</span></p>
                             @else
                                 <p class="col-sm-9 text-3"><span class="bg-danger text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-times-circle"></i> Deactive</span></p>
                             @endif

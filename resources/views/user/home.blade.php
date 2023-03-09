@@ -12,7 +12,7 @@
                         <h1 class="wow fadeInUp mb-0">Các khoản vay và gửi tiết kiệm với rất nhiều ưu đãi khủng</h1>
                         <p class="wow fadeInUp mt-50" data-wow-delay="0.3s">Modern Bank là ngân hàng mà bạn có thể tin tưởng
                             sẽ hỗ trợ bạn mọi lúc bằng cách cung cấp các tiện ích cho vay mua nhà...</p>
-                        <a href="loan.html" data-wow-delay="0.5s"
+                        <a href="{{url("/loan")}}" data-wow-delay="0.5s"
                            class="wow fadeInUp theme-btn theme-btn-lg mt-50">Áp dụng ngay bây giờ<i class="arrow_right"></i>
                         </a>
                     </div>
@@ -185,7 +185,7 @@
                                 <li><i class="icon_box-checked"></i>Được chúng tôi cân nhắc*</li>
                                 <li><i class="icon_box-checked"></i>Hồ sơ xấu vẫn được xem xét</li>
                             </ul>
-                            <a href="loan.html" class="theme-btn mt-20 w-100">Đăng kí vay</a>
+                            <a href="{{url("/loan")}}" class="theme-btn mt-20 w-100">Đăng kí vay</a>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6 ">

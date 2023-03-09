@@ -40,8 +40,7 @@
 
                                 <div class="col-md-6">
                                     <label class="label" for="dob-d">Ngày sinh*</label>
-                                   <input type="date" class="form-control" required>
-
+                                    <input id="birth" class="form-control" type="date" required>
                                 </div>
 
                                 <div class="col-md-6">

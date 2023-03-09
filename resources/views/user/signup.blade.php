@@ -35,6 +35,7 @@
                         <hr class="mx-n3 mx-sm-n5">
                         <p class="lead text-center">Vui Lòng Điền Thông Tin Của Bạn </p>
                         <form id="signupForm" method="post" action="{{url("store")}}">
+                            @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Họ Và Tên</label>
                                 <input type="text" class="form-control" id="Name" required placeholder="Enter Your Name">

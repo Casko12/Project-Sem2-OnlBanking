@@ -66,7 +66,7 @@
                             </div>
                             <div class="d-grid mt-4 mb-3"><button class="btn btn-primary" type="submit">Sign Up</button></div>
                         </form>
-                        <p class="text-3 text-muted text-center mb-0">Already have an account? <a class="btn-link" href="{{url("login")}}">Log In</a></p>
+                        <p class="text-3 text-muted text-center mb-0">Already have an account? <a class="btn-link" href="{{url("login2")}}">Log In</a></p>
                     </div>
                 </div>
             </div>

@@ -26,11 +26,11 @@
     <div class="container my-auto">
         <div class="row g-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-5 col-xl-4 m-auto py-5">
-                <p class="lead text-center mb-4">We are glad to see you again!</p>
+                <p class="lead text-center mb-4">Vui Lòng Đăng Nhập Để Sử Dụng Dịch Vụ!</p>
                 <form id="loginForm" method="post">
                     <div class="vertical-input-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="emailAddress" required placeholder="Your Email">
+                            <input type="" class="form-control" id="emailAddress" required placeholder="Your Email">
                         </div>
                         <div class="input-group">
                             <input type="password" class="form-control" id="loginPassword" required placeholder="Password">

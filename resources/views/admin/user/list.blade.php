@@ -2,7 +2,7 @@
 @section("main_content")
 
     <div class="container" style="margin-top: 200px;margin-bottom: 100px">
-        <h3 style="text-align: center">Danh sách nhân viên</h3>
+        <h3 style="text-align: center">Danh sách người dùng</h3>
         <div style="margin-bottom: 10px">
             <a class="theme-btn" href="#">Thêm mới</a>
         </div>
@@ -31,7 +31,7 @@
                         @else
                             <td>Active</td>
                         @endif
-                        <td><a class="btn-link" href="{{url("/admin/detailstaff",["user"=>$item->id])}}">Chi tiết</a></td>
+                        <td><a class="btn-link" href="{{url("/admin/detailuser",["user"=>$item->id])}}">Chi tiết</a></td>
 
                     </tr>
                 @endforeach

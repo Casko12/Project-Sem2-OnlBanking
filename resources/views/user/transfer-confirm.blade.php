@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <link href="user/user-page/images/logomba.png" rel="icon" />
     <title>Transfer confirmation</title>
-    <meta name="description" content="This professional design html template is for build a Money Transfer and online payments website.">
-    <meta name="author" content="harnishdesign.net">
+    <meta name="description" content="Modern Bank online banking">
 
     <!-- Web Fonts
     ============================================= -->
@@ -61,8 +60,8 @@
                     </div>
                 </div>
             </div>
-            <h2 class="fw-400 text-center mt-3">Send Money</h2>
-            <p class="lead text-center mb-4">You are sending money to <span class="fw-500">demo@gmail.com</span></p>
+            <h2 class="fw-400 text-center mt-3">Xác Nhận Chuyển Khoản</h2>
+            <p class="lead text-center mb-4">Bạn đang chuyển khoản tới <span class="fw-500">Hà Hoàng Hưng</span></p>
             <div class="row">
                 <div class="col-md-9 col-lg-7 col-xl-6 mx-auto">
                     <div class="bg-white shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4">
@@ -71,9 +70,11 @@
                         <!-- Send Money Confirm
                         ============================================= -->
                         <form id="form-send-money" method="post">
-                            <div class="mb-4 mb-sm-5">
-                                <label for="description" class="form-label">Description</label>
-                                <textarea class="form-control" rows="4" id="description" required placeholder="Payment Description"></textarea>
+                            <div class="mb-1">
+                                <label for="recieverID" class="form-label">Nhập mã PIN</label>
+                                <div class="input-group">
+                                    <input id="pin" type="password" inputmode="number" maxlength="4"/>
+                                </div>
                             </div>
                             <hr class="mx-n3 mx-sm-n5 mb-3 mb-sm-4">
                             <h3 class="text-5 fw-400 mb-3 mb-sm-4">Confirm Details</h3>

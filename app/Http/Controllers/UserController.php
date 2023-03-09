@@ -53,7 +53,6 @@ class UserController extends Controller
        $bank_id = $request->get("bank_id");
        $search = Account::where("bank_id",$bank_id)->where("account_number",$account)->first()->user_id;
        $user = User::find($search);
-       dd($user);
 
        if($user != null){
            return response()->json(["user"=>$user->name]);

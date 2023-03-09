@@ -1,4 +1,7 @@
 @extends("user.layout")
+@section("title")
+    Khoản vay
+@endsection
 @section("main_content")
     <section class="loan-deatils-area bg_disable pt-130 pb-120" style="margin-top: 100px">
         <div class="container">

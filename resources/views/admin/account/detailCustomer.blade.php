@@ -1,4 +1,7 @@
 @extends("admin.layout")
+@section("title")
+    Chi tiết
+@endsection
 @section("custom_css")
     <link rel="stylesheet" href="admin/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->

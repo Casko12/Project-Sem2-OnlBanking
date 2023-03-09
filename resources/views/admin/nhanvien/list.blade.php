@@ -1,4 +1,7 @@
 @extends("user.layout")
+@section("title")
+    Danh sách nhân viên
+@endsection
 @section("main_content")
 
     <div class="container" style="margin-top: 200px;margin-bottom: 100px">

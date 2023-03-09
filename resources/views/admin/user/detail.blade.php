@@ -1,4 +1,7 @@
 @extends("user.layout")
+@section("title")
+    Chi tiết người dùng
+@endsection
 @section("main_content")
     <div style="margin-top: 200px;margin-bottom: 100px">
         <h3 style="text-align: center">Chỉnh sửa nhân viên</h3>

@@ -1,4 +1,7 @@
 @extends("admin.layout")
+@section("title")
+    Danh sách
+@endsection
 @section("main_content")
     <div class="card">
         <div class="card-header">

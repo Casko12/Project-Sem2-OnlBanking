@@ -3778,7 +3778,7 @@ select.form-control:not([size]):not([multiple]):not(.form-control-sm) {
 }
 
 a.text-primary:focus, a.text-primary:hover, .btn-link:hover, .link-primary:hover, .link-primary:focus {
-  color: #26a151 !important;
+  color: #252396 !important;
 }
 
 .text-secondary {
@@ -3810,13 +3810,13 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
 }
 
 .btn-primary {
-  background-color: #2dbe60;
-  border-color: #2dbe60;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 
 .btn-primary:hover {
-  background-color: #26a151;
-  border-color: #26a151;
+  background-color: #252396;
+  border-color: #252396;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active {

@@ -14,12 +14,12 @@
 
     <!-- Stylesheet
     ============================================= -->
-{{--    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css" />--}}
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />
-{{--    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />--}}
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
     <!-- Colors Css -->
-    @extends("user.layout")
+{{--    @extends("user.layout")--}}
 </head>
 
 <body>
@@ -179,20 +179,6 @@
 <script src="user/user-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="user/user-page/vendor/daterangepicker/moment.min.js"></script>
 <script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
-{{--<script>--}}
-{{--    $(function() {--}}
-{{--        'use strict';--}}
-{{--        // Birth Date--}}
-{{--        $('#birthDate').daterangepicker({--}}
-{{--            singleDatePicker: true,--}}
-{{--            showDropdowns: true,--}}
-{{--            autoUpdateInput: false,--}}
-{{--            maxDate: moment().add(0, 'days'),--}}
-{{--        }, function(chosen_date) {--}}
-{{--            $('#birthDate').val(chosen_date.format('MM-DD-YYYY'));--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
 <script src="user/user-page/js/theme.js"></script>
 </body>
 </html>

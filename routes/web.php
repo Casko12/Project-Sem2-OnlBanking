@@ -25,7 +25,7 @@ Route::get('/',[App\Http\Controllers\UserController::class,"home"]);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('home');
-Route::get('/user-page/{user}',[App\Http\Controllers\UserController::class,"userPage"]);
+Route::get('/user-info/{user}',[App\Http\Controllers\UserController::class,"userInfo"]);
 Route::get('/login2',[App\Http\Controllers\UserController::class,"login2"]);
 Route::get('/login2',[App\Http\Controllers\UserController::class,"postLogin"]);
 Route::get('/signup',[App\Http\Controllers\UserController::class,"signup"]);

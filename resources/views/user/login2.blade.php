@@ -21,41 +21,60 @@
 </head>
 <body>
 <div id="main-wrapper" class="min-vh-100 d-flex flex-column">
-    <!-- Login Form
-    ============================================= -->
     <div class="container my-auto">
         <div class="row g-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-5 col-xl-4 m-auto py-5">
-                <p class="lead text-center mb-4">We are glad to see you again!</p>
+                <p class="lead text-center mb-4">Vui Lòng Đăng Nhập Để Sử Dụng Dịch Vụ!</p>
+                <?php //Hiển thị thông báo thành công?>
+                @if ( Session::has('success') )
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <strong>{{ Session::get('success') }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                @endif
+                <?php //Hiển thị thông báo lỗi?>
+                @if ( Session::has('error') )
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <strong>{{ Session::get('error') }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                @endif
                 <form id="loginForm" method="post">
                     <div class="vertical-input-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="emailAddress" required placeholder="Your Email">
+                            <input type="text" class="form-control" id="national_id" name="national_id" required placeholder="Your National-id">
                         </div>
                         <div class="input-group">
-                            <input type="password" class="form-control" id="loginPassword" required placeholder="Password">
+                            <input type="password" class="form-control" id="loginPassword" name="password" required placeholder="Password">
                         </div>
                     </div>
                     <div class="d-grid my-4"><button class="btn btn-primary shadow-none" type="submit">Login</button></div>
                 </form>
-                <p class="text-3 text-center text-muted mb-2">Don't have an account? <a class="btn-link" href="{{url("signup")}}">Sign Up</a></p>
-                <p class="text-center mb-0"><a class="btn-link" href="#">Forgot Password?</a></p>
+                <p class="text-3 text-center text-muted mb-2">Tạo Tài Khoản Mới <a class="btn-link" href="{{url("signup")}}">Sign Up</a></p>
+                <p class="text-center mb-0"><a class="btn-link" href="#">Quên Mật Khẩu?</a></p>
             </div>
         </div>
     </div>
-    <!-- Login Form End -->
-
-    <!-- Footer
-    ============================================= -->
-    <div class="container-fluid bg-white py-2">
-        <p class="text-center text-muted mb-0">Copyright &copy; 2022 <a href="#">Payyed</a>. All Rights Reserved.</p>
-    </div>
-
-
 </div>
-
-<!-- Back to Top
-============================================= -->
 <a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 <script src="user/userlogin/vendor/jquery/jquery.min.js"></script>
 <script src="user/userlogin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

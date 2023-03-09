@@ -57,7 +57,7 @@ class UserController extends Controller
         $request->validate([
             "name" => "required|string",
             "email" => "required|numeric",
-            "password" => "required|numeric",
+            "password" => "required|string",
             "telephone" => "required|numeric",
             "birthday" => "required|numeric",
             "address" => "string|required",
@@ -76,7 +76,7 @@ class UserController extends Controller
                 "birthday" => $request->get("birthday"),
                 "national_id" => $request->get("national_id"),
             ]);
-            return redirect()->action("user/signup")->with("success", "Tạo Tài Khoản Thành Công");
+            return redirect()->to("user/signup")->with("success", "Tạo Tài Khoản Thành Công");
         } catch (\Exception $e) {
             return redirect()->back()->with("error", $e->getMessage());
         }

@@ -34,7 +34,7 @@
                         <h3 class="fw-400 text-center mb-4">Đăng Kí</h3>
                         <hr class="mx-n3 mx-sm-n5">
                         <p class="lead text-center">Vui Lòng Điền Thông Tin Của Bạn </p>
-                        <form id="signupForm" method="post" action="{{url("store")}}">
+                        <form id="signupForm" method="post" action="{{url("/store")}}" role="form">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Họ Và Tên</label>
@@ -63,10 +63,6 @@
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" name="password" id="password" required placeholder="Enter Password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" name="confir_password" id="confir_password" required placeholder="Confir Password">
                             </div>
                             <div class="d-grid mt-4 mb-3"><button class="btn btn-primary" type="submit">Sign Up</button></div>
                         </form>

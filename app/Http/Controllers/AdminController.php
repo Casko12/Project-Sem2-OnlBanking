@@ -85,11 +85,11 @@ class AdminController extends Controller
         return redirect()->to("admin/liststaff");
     }
     public function detailStaff(User $user){
-        return view("admin.nhanvien.detail",compact("user"));
+        return view("admin.user.detail",compact("user"));
     }
     public function listUser(){
         $data = User::orderBy("id","desc")->paginate(20);
-        return view("admin.nhanvien.list",[
+        return view("admin.user.list",[
             "data"=>$data,
         ]);
     }

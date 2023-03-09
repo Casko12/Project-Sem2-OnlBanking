@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="{{ url("/") }}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
     <!-- Colors Css -->
+    @yield("custom_css")
 {{--    @extends("user.layout")--}}
 </head>
 
@@ -49,12 +51,12 @@
                     <!-- Profile Details
                     =============================== -->
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-                        <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" src="user/user-page/images/profile-thumb.jpg" alt="">
+                        <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" width="100" height="100" src="{{$user->image_face}}" alt="">
                             <div class="profile-thumb-edit bg-primary text-white" data-bs-toggle="tooltip" title="Change Profile Picture"> <i class="fas fa-camera position-absolute"></i>
                                 <input type="file" class="custom-file-input" id="customFile">
                             </div>
                         </div>
-                        <p class="text-3 fw-500 mb-2">Xin chào, Hà Hoàng Hưng</p>
+                        <p class="text-3 fw-500 mb-2">Xin chào<br> {{$user->name}}</p>
                         <p class="mb-2"><a href="settings-profile.html" class="text-5 text-light" data-bs-toggle="tooltip" title="Edit Profile"><i class="fas fa-edit"></i></a></p>
                     </div>
                     <!-- Profile Details End -->
@@ -63,10 +65,10 @@
                     =============================== -->
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                         <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
-                        <h3 class="text-9 fw-400">VNĐ 567,000.00</h3>
+                        <h3 class="text-9 fw-400">VNĐ {{number_format($account->balance)}}</h3>
                         <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                         <hr class="mx-n3">
-                        <div class="d-flex"><a href="withdraw-money.html" class="btn-link me-auto">Chuyển khoản</a> <a href="deposit-money.html" class="btn-link ms-auto">Danh sách tài khoản</a></div>
+                        <div class="d-flex"><a href="{{url("/money-transfer",["account"=>$account->id])}}" class="btn-link me-auto">Chuyển khoản</a> <a href="deposit-money.html" class="btn-link ms-auto">Danh sách tài khoản</a></div>
                     </div>
                     <!-- Available Balance End -->
 
@@ -95,22 +97,19 @@
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Họ và tên:</p>
-                            <p class="col-sm-9 text-3">Hà Hoàng Hưng</p>
+                            <p class="col-sm-9 text-3">{{$user->name}}</p>
                         </div>
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Ngày sinh:</p>
-                            <p class="col-sm-9 text-3">01-01-1990</p>
+                            <p class="col-sm-9 text-3">{{$user->birthday}}</p>
                         </div>
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Số CCCD:</p>
-                            <p class="col-sm-9 text-3">001010010000</p>
+                            <p class="col-sm-9 text-3">{{$user->national_id}}</p>
                         </div>
                         <div class="row gx-3 align-items-baseline">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Địa chỉ:</p>
-                            <p class="col-sm-9 text-3">Số 8 Tôn Thất Thuyết,<br>
-                                Mỹ Đình, Từ Liêm,<br>
-                                Hà Nội,<br>
-                                Việt Nam.</p>
+                            <p class="col-sm-9 text-3">{{$user->address}}</p>
                         </div>
                     </div>
 
@@ -130,7 +129,11 @@
                         </div>
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Trạng thái tài khoản:</p>
+                            @if($account->status ==1)
                             <p class="col-sm-9 text-3"><span class="bg-success text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-check-circle"></i> Active</span></p>
+                            @else
+                                <p class="col-sm-9 text-3"><span class="bg-danger text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-times-circle"></i> Deactive</span></p>
+                            @endif
                         </div>
                     </div>
 
@@ -180,5 +183,6 @@
 <script src="user/user-page/vendor/daterangepicker/moment.min.js"></script>
 <script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="user/user-page/js/theme.js"></script>
+@yield("custom_js")
 </body>
 </html>

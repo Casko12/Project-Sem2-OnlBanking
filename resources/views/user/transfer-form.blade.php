@@ -93,18 +93,17 @@
                                 <label for="recipientGets" class="form-label">Số tiền</label>
                                 <div class="input-group">
                                     <span class="input-group-text">VNĐ</span>
-                                    <input type="number" required class="form-control" data-bv-field="recipientGets" id="recipientGets" value="1,410.06" placeholder="">
+                                    <input type="number" required class="form-control" name="money" data-bv-field="recipientGets" id="recipientGets" onkeyup="showMoney()"  placeholder="">
                                     <span class="input-group-text p-0">
                     </span>
                                 </div>
                             </div>
                             <div class="mb-4 mb-sm-5">
                                 <label for="description" class="form-label">Nội dung chuyển khoản</label>
-                                <textarea class="form-control" rows="4" id="description" required placeholder="Nhập nội dung chuyển khoản"></textarea>
+                                <textarea class="form-control" rows="4" id="description"  required placeholder="Nhập nội dung chuyển khoản"></textarea>
                             </div><hr>
-                            <p>Phí<span class="float-end">00.00 VNĐ</span></p>
-                            <hr>
-                            <p class="text-4 fw-500">Tổng<span class="float-end">500,000.00 VNĐ</span></p>
+
+                            <p >Tong<span class="float-end" id="totalMoney" ></span></p>
                             <div class="d-grid"><button class="btn btn-primary">Continue</button></div>
                         </form>
                         <!-- Send Money Form end -->
@@ -139,6 +138,20 @@
             }
         })
     }
+
 </script>
+<script>
+    function showMoney(){
+        var phi = $("#phi").val()
+        var money = $("#recipientGets").val()
+        var total =
+        $.ajax({
+            url:"/showmoney",
+            method:"get",
+            success: function (rs){
+               var totalmoney = $("#totalMoney").text(money)
+            }
+        })
+    }</script>
 </body>
 </html>

@@ -66,7 +66,7 @@
                         <h3 class="text-9 fw-400">VNĐ 567,000.00</h3>
                         <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                         <hr class="mx-n3">
-                        <div class="d-flex"><a href="withdraw-money.html" class="btn-link me-auto">Chuyển khoản</a> <a href="deposit-money.html" class="btn-link ms-auto">Xem danh sách tài khoản</a></div>
+                        <div class="d-flex"><a href="withdraw-money.html" class="btn-link me-auto">Chuyển khoản</a> <a href="deposit-money.html" class="btn-link ms-auto">Danh sách tài khoản</a></div>
                     </div>
                     <!-- Available Balance End -->
 

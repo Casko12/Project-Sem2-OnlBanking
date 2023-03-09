@@ -147,7 +147,7 @@
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Email:</p>
-                            <p class="col-sm-9 text-3 d-sm-inline-flex d-md-flex align-items-center">abc@gmail.com<span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
+                            <p class="col-sm-9 text-3 d-sm-inline-flex d-md-flex align-items-center">{{$user->email}}<span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
                         </div>
 
                     </div>
@@ -160,7 +160,7 @@
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Số liên lạc:</p>
-                            <p class="col-sm-9 text-3 align-items-center d-sm-inline-flex d-md-flex">+84 90 1111111<span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
+                            <p class="col-sm-9 text-3 align-items-center d-sm-inline-flex d-md-flex">{{$user->telephone}}<span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
                         </div>
 
                     </div>

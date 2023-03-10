@@ -125,13 +125,66 @@ class UserController extends Controller
 
     public function showMoney(Request $request){
     }
-    public function transferConfirm(){
-        return view("user.transfer-confirm");
+    public function addToCart(Account $account,Request $request){
+        $id = $request->get("transfer_id");
+        $transfer_id = [
+            "transfer_id" => $request->get("transfer_id")
+
+        ];
+        session(["transfer_id"=>$transfer_id]);
+        return redirect()->to("/money-transfer/$id");
+    }
+
+    public function addToCart1(Account $account,Request $request){
+        $request->validate([
+            "account"=>"required|numeric",
+            "money"=>"required|numeric",
+            "description"=>"required|string"
+        ]);
+        $id = $account->id;
+        $reveice_id =  [
+            "receive_id"=> $request->get("account"),
+            "description"=>$request->get("description"),
+            "amount"=>$request->get("money")
+        ];
+        session(["reveice_id"=>$reveice_id]);
+//       $amount = [
+//            "amount"=>$request->get("money")
+//        ];
+//       $desc = [
+//            "description"=>$request->get("description")
+//        ];
+
+//       session(["amount"=>$amount]);
+//       session(["desc"=>$desc]);
+
+        return redirect()->to("/transfer-confirm/$id");
+    }
+    public function transferConfirm(Account $account,Request $request){
+        $transfer = session("transfer_id");
+        $reveice =session("reveice_id");
+
+
+
+
+
+        $account = Account::where("account_number",$reveice["receive_id"])->first();
+
+        if($account!=null){
+            $user = User::find($account->user_id);
+        }
+        return view("user.transfer-confirm",[
+            "reveice"=>$reveice,
+            "transfer"=>$transfer,
+            "user"=>$user,
+            "account"=>$account
+        ]);
     }
     public function transactionHistory(){
         return view("user.transaction-history");
     }
-    public function transferSuccess(){
+    public function transferSuccess(Account $account){
         return view("user.transfer-success");
     }
+
 }

@@ -37,11 +37,16 @@ Route::get('/loan',[App\Http\Controllers\UserController::class,"loan"]);
 Route::get('/personal',[App\Http\Controllers\UserController::class,"personal"]);
 Route::get('/documantUp',[App\Http\Controllers\UserController::class,"documantUp"]);
 Route::get('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"transferForm"]);
+Route::post('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"addToCart"]);
 Route::get('/findname',[App\Http\Controllers\UserController::class,"findName"]);
 Route::get('/showmoney',[App\Http\Controllers\UserController::class,"showMoney"]);
-Route::get('/transfer-confirm',[App\Http\Controllers\UserController::class,"transferConfirm"]);
+Route::get('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"transferConfirm"]);
+Route::post('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"addToCart1"]);
+
+
 Route::get('/transaction-history',[App\Http\Controllers\UserController::class,"transactionHistory"]);
-Route::get('/transfer-success',[App\Http\Controllers\UserController::class,"transferSuccess"]);
+Route::get('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"transferSuccess"]);
+Route::post('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"transferSuccess"]);
 
 
 

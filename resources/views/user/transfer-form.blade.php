@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="{{ url("/") }}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -67,7 +68,7 @@
                         <hr class="mx-n3 mx-sm-n5 mb-4">
                         <!-- Send Money Form
                         ============================ -->
-                        <form id="form-send-money" method="post">
+                        <form id="form-send-money" action="{{url("/transfer-confirm",["account"=>$account->id])}}" method="post">
                             @csrf
                             <div class="mb-3">
                                 <label for="bankID" class="form-label">Chọn Ngân Hàng</label>
@@ -93,18 +94,18 @@
                                 <label for="recipientGets" class="form-label">Số tiền</label>
                                 <div class="input-group">
                                     <span class="input-group-text">VNĐ</span>
-                                    <input type="number" required class="form-control" name="money" data-bv-field="recipientGets" id="recipientGets" onkeyup="showMoney()"  placeholder="">
+                                    <input type="number" required class="form-control" name="money" data-bv-field="recipientGets" id="recipientGets" min="0" onkeyup="showMoney()"  placeholder="">
                                     <span class="input-group-text p-0">
                     </span>
                                 </div>
                             </div>
                             <div class="mb-4 mb-sm-5">
                                 <label for="description" class="form-label">Nội dung chuyển khoản</label>
-                                <textarea class="form-control" rows="4" id="description"  required placeholder="Nhập nội dung chuyển khoản"></textarea>
+                                <textarea class="form-control" rows="4" name="description"  required placeholder="Nhập nội dung chuyển khoản"></textarea>
                             </div><hr>
 
                             <p >Tong<span class="float-end" id="totalMoney" ></span></p>
-                            <div class="d-grid"><button class="btn btn-primary">Continue</button></div>
+                            <div class="d-grid"><button type="submit"  class="btn btn-primary">Continue</button></div>
                         </form>
                         <!-- Send Money Form end -->
                     </div>
@@ -138,20 +139,22 @@
             }
         })
     }
-
-</script>
-<script>
     function showMoney(){
         var phi = $("#phi").val()
         var money = $("#recipientGets").val()
         var total =
-        $.ajax({
-            url:"/showmoney",
-            method:"get",
-            success: function (rs){
-               var totalmoney = $("#totalMoney").text(money)
-            }
-        })
-    }</script>
+            $.ajax({
+                url:"/showmoney",
+                method:"get",
+                success: function (rs){
+                    var totalmoney = $("#totalMoney").text(money)
+                }
+            })
+    }
+
+</script>
+<script>
+    </script>
+
 </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="{{ url("/") }}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -19,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap-select/css/bootstrap-select.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/currency-flags/css/currency-flags.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
-    @extends("user.layout")
+
 </head>
 <body>
 
@@ -61,7 +62,7 @@
                 </div>
             </div>
             <h2 class="fw-400 text-center mt-3">Xác Nhận Chuyển Khoản</h2>
-            <p class="lead text-center mb-4">Bạn đang chuyển khoản tới <span class="fw-500">Hà Hoàng Hưng</span></p>
+            <p class="lead text-center mb-4">Bạn đang chuyển khoản tới <span class="fw-500">{{$user->name}}</span></p>
             <div class="row">
                 <div class="col-md-9 col-lg-7 col-xl-6 mx-auto">
                     <div class="bg-white shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4">
@@ -69,7 +70,8 @@
                         <hr class="mx-n3 mx-sm-n5 mb-4">
                         <!-- Send Money Confirm
                         ============================================= -->
-                        <form id="form-send-money" method="post">
+                        <form id="form-send-money" action="{{url("/transfer-success",["account"=>$transfer])}}" method="post">
+                            @csrf
                             <div class="mb-1">
                                 <label for="recieverID" class="form-label">Nhập mã PIN</label>
                                 <div class="input-group">
@@ -79,11 +81,14 @@
                             <hr class="mx-n3 mx-sm-n5 mb-3 mb-sm-4">
                             <h3 class="text-5 fw-400 mb-3 mb-sm-4">Confirm Details</h3>
                             <hr class="mx-n3 mx-sm-n5 mb-4">
-                            <p class="mb-1">Send Amount <span class="text-3 float-end">1,000.00 USD</span></p>
-                            <p class="mb-1">Total fees <span class="text-3 float-end">7.21 USD</span></p>
+
+                            <p class="mb-1">Send Amount <span class="text-3 float-end">{{$reveice["amount"]}}</span></p>
+                            <p class="mb-1">Total fees <span class="text-3 float-end">{{$reveice["description"]}}</span></p>
+
                             <hr>
-                            <p class="text-4 fw-500">Total<span class="float-end">1,007.21 USD</span></p>
+                            <p class="text-4 fw-500">Total<span class="float-end">{{$reveice["amount"]}}</span></p>
                             <div class="d-grid"><button class="btn btn-primary">Send Money</button></div>
+
                         </form>
                         <!-- Send Money Confirm end -->
                     </div>

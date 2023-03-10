@@ -20,6 +20,10 @@ class Account extends Model
         "balance",
         "status",
     ];
+    /**
+     * @var mixed
+     */
+
 
     public function Bank(){
         return $this->belongsTo(Bank::class);

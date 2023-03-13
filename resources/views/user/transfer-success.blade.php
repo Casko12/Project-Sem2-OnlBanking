@@ -19,10 +19,10 @@
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap-select/css/bootstrap-select.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/currency-flags/css/currency-flags.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
-    @extends("user.layout")
+
 </head>
 <body>
-
+@extends("user.layout2")
 
 
 <!-- Document Wrapper

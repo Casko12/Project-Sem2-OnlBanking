@@ -23,7 +23,7 @@
 
 </head>
 <body>
-
+@extends("user.layout2")
 
 <!-- Document Wrapper
 ============================================= -->

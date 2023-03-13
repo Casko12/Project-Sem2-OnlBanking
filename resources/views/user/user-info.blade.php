@@ -26,10 +26,7 @@
 
 <body>
 
-<!-- Preloader -->
-
-
-<!-- Preloader End -->
+@extends("user.layout2")
 
 <!-- Document Wrapper
 ============================================= -->
@@ -65,10 +62,15 @@
                     =============================== -->
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                         <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
-                        <h3 class="text-9 fw-400">VNĐ {{number_format($account->balance)}}</h3>
+                        <h3 class="text-9 fw-400">VNĐ </h3>
                         <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                         <hr class="mx-n3">
-                        <div class="d-flex"><a href="{{url("/money-transfer",["account"=>$account->id])}}" class="btn-link me-auto">Chuyển khoản</a> <a href="deposit-money.html" class="btn-link ms-auto">Danh sách tài khoản</a></div>
+                        <div class="d-flex"><a href="#" class="btn-link me-auto">Chuyển khoản</a> <select class="form-select"  aria-label="Default select example">
+                                                            <option>Danh sách tài khoản</option>
+                                                            @foreach($account as $acc)
+                                                                <option >{{$acc->account_number}}</option>
+                                                            @endforeach
+                                                        </select></div>
                     </div>
                     <!-- Available Balance End -->
 
@@ -101,8 +103,9 @@
                         </div>
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Ngày sinh:</p>
-                            <p class="col-sm-9 text-3">{{$user->birthday}}</p>
+                            <p class="col-sm-9 text-3">{{date_format(date_create($user->birthday),"d-m-Y")}}</p>
                         </div>
+
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Số CCCD:</p>
                             <p class="col-sm-9 text-3">{{$user->national_id}}</p>
@@ -129,9 +132,9 @@
                         </div>
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Trạng thái tài khoản:</p>
-                            @if($account->status ==1)
+                            @if($user->status ==1)
                                 <p class="col-sm-9 text-3"><span class="bg-success text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-check-circle"></i> Active</span></p>
-                            @elseif($account->status ==2)
+                            @elseif($user->status ==2)
                                 <p class="col-sm-9 text-3"><span class="bg-info text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-exclamation-circle"></i> Pending</span></p>
                             @else
                                 <p class="col-sm-9 text-3"><span class="bg-danger text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-times-circle"></i> Deactive</span></p>

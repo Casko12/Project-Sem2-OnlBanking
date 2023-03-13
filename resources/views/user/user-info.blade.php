@@ -2,37 +2,36 @@
 <html lang="en">
 <head>
     <base href="{{ url("/") }}"/>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-    <link href="user/user-page/images/logomba.png" rel="icon" />
+    <link href="user/user-page/images/logomba.png" rel="icon"/>
     <title>User Information</title>
     <meta name="description" content="Modern Bank online banking">
 
     <!-- Web Fonts
     ============================================= -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
 
     <!-- Stylesheet
     ============================================= -->
-    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css"/>
     <!-- Colors Css -->
     @yield("custom_css")
-{{--    @extends("user.layout")--}}
+    {{--    @extends("user.layout")--}}
 </head>
 
 <body>
 
-@extends("user.layout2")
+@extends("layouts.layout2")
 
 <!-- Document Wrapper
 ============================================= -->
 <div id="main-wrapper">
-
-
 
 
     <!-- Content
@@ -48,13 +47,17 @@
                     <!-- Profile Details
                     =============================== -->
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-                        <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" width="100" height="100" src="{{$user->image_face}}" alt="">
-                            <div class="profile-thumb-edit bg-primary text-white" data-bs-toggle="tooltip" title="Change Profile Picture"> <i class="fas fa-camera position-absolute"></i>
+                        <div class="profile-thumb mt-3 mb-4"><img class="rounded-circle" width="100" height="100"
+                                                                  src="{{$user->image_face}}" alt="">
+                            <div class="profile-thumb-edit bg-primary text-white" data-bs-toggle="tooltip"
+                                 title="Change Profile Picture"><i class="fas fa-camera position-absolute"></i>
                                 <input type="file" class="custom-file-input" id="customFile">
                             </div>
                         </div>
                         <p class="text-3 fw-500 mb-2">Xin chào<br> {{$user->name}}</p>
-                        <p class="mb-2"><a href="settings-profile.html" class="text-5 text-light" data-bs-toggle="tooltip" title="Edit Profile"><i class="fas fa-edit"></i></a></p>
+                        <p class="mb-2"><a href="settings-profile.html" class="text-5 text-light"
+                                           data-bs-toggle="tooltip" title="Edit Profile"><i class="fas fa-edit"></i></a>
+                        </p>
                     </div>
                     <!-- Profile Details End -->
 
@@ -65,12 +68,13 @@
                         <h3 class="text-9 fw-400">VNĐ </h3>
                         <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                         <hr class="mx-n3">
-                        <div class="d-flex"><a href="#" class="btn-link me-auto">Chuyển khoản</a> <select class="form-select"  aria-label="Default select example">
-                                                            <option>Danh sách tài khoản</option>
-                                                            @foreach($account as $acc)
-                                                                <option >{{$acc->account_number}}</option>
-                                                            @endforeach
-                                                        </select></div>
+                        <div class="d-flex"><a href="#" class="btn-link me-auto">Chuyển khoản</a> <select
+                                class="form-select" aria-label="Default select example">
+                                <option>Danh sách tài khoản</option>
+                                @foreach($account as $acc)
+                                    <option>{{$acc->account_number}}</option>
+                                @endforeach
+                            </select></div>
                     </div>
                     <!-- Available Balance End -->
 
@@ -95,7 +99,10 @@
                     <!-- Personal Details
                     ============================================= -->
                     <div class="bg-white shadow-sm rounded p-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Thông tin cá nhân<a href="#edit-personal-details" data-bs-toggle="modal" class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Edit</a></h3>
+                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Thông tin cá nhân<a
+                                href="#edit-personal-details" data-bs-toggle="modal"
+                                class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i
+                                        class="fas fa-edit"></i></span>Edit</a></h3>
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Họ và tên:</p>
@@ -120,7 +127,10 @@
                     <!-- Account Settings
                     ============================================= -->
                     <div class="bg-white shadow-sm rounded p-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Tuỳ chỉnh<a href="#edit-account-settings" data-bs-toggle="modal" class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Edit</a></h3>
+                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Tuỳ chỉnh<a
+                                href="#edit-account-settings" data-bs-toggle="modal"
+                                class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i
+                                        class="fas fa-edit"></i></span>Edit</a></h3>
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Ngôn ngữ:</p>
@@ -133,11 +143,17 @@
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Trạng thái tài khoản:</p>
                             @if($user->status ==1)
-                                <p class="col-sm-9 text-3"><span class="bg-success text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-check-circle"></i> Active</span></p>
+                                <p class="col-sm-9 text-3"><span
+                                        class="bg-success text-white rounded-pill d-inline-block px-2 mb-0"><i
+                                            class="fas fa-check-circle"></i> Active</span></p>
                             @elseif($user->status ==2)
-                                <p class="col-sm-9 text-3"><span class="bg-info text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-exclamation-circle"></i> Pending</span></p>
+                                <p class="col-sm-9 text-3"><span
+                                        class="bg-info text-white rounded-pill d-inline-block px-2 mb-0"><i
+                                            class="fas fa-exclamation-circle"></i> Pending</span></p>
                             @else
-                                <p class="col-sm-9 text-3"><span class="bg-danger text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-times-circle"></i> Deactive</span></p>
+                                <p class="col-sm-9 text-3"><span
+                                        class="bg-danger text-white rounded-pill d-inline-block px-2 mb-0"><i
+                                            class="fas fa-times-circle"></i> Deactive</span></p>
                             @endif
                         </div>
                     </div>
@@ -146,11 +162,15 @@
                     <!-- Email Addresses
                     ============================================= -->
                     <div class="bg-white shadow-sm rounded p-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Email<a href="#edit-email" data-bs-toggle="modal" class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Edit</a></h3>
+                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Email<a href="#edit-email"
+                                                                                         data-bs-toggle="modal"
+                                                                                         class="ms-auto text-2 text-uppercase btn-link"><span
+                                    class="me-1"><i class="fas fa-edit"></i></span>Edit</a></h3>
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Email:</p>
-                            <p class="col-sm-9 text-3 d-sm-inline-flex d-md-flex align-items-center">{{$user->email}}<span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
+                            <p class="col-sm-9 text-3 d-sm-inline-flex d-md-flex align-items-center">{{$user->email}}
+                                <span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
                         </div>
 
                     </div>
@@ -159,11 +179,15 @@
                     <!-- Phone
                     ============================================= -->
                     <div class="bg-white shadow-sm rounded p-4 mb-4">
-                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Điện thoại<a href="#edit-phone" data-bs-toggle="modal" class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Edit</a></h3>
+                        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Điện thoại<a href="#edit-phone"
+                                                                                              data-bs-toggle="modal"
+                                                                                              class="ms-auto text-2 text-uppercase btn-link"><span
+                                    class="me-1"><i class="fas fa-edit"></i></span>Edit</a></h3>
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Số liên lạc:</p>
-                            <p class="col-sm-9 text-3 align-items-center d-sm-inline-flex d-md-flex">{{$user->telephone}}<span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
+                            <p class="col-sm-9 text-3 align-items-center d-sm-inline-flex d-md-flex">{{$user->telephone}}
+                                <span class="badge bg-info text-1 fw-500 rounded-pill px-2 py-1 ms-2">Primary</span></p>
                         </div>
 
                     </div>
@@ -175,7 +199,6 @@
         </div>
     </div>
     <!-- Content end -->
-
 
 
 </div>

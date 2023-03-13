@@ -41,7 +41,7 @@
             <div class="header-column justify-content-start">
                 <!-- Logo
                 ============================= -->
-                <div class="logo me-3"> <a class="d-flex" href="index.html" ><img src="user/user-page/images/mbanking-03.png" alt="Payyed" /></a> </div>
+                <div class="logo me-3"> <a class="d-flex" href="" ><img src="user/user-page/images/mbanking-03.png"  /></a> </div>
                 <!-- Logo end -->
                 <!-- Collapse Button
                 ============================== -->
@@ -61,7 +61,7 @@
                                 <ul class="dropdown-menu">
                                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Headers</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="index.html">Light Version (Default)</a></li>
+                                            <li><a class="dropdown-item" href="/">Light Version (Default)</a></li>
                                             <li><a class="dropdown-item" href="feature-header-dark.html">Dark Version</a></li>
                                             <li><a class="dropdown-item" href="feature-header-primary.html">Primary Version</a></li>
                                             <li><a class="dropdown-item" href="index-2.html">Transparent Version</a></li>

@@ -68,12 +68,7 @@
                         <h3 class="text-9 fw-400">VNĐ {{number_format($account->balance)}}</h3>
                         <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                         <hr class="mx-n3">
-                        <div class="d-flex">
-                            <form action="{{url("/money-transfer",["account"=>$account->id])}}" method="post">
-                                @csrf
-                            <button id="transfer_id" onclick="" type="submit" class="btn btn-primary" name="transfer_id" value="{{$account->id}}">Chuyển khoản</button>
-                            </form>
-                            <a href="deposit-money.html" class="btn-link ms-auto">Danh sách tài khoản</a></div>
+                        <div class="d-flex"><a href="{{url("/money-transfer",["account"=>$account->id])}}" class="btn-link me-auto">Chuyển khoản</a> <a href="deposit-money.html" class="btn-link ms-auto">Danh sách tài khoản</a></div>
                     </div>
                     <!-- Available Balance End -->
 
@@ -190,15 +185,6 @@
 <script src="user/user-page/vendor/daterangepicker/moment.min.js"></script>
 <script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="user/user-page/js/theme.js"></script>
-<script>
-    function trans(){
-        var transfer_id = $("#transfer_id").val()
-        $.ajax({
-            url: "/money-transfer"+"?account="+transfer_id,
-            method: "get"
-        })
-    }
-</script>
 @yield("custom_js")
 </body>
 </html>

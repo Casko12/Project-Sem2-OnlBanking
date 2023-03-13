@@ -103,9 +103,6 @@
 </div>
 <!-- Document Wrapper end -->
 
-<!-- Back to Top
-============================================= -->
-<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 
 <!-- Script -->
 <script src="user/user-page/vendor/jquery/jquery.min.js"></script>

@@ -129,7 +129,6 @@ class UserController extends Controller
         $id = $request->get("transfer_id");
         $transfer_id = [
             "transfer_id" => $request->get("transfer_id")
-
         ];
         session(["transfer_id"=>$transfer_id]);
         return redirect()->to("/money-transfer/$id");
@@ -148,28 +147,13 @@ class UserController extends Controller
             "amount"=>$request->get("money")
         ];
         session(["reveice_id"=>$reveice_id]);
-//       $amount = [
-//            "amount"=>$request->get("money")
-//        ];
-//       $desc = [
-//            "description"=>$request->get("description")
-//        ];
-
-//       session(["amount"=>$amount]);
-//       session(["desc"=>$desc]);
-
         return redirect()->to("/transfer-confirm/$id");
     }
     public function transferConfirm(Account $account,Request $request){
         $transfer = session("transfer_id");
         $reveice =session("reveice_id");
-
-
-
-
-
         $account = Account::where("account_number",$reveice["receive_id"])->first();
-
+//        dd($transfer,$reveice,$account);
         if($account!=null){
             $user = User::find($account->user_id);
         }
@@ -180,11 +164,25 @@ class UserController extends Controller
             "account"=>$account
         ]);
     }
+
+    public function checkPin(Request $request){
+        $transfer = session("transfer_id");
+       $pin = $request->get("pin");
+       $account = Account::find($transfer);
+       $user = User::find($account->user_id);
+       dd($user);
+       if($user->pin == $pin){
+           return redirect()->to("/transfer-success/$transfer");
+       }
+      return redirect()->to("/");
+    }
     public function transactionHistory(){
         return view("user.transaction-history");
     }
     public function transferSuccess(Account $account){
-        return view("user.transfer-success");
+        return view("user.transfer-success",[
+            "account" =>$account
+        ]);
     }
 
 }

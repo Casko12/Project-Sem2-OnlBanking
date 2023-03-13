@@ -70,12 +70,12 @@
                         <hr class="mx-n3 mx-sm-n5 mb-4">
                         <!-- Send Money Confirm
                         ============================================= -->
-                        <form id="form-send-money" action="{{url("/transfer-success",["account"=>$transfer])}}" method="post">
+                        <form id="form-send-money" action="{{url("/transfer-confirm",["account"=>$account->id])}}" method="post">
                             @csrf
                             <div class="mb-1">
                                 <label for="recieverID" class="form-label">Nhập mã PIN</label>
                                 <div class="input-group">
-                                    <input id="pin" type="password" inputmode="number" maxlength="4"/>
+                                    <input id="pin" name="pin" type="password" inputmode="number" maxlength="4"/>
                                 </div>
                             </div>
                             <hr class="mx-n3 mx-sm-n5 mb-3 mb-sm-4">
@@ -87,7 +87,7 @@
 
                             <hr>
                             <p class="text-4 fw-500">Total<span class="float-end">{{$reveice["amount"]}}</span></p>
-                            <div class="d-grid"><button class="btn btn-primary">Send Money</button></div>
+                            <div class="d-grid"><button type="button" onclick="checkPin()" class="btn btn-primary">Send Money</button></div>
 
                         </form>
                         <!-- Send Money Confirm end -->
@@ -105,12 +105,21 @@
 
 <!-- Back to Top
 ============================================= -->
-<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+{{--<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void("0")"><i class="fa fa-chevron-up"></i></a>--}}
 
 <!-- Script -->
 <script src="user/user-page/vendor/jquery/jquery.min.js"></script>
 <script src="user/user-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="user/user-page/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
 <script src="user/user-page/js/theme.js"></script>
+<script>
+    function checkPin(){
+        var pin = $("#pin").val();
+        $.ajax({
+            url: "/checkpin"+"?pin="+pin,
+            method:"get"
+        })
+    }
+</script>
 </body>
 </html>

@@ -21,66 +21,6 @@ class UserController extends Controller
                 "account"=>$account
         ]);
     }
-    public function login2(){
-        return view("user.login2");
-    }
-    public function postLogin(Request $request) {
-        $rules = [
-            'national_id' =>'required',
-            'password' => 'required|min:6'
-        ];
-        $messages = [
-            'email.required' => 'Email là trường bắt buộc',
-            'password.required' => 'Mật khẩu là trường bắt buộc',
-            'password.min' => 'Mật khẩu phải chứa ít nhất 8 ký tự',
-        ];
-        $validator = Validator::make($request->all(), $rules, $messages);
-        if ($validator->fails()) {
-            return redirect('login2')->withErrors($validator)->withInput();
-        } else {
-            $national_id = $request->input('national_id');
-            $password = $request->input('password');
-
-            if( Auth::attempt(['national_id' => $national_id, 'password' =>$password])) {
-                return redirect('user-page');
-            } else {
-                Session::flash('error', 'Email hoặc mật khẩu không đúng!');
-                return redirect('login2');
-            }
-        }
-    }
-    public function signup(){
-        return view("user.signup");
-    }
-    public function store(Request $request)
-    {
-        $request->validate([
-            "name" => "required|string",
-            "email" => "required|numeric",
-            "password" => "required|string",
-            "telephone" => "required|numeric",
-            "birthday" => "required|numeric",
-            "address" => "string|required",
-            "national_id" => "required"
-        ], [
-            "required" => "Vui lòng nhập thông tin",
-            "string" => "Phải nhập vào là một chuỗi văn bản"
-        ]);
-        try {
-            User::create([
-                "name" => $request->get("name"),
-                "email" => $request->get("email"),
-                "address" => $request->get("address"),
-                "password" => $request->get("password"),
-                "telephone" => $request->get("telephone"),
-                "birthday" => $request->get("birthday"),
-                "national_id" => $request->get("national_id"),
-            ]);
-            return redirect()->to("user/signup")->with("success", "Tạo Tài Khoản Thành Công");
-        } catch (\Exception $e) {
-            return redirect()->back()->with("error", $e->getMessage());
-        }
-    }
     public function veChungToi(){
         return view("user.ve-chung-toi");
     }

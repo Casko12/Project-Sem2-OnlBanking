@@ -11,8 +11,14 @@ class AdminController extends Controller
         return view("admin.admin");
     }
 
-    public function listStaff(){
-        $data = User::orderBy("id","desc")->paginate(20);
+    public function listStaff(Request $request){
+        $search =$request->get("search");
+        $data = User::orderBy("id","desc")
+            ->Search($search)
+            ->where("name","like","%$search%")
+            ->orWhere("email","like","%$search%")
+            ->orWhere("national_id","like","%$search%")
+            ->paginate(20);
         return view("admin.nhanvien.list",[
             "data"=>$data,
         ]);
@@ -87,8 +93,14 @@ class AdminController extends Controller
     public function detailStaff(User $user){
         return view("admin.user.detail",compact("user"));
     }
-    public function listUser(){
-        $data = User::orderBy("id","desc")->paginate(20);
+    public function listUser(Request $request){
+        $search =$request->get("search");
+        $data = User::orderBy("id","desc")
+            ->Search($search)
+            ->where("name","like","%$search%")
+            ->orWhere("email","like","%$search%")
+            ->orWhere("national_id","like","%$search%")
+            ->paginate(20);
         return view("admin.user.list",[
             "data"=>$data,
         ]);

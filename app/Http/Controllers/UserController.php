@@ -151,6 +151,7 @@ class UserController extends Controller
     }
     public function transferConfirm(Account $account,Request $request){
         $transfer = session("transfer_id");
+        $id = $transfer['transfer_id'];
         $reveice =session("reveice_id");
         $account = Account::where("account_number",$reveice["receive_id"])->first();
 //        dd($transfer,$reveice,$account);
@@ -161,27 +162,51 @@ class UserController extends Controller
             "reveice"=>$reveice,
             "transfer"=>$transfer,
             "user"=>$user,
-            "account"=>$account
+            "account"=>$account,
+            "id"=>$id
         ]);
     }
 
     public function checkPin(Request $request){
         $transfer = session("transfer_id");
+        $reveice =session("reveice_id");
+        $id = $transfer["transfer_id"];
        $pin = $request->get("pin");
-       $account = Account::find($transfer);
-       $user = User::find($account->user_id);
-       dd($user);
-       if($user->pin == $pin){
-           return redirect()->to("/transfer-success/$transfer");
+       $account2 = Account::where("account_number",$reveice["receive_id"])->first();
+       $account1 = Account::where('id',$transfer["transfer_id"])->first();
+       $transfer_amount = $account1->balance -=$reveice["amount"];
+       $transfer_receive = $account2->balance +=$reveice["amount"];
+       $amount = $reveice['amount'];
+
+       $user = User::find($account1->user_id);
+
+       if($pin == $user->pin){
+          $account1->update([
+              "balance"=> $transfer_amount
+          ]);
+           $account2->update([
+               "balance"=> $transfer_receive
+           ]);
+           $account1->createHistory($account2,$amount);
+           return redirect()->to("/transfer-success/$id");
        }
-      return redirect()->to("/");
+
+      return redirect()->back();
     }
     public function transactionHistory(){
         return view("user.transaction-history");
     }
     public function transferSuccess(Account $account){
+        $reveice =session("reveice_id");
+        $account = Account::where("account_number",$reveice["receive_id"])->first();
+//        dd($reveice,$account);
+        if($account!=null){
+            $user = User::find($account->user_id);
+        }
         return view("user.transfer-success",[
-            "account" =>$account
+            "account" =>$account,
+            "reveice" => $reveice,
+            "user"=>$user
         ]);
     }
 

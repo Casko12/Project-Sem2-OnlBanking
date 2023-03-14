@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Account extends Model
 {
@@ -45,7 +46,22 @@ class Account extends Model
         }
             return $query;
     }
+    public function createHistory($account2,$amount){
+        $reveice =session("reveice_id");
 
+            DB::table("transaction_history")->insert([
+                "transfer_id"=>$this->id,
+                "receive_id"=>$account2->id,
+                "amount"=>$amount,
+                "created_at"=>now()
+            ]);
+
+        //phat su kien
+//        event(new NewOrder($this));
+
+
+
+    }
 
 
 }

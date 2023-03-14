@@ -70,12 +70,12 @@
                         <hr class="mx-n3 mx-sm-n5 mb-4">
                         <!-- Send Money Confirm
                         ============================================= -->
-                        <form id="form-send-money" action="{{url("/transfer-success",["account"=>$transfer])}}" method="post">
+                        <form id="form-send-money" action="{{url("/transfer-success",["account"=>$id])}}" method="post">
                             @csrf
                             <div class="mb-1">
                                 <label for="recieverID" class="form-label">Nhập mã PIN</label>
                                 <div class="input-group">
-                                    <input id="pin" type="password" inputmode="number" maxlength="4"/>
+                                    <input name="pin" type="password" inputmode="number" maxlength="4"/>
                                 </div>
                             </div>
                             <hr class="mx-n3 mx-sm-n5 mb-3 mb-sm-4">
@@ -87,7 +87,7 @@
 
                             <hr>
                             <p class="text-4 fw-500">Total<span class="float-end">{{$reveice["amount"]}}</span></p>
-                            <div class="d-grid"><button class="btn btn-primary">Send Money</button></div>
+                            <div class="d-grid"><button type="submit" class="btn btn-primary">Send Money</button></div>
 
                         </form>
                         <!-- Send Money Confirm end -->

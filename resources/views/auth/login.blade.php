@@ -27,8 +27,8 @@
         <div class="row g-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-5 col-xl-4 m-auto py-5">
                 <p class="lead text-center mb-4">Vui Lòng Đăng Nhập Để Sử Dụng Dịch Vụ!</p>
-                <form method="post" action="{{ route('login') }}>
-                    <div class="vertical-input-group">
+                <form method="post" action= "{{ route('login') }}">
+                    <div class= "vertical-input-group">
                         <div class="input-group">
                             <input  placeholder="National_id" id="national_id" type="text" class="form-control @error('national_id') is-invalid @enderror" name="national_id" value="{{ old('national_id') }}" required autocomplete="national_id">
                             @error('national_id')

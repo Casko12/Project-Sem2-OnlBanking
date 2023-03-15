@@ -81,10 +81,9 @@ class UserController extends Controller
             "description"=>"required|string"
         ]);
         $receive_id= $request->get("account");
-        $amount = $request->get("description");
+        $amount = $request->get("money");
         $id = $account->id;
-        $user = User::find($id)->first();
-        if($user->account_number != $receive_id && $user->balance >=$amount){
+        if($account->account_number != $receive_id && $account->balance >=$amount){
         $reveice_id =  [
             "receive_id"=> $request->get("account"),
             "description"=>$request->get("description"),

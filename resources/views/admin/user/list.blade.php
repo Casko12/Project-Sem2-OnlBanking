@@ -1,4 +1,16 @@
-@extends("user.layout")
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>@extends("user.layout")
 @section("title")
     Danh sách người dùng
 @endsection
@@ -6,8 +18,19 @@
 
     <div class="container" style="margin-top: 200px;margin-bottom: 100px">
         <h3 style="text-align: center">Danh sách người dùng</h3>
-        <div style="margin-bottom: 10px">
-            <a class="theme-btn" href="#">Thêm mới</a>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-6">
+                <a class="theme-btn" href="#">Thêm mới</a>
+            </div>
+
+            <div class="col-md-6" style="margin-top: 22px">
+                <form action="/admin/listuser" method="get">
+                    <div style="float: right">
+                        <input type="search" value="{{app("request")->input("search")}}" name="search" id="search" placeholder="Search"/>
+                        <button type="submit" style="background-color: #0a53be; color: white;border: 1px;text-align: center">Tìm kiếm</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <div>
 
@@ -38,6 +61,8 @@
 
                     </tr>
                 @endforeach
+                </tbody>
+                <tbody id="Content">
 
                 </tbody>
             </table>
@@ -48,3 +73,5 @@
     </div>
     <!-- /.card -->
 @endsection
+
+

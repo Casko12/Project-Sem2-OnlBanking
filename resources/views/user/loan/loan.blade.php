@@ -30,60 +30,12 @@
                 <div class="col-lg-9">
                     <div class="loan-details-widget bg_white">
                         <form action="{{url("/personal")}}">
-                            <div class="row mb-35 gy-4">
-                                <div class="col-lg-3 col-md-6">
-                                    <input class="select-loan-type-radio" name="select-loan-type" type="radio"
-                                           id="Personal_loan">
-                                    <label for="Personal_loan" class="loan-type">
-                                        <img src="/user/html/img/apply-loan/icon-4.1.png" alt="icon">
-                                        <img src="/user/html/img/apply-loan/icon-4.2.png" alt="icon">
-                                        <span>Vay tiêu dùng</span>
-                                    </label>
-
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <input class="select-loan-type-radio" name="select-loan-type" type="radio"
-                                           id="Home_loan">
-                                    <label for="Home_loan" class="loan-type">
-                                        <img src="/user/html/img/apply-loan/icon-5.1.png" alt="icon">
-                                        <img src="/user/html/img/apply-loan/icon-5.2.png" alt="icon">
-                                        <span>Vay mua nhà</span>
-                                    </label>
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <input class="select-loan-type-radio" name="select-loan-type" type="radio"
-                                           id="Buisness_loan">
-                                    <label for="Buisness_loan" class="loan-type">
-                                        <img src="/user/html/img/apply-loan/icon-6.1.png" alt="icon">
-                                        <img src="/user/html/img/apply-loan/icon-6.2.png" alt="icon">
-                                        <span>Vay trả nợ</span>
-                                    </label>
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <input class="select-loan-type-radio" name="select-loan-type" type="radio"
-                                           id="Car_loan">
-                                    <label for="Car_loan" class="loan-type">
-                                        <img src="/user/html/img/apply-loan/icon-7.1.png" alt="icon">
-                                        <img src="/user/html/img/apply-loan/icon-7.2.png" alt="icon">
-                                        <span>Vay mua ô tô</span>
-                                    </label>
-                                </div>
-                            </div>
                             <div class="row gy-4">
                                 <div class="col-md-6">
-                                    <label class="label" for="loandetails01">Chọn loại tài chính của bạn</label>
+                                    <label class="label" for="loandetails01">Chọn hình thức vay</label>
                                     <select class="w-100" id="loandetails01">
-                                        <option value="Debt-Financing">Nợ tài chính</option>
-                                        <option value="Equity-Finance">Tài chính vốn chủ sở hữu</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="label" for="loandetails02">Chọn ngân hàng bạn ưa thích
-                                    </label>
-                                    <select class=" w-100" id="loandetails02">
-                                        <option value="Individual-Banking">Ngân hàng cá nhân</option>
-                                        <option value="Business-Banking">Ngân hàng thương mại</option>
-                                        <option value="Digital-Banking">Ngân hàng số</option>
+                                        <option value="Debt-Financing">Vay tiền mặt</option>
+                                        <option value="Equity-Finance">Vay tín dụng số</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">

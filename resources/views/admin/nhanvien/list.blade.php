@@ -6,8 +6,19 @@
 
     <div class="container" style="margin-top: 200px;margin-bottom: 100px">
         <h3 style="text-align: center">Danh sách nhân viên</h3>
-        <div style="margin-bottom: 10px">
-            <a class="theme-btn" href="#">Thêm mới</a>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-6">
+                <a class="theme-btn" href="#">Thêm mới</a>
+            </div>
+
+            <div class="col-md-6" style="margin-top: 22px">
+                <form action="/admin/liststaff" method="get">
+                    <div style="float: right">
+                        <input type="search" value="{{app("request")->input("search")}}" name="search" id="search" placeholder="Search"/>
+                        <button type="submit" style="background-color: #0a53be; color: white;border: 1px;text-align: center">Tìm kiếm</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <div>
 

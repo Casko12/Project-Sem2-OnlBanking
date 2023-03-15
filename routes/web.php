@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 /*
@@ -25,7 +26,7 @@ Route::get('/',[App\Http\Controllers\UserController::class,"home"]);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('home');
-Route::get('/user-info/{user}',[App\Http\Controllers\UserController::class,"userInfo"]);
+Route::get('/user-info/{user}',[App\Http\Controllers\UserController::class,"userInfo"])->name("userInfo");
 Route::get('/ve-chung-toi',[App\Http\Controllers\UserController::class,"veChungToi"]);
 Route::get('/phat-trien',[App\Http\Controllers\UserController::class,"phatTrien"]);
 Route::get('/an-toan',[App\Http\Controllers\UserController::class,"anToan"]);
@@ -44,12 +45,12 @@ Route::post('/transfer-confirm/{account}',[App\Http\Controllers\UserController::
 Route::get('/transaction-history',[App\Http\Controllers\UserController::class,"transactionHistory"]);
 Route::get('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"transferSuccess"]);
 Route::post('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"checkPin"]);
-//Route::post('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"addToHistory"]);
 
 
 
 
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+

@@ -86,6 +86,33 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
+                                <label for="telephone" class="form-label">Anh khuan mat</label>
+                                <input id="telephone" type="file" class="form-control @error('image_face') is-invalid @enderror" name="image_face" value="{{ old('image_face') }}" required  autofocus>
+                                @error('telephone')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label">anh cc1</label>
+                                <input id="telephone" type="file" class="form-control @error('image_id1') is-invalid @enderror" name="image_id1" value="{{ old('image_id1') }}" required  autofocus>
+                                @error('telephone')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label">anh cc2</label>
+                                <input id="telephone" type="file" class="form-control @error('image_id2') is-invalid @enderror" name="image_id2" value="{{ old('image_id2') }}" required  autofocus>
+                                @error('telephone')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                 @error('password')
@@ -98,7 +125,7 @@
                                 <label for="retype-password" class="form-label">Retype Password</label>
                                 <input id="password-confirm" placeholder="Retype password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
-                            <div class="d-grid mt-4 mb-3"><button class="btn btn-primary" type="submit">Sign Up</button></div>
+                            <div class="d-grid mt-4 mb-3"><button class="btn btn-primary" name="status" value="0" type="submit">Sign Up</button></div>
                         </form>
                         <p class="text-3 text-muted text-center mb-0">Already have an account? <a class="btn-link" href="{{route("login")}}">Log In</a></p>
                     </div>

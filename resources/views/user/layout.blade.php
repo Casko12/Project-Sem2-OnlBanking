@@ -65,7 +65,17 @@
                             </li>
                             <li>
 
-                                <i class="fa-solid fa-right-to-bracket"></i><a href="{{route("login")}}">Đăng nhập</a>
+
+                                @guest
+                                    <i class="fa-solid fa-right-to-bracket"></i><a href="{{route("login")}}">Đăng nhập</a>
+                                @endguest
+
+                                @auth
+                                    <form action="{{route("logout")}}" method="post">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary">Logout</button>
+                                    </form>
+                                @endauth
                             </li>
                         </ul>
                     </div>

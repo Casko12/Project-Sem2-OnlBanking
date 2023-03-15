@@ -80,7 +80,11 @@ class UserController extends Controller
             "money"=>"required|numeric",
             "description"=>"required|string"
         ]);
+        $receive_id= $request->get("account");
+        $amount = $request->get("description");
         $id = $account->id;
+        $user = User::find($id)->first();
+        if($user->account_number != $receive_id && $user->balance >=$amount){
         $reveice_id =  [
             "receive_id"=> $request->get("account"),
             "description"=>$request->get("description"),
@@ -88,6 +92,8 @@ class UserController extends Controller
         ];
         session(["reveice_id"=>$reveice_id]);
         return redirect()->to("/transfer-confirm/$id");
+        }
+        return redirect()->back();
     }
     public function transferConfirm(Account $account,Request $request){
         $transfer = session("transfer_id");

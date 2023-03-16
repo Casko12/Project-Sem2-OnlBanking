@@ -73,7 +73,8 @@
                                 @auth
                                     <form action="{{route("logout")}}" method="post">
                                         @csrf
-                                        <button type="submit" class="btn btn-primary">Logout</button>
+                                        <button type="submit" class="btn btn-default" style="color: #bbc0c4">Đăng xuất</button>
+
                                     </form>
                                 @endauth
                             </li>

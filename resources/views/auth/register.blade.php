@@ -1,3 +1,4 @@
+
 @section('content')
 @endsection
 <!DOCTYPE html>
@@ -29,120 +30,134 @@
     <div id="content">
         <div class="container py-5">
             <div class="row">
-                <div class="col-md-9 col-lg-7 col-xl-5 mx-auto">
-                    <div class="bg-white shadow-md rounded p-3 pt-sm-4 pb-sm-5 px-sm-5">
                         <h3 class="fw-400 text-center mb-4">Đăng Kí</h3>
-                        <hr class="mx-n3 mx-sm-n5">
-                        <p class="lead text-center">Vui Lòng Điền Thông Tin Của Bạn </p>
+                        <hr class="col-md-12" style="color: red">
+                        <p class="lead text-center" >Vui Lòng Điền Thông Tin Của Bạn </p>
                         <form id="signupForm" method="post" action="{{ route('register') }}" enctype="multipart/form-data" role="form">
                             @csrf
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Họ Và Tên</label>
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Name" autofocus>
-                                @error('name')
-                                <span class="invalid-feedback" role="alert">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label" style="color: red">Họ Và Tên *</label>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Tên" autofocus>
+                                    @error('name')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input  placeholder="Email" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label"style="color: red">Email *</label>
+                                    <input  placeholder="Email" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="birthday" class="form-label">Bạn Sinh Ngày?</label>
-                                <input type="date" class="form-control" name="birthday" id="birthday" required placeholder="Enter Your Birthday">
-                            </div>
-                            <div class="mb-3">
-                                <label for="address" class="form-label">Địa Chỉ Thường Trú</label>
-                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="Address" autofocus>
-                                @error('address')
-                                <span class="invalid-feedback" role="alert">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="birthday" class="form-label"style="color: red">Bạn Sinh Ngày? *</label>
+                                    <input type="date" class="form-control" name="birthday" id="birthday" required placeholder="Enter Your Birthday">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="address" class="form-label"style="color: red">Địa Chỉ Thường Trú *</label>
+                                    <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="Địa chỉ của bạn" autofocus>
+                                    @error('address')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="national_id" class="form-label">Số CMT/CCCD của bạn</label>
-                                <input id="national_id" type="text" class="form-control @error('national_id') is-invalid @enderror" name="national_id" value="{{ old('national_id') }}" required autocomplete="national_id" placeholder="National_id" autofocus>
-                                @error('national_id')
-                                <span class="invalid-feedback" role="alert">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="national_id" class="form-label"style="color: red">Số CMT/CCCD của bạn *</label>
+                                    <input id="national_id" type="text" class="form-control @error('national_id') is-invalid @enderror" name="national_id" value="{{ old('national_id') }}" required autocomplete="national_id" placeholder="Căn cước công dân" autofocus>
+                                    @error('national_id')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-                            <div class="mb-3">
-                                <label for="telephone" class="form-label">Số Điện Thoại</label>
-                                <input id="telephone" type="text" class="form-control @error('telephone') is-invalid @enderror" name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone" placeholder="Telephone" autofocus>
-                                @error('telephone')
-                                <span class="invalid-feedback" role="alert">
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telephone" class="form-label"style="color: red">Số Điện Thoại *</label>
+                                    <input id="telephone" type="text" class="form-control @error('telephone') is-invalid @enderror" name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone" placeholder="Số điện thoại" autofocus>
+                                    @error('telephone')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="telephone" class="form-label">Anh khuan mat</label>
-                                <input id="image_face" type="file" class="form-control @error('image_face') is-invalid @enderror" name="image_face" value="{{ old('image_face') }}" required  autofocus>
-                                @error('telephone')
-                                <span class="invalid-feedback" role="alert">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="telephone" class="form-label"style="color: red">Ảnh chân dung *</label>
+                                    <input id="image_face" type="file" class="form-control @error('image_face') is-invalid @enderror" name="image_face" value="{{ old('image_face') }}" required  autofocus>
+                                    @error('telephone')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-                            <div class="mb-3">
-                                <label for="telephone" class="form-label">anh cc1</label>
-                                <input id="image_id1" type="file" class="form-control @error('image_id1') is-invalid @enderror" name="image_id1" value="{{ old('image_id1') }}" required  autofocus>
-                                @error('telephone')
-                                <span class="invalid-feedback" role="alert">
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telephone" class="form-label" style="color: red">Ảnh mặt trước căn cước *</label>
+                                    <input id="image_id1" type="file" class="form-control @error('image_id1') is-invalid @enderror" name="image_id1" value="{{ old('image_id1') }}" required  autofocus>
+                                    @error('telephone')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="telephone" class="form-label">anh cc2</label>
-                                <input id="image_id2" type="file" class="form-control @error('image_id2') is-invalid @enderror" name="image_id2" value="{{ old('image_id2') }}" required  autofocus>
-                                @error('telephone')
-                                <span class="invalid-feedback" role="alert">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="telephone" class="form-label"style="color: red">Ảnh mặt sau căn cước * </label>
+                                    <input id="image_id2" type="file" class="form-control @error('image_id2') is-invalid @enderror" name="image_id2" value="{{ old('image_id2') }}" required  autofocus>
+                                    @error('telephone')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="password" class="form-label"style="color: red">Mã Pin *</label>
+                                    <input placeholder="Mã Pin" id="pin" type="password" class="form-control @error('pin') is-invalid @enderror" name="pin" required autocomplete="new-password">
+                                    @error('pin')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
+
                             </div>
-                            <div class="mb-3">
-                                <label for="retype-password" class="form-label">Retype Password</label>
-                                <input id="password-confirm" placeholder="Retype password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input placeholder="pin" id="pin" type="password" class="form-control @error('pin') is-invalid @enderror" name="pin" required autocomplete="new-password">
-                                @error('pin')
-                                <span class="invalid-feedback" role="alert">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="password" class="form-label"style="color: red">Mật khẩu *</label>
+                                    <input placeholder="Mật khẩu" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="retype-password" class="form-label" style="color: red">Xác nhận mật khẩu *</label>
+                                    <input id="password-confirm" placeholder="xác nhận mật khẩu" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                </div>
                             </div>
-                            <div class="d-grid mt-4 mb-3"><button class="btn btn-primary" name="status" value="0" type="submit">Sign Up</button></div>
+                            <div class="row">
+                                <div class="d-grid mt-4 col-md-2"><button class="btn btn-primary" name="status" value="0" type="submit">Đăng kí</button></div>
+                                <div class="d-grid mt-4 col-md-10"><p style="margin-top: 29px;font-size: 16px">Already have an account? <a class="btn-link" href="{{route("login")}}">Log In</a><p></p></div>
+                            </div>
                         </form>
-                        <p class="text-3 text-muted text-center mb-0">Already have an account? <a class="btn-link" href="{{route("login")}}">Log In</a></p>
-                    </div>
-                </div>
+
             </div>
         </div>
-
-
     </div>
     <script src="user/userlogin/vendor/jquery/jquery.min.js"></script>
     <script src="user/userlogin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

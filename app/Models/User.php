@@ -57,6 +57,9 @@ class User extends Authenticatable
     public function Account(){
         return $this->hasMany(Account::class);
     }
+    public function firstAccount(){
+        return $this->hasOne(Account::class);
+    }
 
     public function scopeSearch($query,$search){
         if ($search && $search !=0){

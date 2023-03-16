@@ -63,15 +63,41 @@
 
                     <!-- Available Balance
                     =============================== -->
-                    <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-                        <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
-                        <h3 class="text-9 fw-400">VNĐ {{number_format($account->balance)}}</h3>
-                        <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
-                        <hr class="mx-n3">
-                        <form action="{{url("/money-transfer",["account"=>$account->id])}}" method="post">
-                            @csrf
-                        <div class="d-flex"><button type="submit" name="transfer_id" value="{{$account->id}}" class="btn btn-primary">Chuyển khoản</button>
-                        <a href="deposit-money.html" class="btn-link ms-auto">Danh sách tài khoản</a></div></form>
+
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            @foreach($allaccount as $item)
+
+                            <div class="carousel-item @if($loop->first)active @endif">
+                                <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
+                                    <h3 class="text-9 fw-400">{{$item->account_number}}</h3>
+                                    <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
+                                    <h3 class="text-9 fw-400">VNĐ {{number_format($item->balance)}}</h3>
+                                    <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
+                                    <hr class="mx-n3">
+                                    <form action="{{url("/money-transfer",["account"=>$item->id])}}" method="post">
+                                        @csrf
+                                        <div class="d-flex"><button type="submit" name="transfer_id" value="{{$item->id}}" class="btn btn-primary">Chuyển khoản</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            @endforeach
+
+                        </div>
+                        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+                            <span class="visually-hidden" >Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                     <!-- Available Balance End -->
 
@@ -188,6 +214,19 @@
 <script src="user/user-page/vendor/daterangepicker/moment.min.js"></script>
 <script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="user/user-page/js/theme.js"></script>
-@yield("custom_js")
+
+<script>
+    function changeAccount(){
+        var changer = $( "#changerAccount" ).val();
+        $.ajax({
+            url:"/changeAccount/"+"?account_number="+changer,
+            method: "get",
+            success: function (rs) {
+                $("#balance").val(rs.balance)
+            }
+        })
+    }
+</script>
+
 </body>
 </html>

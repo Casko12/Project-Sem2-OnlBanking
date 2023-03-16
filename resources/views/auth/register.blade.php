@@ -34,7 +34,7 @@
                         <h3 class="fw-400 text-center mb-4">Đăng Kí</h3>
                         <hr class="mx-n3 mx-sm-n5">
                         <p class="lead text-center">Vui Lòng Điền Thông Tin Của Bạn </p>
-                        <form id="signupForm" method="post" action="{{ route('register') }}" role="form">
+                        <form id="signupForm" method="post" action="{{ route('register') }}" enctype="multipart/form-data" role="form">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Họ Và Tên</label>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="telephone" class="form-label">Anh khuan mat</label>
-                                <input id="telephone" type="file" class="form-control @error('image_face') is-invalid @enderror" name="image_face" value="{{ old('image_face') }}" required  autofocus>
+                                <input id="image_face" type="file" class="form-control @error('image_face') is-invalid @enderror" name="image_face" value="{{ old('image_face') }}" required  autofocus>
                                 @error('telephone')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="telephone" class="form-label">anh cc1</label>
-                                <input id="telephone" type="file" class="form-control @error('image_id1') is-invalid @enderror" name="image_id1" value="{{ old('image_id1') }}" required  autofocus>
+                                <input id="image_id1" type="file" class="form-control @error('image_id1') is-invalid @enderror" name="image_id1" value="{{ old('image_id1') }}" required  autofocus>
                                 @error('telephone')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -105,7 +105,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="telephone" class="form-label">anh cc2</label>
-                                <input id="telephone" type="file" class="form-control @error('image_id2') is-invalid @enderror" name="image_id2" value="{{ old('image_id2') }}" required  autofocus>
+                                <input id="image_id2" type="file" class="form-control @error('image_id2') is-invalid @enderror" name="image_id2" value="{{ old('image_id2') }}" required  autofocus>
                                 @error('telephone')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -124,6 +124,15 @@
                             <div class="mb-3">
                                 <label for="retype-password" class="form-label">Retype Password</label>
                                 <input id="password-confirm" placeholder="Retype password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input placeholder="pin" id="pin" type="password" class="form-control @error('pin') is-invalid @enderror" name="pin" required autocomplete="new-password">
+                                @error('pin')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="d-grid mt-4 mb-3"><button class="btn btn-primary" name="status" value="0" type="submit">Sign Up</button></div>
                         </form>

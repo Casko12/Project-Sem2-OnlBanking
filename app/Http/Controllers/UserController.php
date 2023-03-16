@@ -6,6 +6,7 @@ use App\Models\Account;
 use App\Models\Bank;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -128,7 +129,7 @@ class UserController extends Controller
 
        $user = User::find($account1->user_id);
 
-       if($pin == $user->pin){
+       if(Hash::check($pin, $user->pin)){
           $account1->update([
               "balance"=> $transfer_amount
           ]);

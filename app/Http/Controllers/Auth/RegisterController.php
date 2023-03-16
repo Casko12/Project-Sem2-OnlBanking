@@ -68,56 +68,58 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        if ($data ->hasFile("image_face")){
-            $file = $data->file("image_face");
+
+       // return
+    }
+
+    public function register(Request $request,User $user)
+    {
+
+        $this->validator($request->all())->validate();
+            $image_face = $request->get("image_face");
+//        dd($request);
+        if ($request ->hasFile("image_face")){
+            $file = $request->file("image_face");
             $fileName = time().$file->getClientOriginalName();
 
             $path = public_path("uploads/image_faces");
             $file->move($path,$fileName);
             $image_face = "/uploads/image_faces/".$fileName;
         }
-
-        if ($data ->hasFile("image_id1")){
-            $file = $data->file("image_id1");
+            $image_id1 = $request->get("image_id1");
+        if ($request ->hasFile("image_id1")){
+            $file = $request->file("image_id1");
             $fileName = time().$file->getClientOriginalName();
 
             $path = public_path("uploads/image_id1");
             $file->move($path,$fileName);
             $image_id1 = "/uploads/image_id1/".$fileName;
         }
-
-        if ($data ->hasFile("image_id2")) {
-            $file = $data->file("image_id2");
+            $image_id2 = $request->get("image_id2");
+        if ($request ->hasFile("image_id2")) {
+            $file = $request->file("image_id2");
             $fileName = time() . $file->getClientOriginalName();
 
             $path = public_path("uploads/image_id2");
             $file->move($path, $fileName);
             $image_id2 = "/uploads/image_id2/" . $fileName;
         }
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'birthday' => $data['birthday'],
-            'telephone' => $data['telephone'],
+        $user = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'birthday' => $request['birthday'],
+            'telephone' => $request['telephone'],
             'image_face' => $image_face,
             'image_id1' => $image_id1,
             'image_id2' => $image_id2,
-            'address' => $data['address'],
-            "status"=>$data["status"],
-            'national_id' => $data['national_id'],
-            'password' => Hash::make($data['password']),
+            'address' => $request['address'],
+            "status"=>$request["status"],
+            'national_id' => $request['national_id'],
+            'password' => Hash::make($request['password']),
+            'pin'=>Hash::make($request['pin'])
 
         ]);
-    }
-
-    public function register(Request $request)
-    {
-
-        $this->validator($request->all())->validate();
-
-
-
-        event(new Registered($user = $this->create($request->all())));
+        event(new Registered($user));
 
         $this->guard()->login($user);
 

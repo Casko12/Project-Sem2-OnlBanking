@@ -34,8 +34,7 @@ Route::get('/ve-chung-toi',[App\Http\Controllers\UserController::class,"veChungT
 Route::get('/phat-trien',[App\Http\Controllers\UserController::class,"phatTrien"]);
 Route::get('/an-toan',[App\Http\Controllers\UserController::class,"anToan"]);
 Route::get('/loan',[App\Http\Controllers\UserController::class,"loan"]);
-Route::get('/personal',[App\Http\Controllers\UserController::class,"personal"]);
-Route::get('/documantUp',[App\Http\Controllers\UserController::class,"documantUp"]);
+Route::post('/addLoan',[App\Http\Controllers\UserController::class,"addLoan"]);
 
 
 

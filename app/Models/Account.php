@@ -33,6 +33,9 @@ class Account extends Model
     public function User(){
         return $this->belongsTo(User::class);
     }
+    public function Loan(){
+        return $this->belongsTo(Loan::class);
+    }
      public function AccountType(){
         return $this->belongsTo(AccountType::class);
     }

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card-body register-card-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg; text-danger">Đăng nhập để tiếp tục?</p>
 
         <form  method="post"action="{{ route('login') }}">
             @csrf
@@ -20,7 +20,7 @@
                 @enderror
             </div>
             <div class="input-group mb-3">
-                <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                <input placeholder="Mật khẩu" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <span class="fas fa-lock"></span>
@@ -33,17 +33,17 @@
                 @enderror
             </div>
             <div class="row">
-                <div class="col-8">
+                <div class="col-6">
                     <div class="icheck-primary">
                         <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                         <label for="agreeTerms">
-                            I agree to the <a href="#">terms</a>
+                           Đồng ý các <a href="#">điều khoản</a>
                         </label>
                     </div>
                 </div>
                 <!-- /.col -->
-                <div class="col-4">
-                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
                 </div>
                 <!-- /.col -->
             </div>
@@ -52,10 +52,10 @@
 
 
         <p class="mb-1">
-            <a href="forgot-password">I forgot my password</a>
+            <a href="forgot-password">Tôi quên mật khẩu</a>
         </p>
         <p class="mb-0">
-            <a href="{{route("register")}}" class="text-center">Register a new membership</a>
+            <a href="{{route("register")}}" class="text-center">Đăng kí tài khoản mới</a>
         </p>
     </div>
 @endsection

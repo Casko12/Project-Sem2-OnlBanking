@@ -1,0 +1,12 @@
+<?php
+Route::get('/user-info',[App\Http\Controllers\UserController::class,"userInfo"])->name("userInfo");
+Route::get('/user-home/{user}',[App\Http\Controllers\UserController::class,"userHome"])->name("userHome");
+Route::get('/findname',[App\Http\Controllers\UserController::class,"findName"]);
+Route::get('/showmoney',[App\Http\Controllers\UserController::class,"showMoney"]);
+Route::get('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"transferConfirm"]);
+Route::post('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"addToCart1"]);
+Route::get('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"transferForm"]);
+Route::post('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"addToCart"]);
+Route::get('/transaction-history',[App\Http\Controllers\UserController::class,"transactionHistory"]);
+Route::get('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"transferSuccess"]);
+Route::post('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"checkPin"]);

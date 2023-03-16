@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -64,14 +67,41 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        if ($data ->hasFile("image_face")){
+            $file = $data->file("image_face");
+            $fileName = time().$file->getClientOriginalName();
+
+            $path = public_path("uploads/image_faces");
+            $file->move($path,$fileName);
+            $image_face = "/uploads/image_faces/".$fileName;
+        }
+
+        if ($data ->hasFile("image_id1")){
+            $file = $data->file("image_id1");
+            $fileName = time().$file->getClientOriginalName();
+
+            $path = public_path("uploads/image_id1");
+            $file->move($path,$fileName);
+            $image_id1 = "/uploads/image_id1/".$fileName;
+        }
+
+        if ($data ->hasFile("image_id2")) {
+            $file = $data->file("image_id2");
+            $fileName = time() . $file->getClientOriginalName();
+
+            $path = public_path("uploads/image_id2");
+            $file->move($path, $fileName);
+            $image_id2 = "/uploads/image_id2/" . $fileName;
+        }
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'birthday' => $data['birthday'],
             'telephone' => $data['telephone'],
-            'image_face' => $data['image_face'],
-            'image_id1' => $data['image_id1'],
-            'image_id2' => $data['image_id2'],
+            'image_face' => $image_face,
+            'image_id1' => $image_id1,
+            'image_id2' => $image_id2,
             'address' => $data['address'],
             "status"=>$data["status"],
             'national_id' => $data['national_id'],
@@ -79,4 +109,26 @@ class RegisterController extends Controller
 
         ]);
     }
+
+    public function register(Request $request)
+    {
+
+        $this->validator($request->all())->validate();
+
+
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->guard()->login($user);
+
+        if ($response = $this->registered($request, $user)) {
+            return $response;
+        }
+
+        return $request->wantsJson()
+            ? new JsonResponse([], 201)
+            : redirect($this->redirectPath());
+    }
+
+
 }

@@ -12,13 +12,16 @@ class UserController extends Controller
    public function home(){
        return view("user.home");
    }
-    public function userInfo(User $user){
-       $user_id= $user->id;
+    public function userInfo(){
+       $user_id= auth()->id();
+
+       $user = User::find($user_id);
+
         $account = Account::where("user_id",$user_id)->first();
 
         return view("user.user-info",[
-            "user"=>$user,
-                "account"=>$account
+                "account"=>$account,
+            "user"=>$user
         ]);
     }
     public function veChungToi(){
@@ -153,6 +156,10 @@ class UserController extends Controller
             "reveice" => $reveice,
             "user"=>$user
         ]);
+    }
+
+    public function userHome(User $user){
+       return view ("user.user-home",compact("user"));
     }
 
 }

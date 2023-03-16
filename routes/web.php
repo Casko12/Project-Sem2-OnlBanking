@@ -20,31 +20,25 @@ Route::middleware(["auth","admin"])->group(function (){
 
 @include_once "admin.php";
 
+Route::middleware(["auth"])->group(function (){
+    @include_once "user.php";
+});
 
 Route::get('/',[App\Http\Controllers\UserController::class,"home"]);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('home');
-Route::get('/user-info/{user}',[App\Http\Controllers\UserController::class,"userInfo"])->name("userInfo");
+
 Route::get('/ve-chung-toi',[App\Http\Controllers\UserController::class,"veChungToi"]);
 Route::get('/phat-trien',[App\Http\Controllers\UserController::class,"phatTrien"]);
 Route::get('/an-toan',[App\Http\Controllers\UserController::class,"anToan"]);
 Route::get('/loan',[App\Http\Controllers\UserController::class,"loan"]);
 Route::get('/personal',[App\Http\Controllers\UserController::class,"personal"]);
 Route::get('/documantUp',[App\Http\Controllers\UserController::class,"documantUp"]);
-Route::get('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"transferForm"]);
-Route::post('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"addToCart"]);
-Route::get('/findname',[App\Http\Controllers\UserController::class,"findName"]);
-Route::get('/showmoney',[App\Http\Controllers\UserController::class,"showMoney"]);
-Route::get('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"transferConfirm"]);
-Route::post('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"addToCart1"]);
 
 
 
-Route::get('/transaction-history',[App\Http\Controllers\UserController::class,"transactionHistory"]);
-Route::get('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"transferSuccess"]);
-Route::post('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"checkPin"]);
 
 
 

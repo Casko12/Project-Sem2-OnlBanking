@@ -80,8 +80,8 @@
                                     <h3 class="text-9 fw-400">VNĐ {{number_format($item->balance)}}</h3>
                                     <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                     <hr class="mx-n3">
-                                    <form action="{{url("/money-transfer",["account"=>$item->id])}}" method="post">
-                                        @csrf
+
+                                    <form action="{{url("/money-transfer",["account"=>$item->id])}}" method="get">
                                         <div class="d-flex"><button type="submit" name="transfer_id" value="{{$item->id}}" class="btn btn-primary">Chuyển khoản</button>
                                         </div>
                                     </form>

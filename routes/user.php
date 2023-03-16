@@ -7,7 +7,7 @@ Route::get('/showmoney',[App\Http\Controllers\UserController::class,"showMoney"]
 Route::get('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"transferConfirm"]);
 Route::post('/transfer-confirm/{account}',[App\Http\Controllers\UserController::class,"addToCart1"]);
 Route::get('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"transferForm"])->name("moneyTransfer");
-Route::post('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"addToCart"]);
+//Route::get('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"addToCart"]);
 Route::get('/transaction-history',[App\Http\Controllers\UserController::class,"transactionHistory"]);
 Route::get('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"transferSuccess"]);
 Route::post('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"checkPin"]);

@@ -13,8 +13,8 @@ class UserController extends Controller
    public function home(){
        return view("user.home");
    }
-    public function userInfo(Request $request){
-       $account_number = $request->get("changerAccount");
+    public function userInfo(){
+
        $user= auth()->user();
         $account = $user->firstAccount;
         $allaccount = $user->Account;
@@ -45,8 +45,14 @@ class UserController extends Controller
         return view("user.loan.documantsUpload");
 
     }
-    public function transferForm(Account $account){
+    public function transferForm(Account $account,Request $request){
        $bank = Bank::all();
+        $id = $request->get("transfer_id");
+
+        $transfer_id = [
+            "transfer_id" => $request->get("transfer_id")
+        ];
+        session(["transfer_id"=>$transfer_id]);
        return view("user.transfer-form",[
            "bank"=>$bank,
            "account"=>$account
@@ -70,12 +76,10 @@ class UserController extends Controller
     public function showMoney(Request $request){
     }
     public function addToCart(Account $account,Request $request){
-        $id = $request->get("transfer_id");
-        $transfer_id = [
-            "transfer_id" => $request->get("transfer_id")
-        ];
-        session(["transfer_id"=>$transfer_id]);
-        return redirect()->to("/money-transfer/$id");
+
+        return view("user.transfer-form",[
+            "account"=>$account
+        ]);
     }
 
     public function addToCart1(Account $account,Request $request){
@@ -116,27 +120,27 @@ class UserController extends Controller
         ]);
     }
 
-    public function checkPin(Request $request){
+    public function checkPin(Account $account,Request $request){
         $transfer = session("transfer_id");
         $reveice =session("reveice_id");
-        $id = $transfer["transfer_id"];
+        $id = $account->id;
        $pin = $request->get("pin");
        $account2 = Account::where("account_number",$reveice["receive_id"])->first();
-       $account1 = Account::where('id',$transfer["transfer_id"])->first();
-       $transfer_amount = $account1->balance -=$reveice["amount"];
+//       $account1 = Account::where('id',$transfer["transfer_id"])->first();
+       $transfer_amount = $account->balance -=$reveice["amount"];
        $transfer_receive = $account2->balance +=$reveice["amount"];
        $amount = $reveice['amount'];
 
-       $user = User::find($account1->user_id);
+       $user = User::find($account->user_id);
 
        if(Hash::check($pin, $user->pin)){
-          $account1->update([
+          $account->update([
               "balance"=> $transfer_amount
           ]);
            $account2->update([
                "balance"=> $transfer_receive
            ]);
-           $account1->createHistory($account2,$amount);
+           $account->createHistory($account2,$amount);
            return redirect()->to("/transfer-success/$id");
        }
 

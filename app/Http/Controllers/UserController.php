@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use App\Models\Bank;
+use App\Models\Loan;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -24,26 +25,21 @@ class UserController extends Controller
             "user"=>$user
         ]);
     }
-    public function veChungToi(){
-        return view("user.ve-chung-toi");
-    }
-    public function phatTrien(){
-       return view("user.phat-trien");
-    }
-    public function anToan(){
-        return view("user.an-toan");
-    }
+
+
+
     public function loan(){
-        return view("user.loan.loan");
-    }
-    public function personal(){
-        return view("user.loan.personal");
-
+        return view("user.loan");
    }
-    public function documantUp(){
-        return view("user.loan.documantsUpload");
+   public function addLoan(Request $request){
+       Loan::created([
+           "money_amount"=>$request->get("money_amount"),
+           "date_loan_money"=>$request->get("date_loan_money"),
+           "image_loan1"=>$request->get("image_loan1"),
+           "image_loan2"=>$request->get("image_loan2")
+       ]);
+   }
 
-    }
     public function transferForm(Account $account){
        $bank = Bank::all();
        return view("user.transfer-form",[
@@ -161,5 +157,13 @@ class UserController extends Controller
     public function userHome(User $user){
        return view ("user.user-home",compact("user"));
     }
-
+    public function veChungToi(){
+        return view("user.ve-chung-toi");
+    }
+    public function phatTrien(){
+        return view("user.phat-trien");
+    }
+    public function anToan(){
+        return view("user.an-toan");
+    }
 }

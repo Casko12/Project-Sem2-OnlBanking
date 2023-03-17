@@ -7,11 +7,19 @@ Written by: 	Harnish Design - (http://www.harnishdesign.net)
 	"use strict";
 
 // Preloader
-$(window).on('load', function () {
-	$('[data-loader="circle-side"]').fadeOut(); // will first fade out the loading animation
-	$('#preloader').delay(333).fadeOut('slow'); // will fade out the white DIV that covers the website.
-	$('body').delay(333);
-});
+    var cites = [];
+    cites[0] = "Chúng tôi luôn sẵn sàng được phục vụ bạn.";
+    var cite = cites[Math.floor(Math.random() * cites.length)];
+    $("#preloader p").text(cite);
+    $("#preloader").addClass("loading");
+
+    $(window).on("load", function () {
+        setTimeout(function () {
+            $("#preloader").fadeOut(500, function () {
+                $("#preloader").removeClass("loading");
+            });
+        }, 500);
+    });
 
 /*---------------------------------------------------
     Primary Menu
@@ -22,9 +30,9 @@ $('.primary-menu ul.navbar-nav li.dropdown, .login-signup ul.navbar-nav li.dropd
 	if ($(window).width() > 991) {
 		$(this).find('> .dropdown-menu').stop().slideDown('fast');
 		$(this).bind('mouseleave', function() {
-		$(this).find('> .dropdown-menu').stop().css('display', 'none'); 
+		$(this).find('> .dropdown-menu').stop().css('display', 'none');
 		});
-		
+
 	// When dropdown going off to the out of the screen.
 	$('.primary-menu ul.navbar-nav > li.dropdown > .dropdown-menu').each(function() {
 		var menu = $('#header .header-row').offset();
@@ -43,7 +51,7 @@ $('.primary-menu ul.navbar-nav li.dropdown, .login-signup ul.navbar-nav li.dropd
 			}
 		}
 	});
-		
+
 	}
 });
 
@@ -187,12 +195,12 @@ $('.video-btn').on('click', function() {
 // when the modal is opened autoplay it
 $('#videoModal').on('shown.bs.modal', function (e) {
 // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates...you never know what you're gonna get
-$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;rel=0" ); 
+$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0&amp;rel=0" );
 })
 // stop playing the youtube video when I close the modal
 $('#videoModal').on('hide.bs.modal', function (e) {
-    $("#video").attr('src',$videoSrc); 
-}) 
+    $("#video").attr('src',$videoSrc);
+})
 
 /*------------------------
    tooltips

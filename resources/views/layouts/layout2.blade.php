@@ -18,7 +18,6 @@
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
-
     <!-- Colors Css -->
     @yield("custom_css")
 </head>

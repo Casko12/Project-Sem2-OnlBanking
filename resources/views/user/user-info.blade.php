@@ -1,7 +1,7 @@
 @extends("layouts.layout2")
 <base href="{{ url("/") }}"/>
 @section("title")
-    Trang người dùng
+    Trang cá nhân
 @endsection
 
 @section("main_content")

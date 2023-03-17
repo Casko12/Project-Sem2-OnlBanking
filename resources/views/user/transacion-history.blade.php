@@ -157,39 +157,39 @@
                                 <div class="col-sm-5 d-flex justify-content-center bg-primary rounded-start py-4">
                                     <div class="my-auto text-center">
                                         <div class="text-17 text-white my-3"><i class="fas fa-building"></i></div>
-                                        <h3 class="text-4 text-white fw-400 my-3">Envato Pty Ltd</h3>
-                                        <div class="text-8 fw-500 text-white my-4">$557.20</div>
-                                        <p class="text-white">15 March 2021</p>
+                                        <h3 class="text-4 text-white fw-400 my-3">Vietcombank</h3>
+                                        <div class="text-8 fw-500 text-white my-4">VNĐ 1,000,000</div>
+                                        <p class="text-white">15 Tháng 3, 2021</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-7">
-                                    <h5 class="text-5 fw-400 m-3">Transaction Details
+                                    <h5 class="text-5 fw-400 m-3">Chi tiết giao dịch
                                         <button type="button" class="btn-close text-2 float-end" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </h5>
                                     <hr>
                                     <div class="px-3">
                                         <ul class="list-unstyled">
-                                            <li class="mb-2">Payment Amount <span class="float-end text-3">$562.00</span></li>
-                                            <li class="mb-2">Fee <span class="float-end text-3">-$4.80</span></li>
+                                            <li class="mb-2">Loại giao dịch <span class="float-end text-3">Chuyển tiền đi</span></li>
                                         </ul>
                                         <hr class="mb-2">
-                                        <p class="d-flex align-items-center fw-500 mb-0">Total Amount <span class="text-3 ms-auto">$557.20</span></p>
+                                        <p class="d-flex align-items-center fw-500 mb-0">Số tiền <span class="text-3 ms-auto">VNĐ 1,000,000</span></p>
                                         <hr class="mb-4 mt-2">
                                         <ul class="list-unstyled">
-                                            <li class="fw-500">Paid By:</li>
-                                            <li class="text-muted">Envato Pty Ltd</li>
+                                            <li class="fw-500">Người nhận:</li>
+{{--                                            nếu là giao dịch Chuyển tiền vào thì đổi "Người nhận" thành "Người gửi--}}
+                                            <li class="text-muted">Hà Hoàng Hưng</li>
                                         </ul>
                                         <ul class="list-unstyled">
-                                            <li class="fw-500">Transaction ID:</li>
+                                            <li class="fw-500">Mã giao dịch:</li>
                                             <li class="text-muted">26566689645685976589</li>
                                         </ul>
                                         <ul class="list-unstyled">
-                                            <li class="fw-500">Description:</li>
-                                            <li class="text-muted">Envato March 2021 Member Payment</li>
+                                            <li class="fw-500">Mô tả:</li>
+                                            <li class="text-muted">Chuyển tiền học</li>
                                         </ul>
                                         <ul class="list-unstyled">
-                                            <li class="fw-500">Status:</li>
-                                            <li class="text-muted">Completed<span class="text-success text-3 ms-1"><i class="fas fa-check-circle"></i></span></li>
+                                            <li class="fw-500">Trạng thái:</li>
+                                            <li class="text-muted">Thành công<span class="text-success text-3 ms-1"><i class="fas fa-check-circle"></i></span></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -18,20 +18,9 @@
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
-
-
-    <link rel="stylesheet" type="text/css" href="/user/html/css/elegant-icons.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/user/html/css/all.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/user/html/css/animate.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/user/html/css/nice-select.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/user/html/css/default.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/user/html/css/style.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/user/html/css/responsive.css" media="all" />
     <!-- Colors Css -->
     @yield("custom_css")
-
 </head>
-
 <body>
 @yield("custom_css")
 <!-- Preloader -->
@@ -242,6 +231,7 @@
         </div>
     </header>
     <!-- Header End -->
+
     <!-- Content
     ============================================= -->
     <div id="content" class="py-4">
@@ -685,6 +675,7 @@
         </div>
     </div>
     <!-- Content end -->
+
     <!-- footer -->
     <footer class="footer footer-3">
         <div class="footer-top  pt-200 pb-lg-115 pb-120">
@@ -780,18 +771,7 @@
 <script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="user/user-page/js/theme.js"></script>
 
-<a id="back-to-top" title="Back to Top"></a>
-<script type="text/javascript" src="/user/html/js/preloader.js"></script>
-<script type="text/javascript" src="/user/html/js/jquery.waypoints.min.js"></script>
-<script type="text/javascript" src="/user/html/js/jquery.counterup.min.js"></script>
-<script type="text/javascript" src="/user/html/js/jquery.nice-select.min.js"></script>
-<script type="text/javascript" src="/user/html/js/parallax.js"></script>
-<script type="text/javascript" src="/user/html/js/jquery.parallax-scroll.js"></script>
-<script type="text/javascript" src="/user/html/js/wow.min.js"></script>
-<script type="text/javascript" src="/user/html/js/custom.js"></script>
+<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 @yield("custom_js")
-
-
-
 </body>
 </html>

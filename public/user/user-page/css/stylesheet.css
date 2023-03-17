@@ -4300,7 +4300,7 @@ button:last-of-type{
 }
 
 .multi-button:hover button:hover{
-    background: #D53F8C;
+    background: #0d6efd;
     color: #fff;
     box-shadow: 0 0 0.8em 0 rgba(213, 63, 140, .8);
     transform: translateY(-.2em);

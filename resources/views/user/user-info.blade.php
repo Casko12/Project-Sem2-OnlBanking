@@ -257,7 +257,7 @@
                                             <div class="row g-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label for="firstName" class="form-label">First Name</label>
-                                                    <input type="text" value="Smith" class="form-control" data-bv-field="firstName" id="firstName" required placeholder="First Name">
+                                                    <input type="button" value="Smith" class="form-control" data-bv-field="firstName" id="firstName" required placeholder="First Name">
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="lastName" class="form-label">Last Name</label>
@@ -637,10 +637,6 @@
                         <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Thông tin cá nhân</h3>
                         <hr class="mx-n4 mb-4">
                         <div class="row gx-3 align-items-center">
-                            <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Họ và tên:</p>
-                            <p class="col-sm-9 text-3">{{$user->name}}</p>
-                        </div>
-                        <div class="row gx-3 align-items-center">
                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">Ngày sinh:</p>
                             <p class="col-sm-9 text-3">{{$user->birthday}}</p>
                         </div>
@@ -690,9 +686,9 @@
                                         <hr class="mx-n3">
 
                                         <div class="multi-button">
-                                            <button><i class="fas fa-file-invoice-dollar"></i></i> Lịch sử giao dịch</button>
-                                            <button><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
                                             <button><i class="fas fa-coins"></i> Tiết kiệm</button>
+                                            <button><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
+                                            <button><i class="fas fa-file-invoice-dollar"></i></i> Lịch sử giao dịch</button>
                                         </div>
                                     </div>
                                 </div>
@@ -739,6 +735,92 @@
         </div>
     </div>
     <!-- Content end -->
+    <!-- footer -->
+    <footer class="footer footer-3">
+        <div class="footer-top  pt-200 pb-lg-115 pb-120">
+            <div class="container">
+                <div class="row gx-0 pt-45 ">
+
+                    <div class="col-lg-4 col-sm-6 text-center text-sm-start ms-0 ">
+                        <div class="footer-widget wow fadeInLeft mb-30">
+                            <div class="footer-text mb-20">
+                                <p>Modern Bank là một ngân hàng hàng đầu trong khu vực thế giới và là một tổ chức ngân hàng quốc tế nổi bật</p>
+                            </div>
+
+                            <span class="overline">Trích dẫn</span>
+
+                            <div class="footer-bold">
+                                <span class="counter">$<span>35.105</span> </span>
+                                <span class="counter">-<span>0.46</span>% </span>
+                            </div>
+                            <p class="time">2021-01-05 14:00 (Giờ quốc tế)</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-2 col-sm-6 text-center text-sm-start ms-lg-5 ">
+                        <div class="footer-widget mb-30 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="f-widget-title">
+                                <h5>Tổng Quan</h5>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <li><a href="#"> Lĩnh vực kinh doanh cốt lõi của chúng tôi
+                                        </a></li>
+                                    <li><a href="#"> Công việc & Nghề nghiệp</a></li>
+                                    <li><a href="#"> Trách nhiệm của chúng tôi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2  col-sm-6 text-center text-sm-start ms-lg-5">
+                        <div class="footer-widget mb-30 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="f-widget-title">
+                                <h5>Truy Cập Trực Tiếp</h5>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <li><a href="#"> Tin tức của chúng tôi</a></li>
+                                    <li><a href="#"> Thông báo của chúng tôi</a></li>
+                                    <li><a href="#"> Lời mời làm việc của chúng tôi</a></li>
+                                    <li><a href="#"> Trang web của chúng tôi</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright area -->
+        <div class="copyright pt-25 pb-25">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 text-center text-lg-start">
+                        <img class="p-0 m-0" style="width: 160px"height="40px" src="/user/html/img/logo/mbanking-03.png" alt="logo" >
+                    </div>
+                    <div class="col-lg-5 text-center my-3 my-sm-0">
+                        <div class="copyright-text">
+                            <p>Copyright&copy; Modern 2021. <br class="d-sm-none"> <a class="ms-2" href="#">Privecy</a> |
+                                <a class="ms-0" href="#">Term of
+                                    Use</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end ">
+                        <div class="social-button">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
 </div>
 <!-- Document Wrapper end -->
 

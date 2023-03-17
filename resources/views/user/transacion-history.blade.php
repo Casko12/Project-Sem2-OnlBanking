@@ -18,18 +18,18 @@
                         ========================= -->
                         <div class="col-sm-6 col-md-5">
                             <div class="position-relative">
-                                <input id="dateRange" type="text" class="form-control" placeholder="Date Range">
+                                <input id="dateRange" type="text" class="form-control" placeholder="Chọn khoảng thời gian">
                                 <span class="icon-inside"><i class="fas fa-calendar-alt"></i></span>
                             </div>
                         </div>
                         <!-- All Filters Link
                         ========================= -->
-                        <div class="col-auto d-flex align-items-center me-auto form-group" data-bs-toggle="collapse"> <a class="btn-link" data-bs-toggle="collapse" href="#allFilters" aria-expanded="false" aria-controls="allFilters">All Filters<i class="fas fa-sliders-h text-3 ms-1"></i></a> </div>
+                        <div class="col-auto d-flex align-items-center me-auto form-group" data-bs-toggle="collapse"> <a class="btn-link" data-bs-toggle="collapse" href="#allFilters" aria-expanded="false" aria-controls="allFilters">Mở rộng<i class="fas fa-sliders-h text-3 ms-1"></i></a> </div>
 
                         <!-- Statements Link
                         ========================= -->
                         <div class="col-auto d-flex align-items-center ms-auto">
-                            <div class="dropdown"> <a class="text-muted btn-link" href="#" role="button" id="statements" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-file-download text-3 me-1"></i>Statements</a>
+                            <div class="dropdown"> <a class="text-muted btn-link" href="#" role="button" id="statements" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-file-download text-3 me-1"></i>Xuất ra file</a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="statements"> <a class="dropdown-item" href="#">CSV</a> <a class="dropdown-item" href="#">PDF</a> </div>
                             </div>
                         </div>
@@ -39,27 +39,15 @@
                         <div class="col-12 collapse" id="allFilters">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" id="allTransactions" name="allFilters" checked>
-                                <label class="form-check-label" for="allTransactions">All Transactions</label>
+                                <label class="form-check-label" for="allTransactions">Tất cả giao dịch</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" id="paymentsSend" name="allFilters">
-                                <label class="form-check-label" for="paymentsSend">Payments Send</label>
+                                <label class="form-check-label" for="paymentsSend">Chuyển tiền đi</label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" id="paymentsReceived" name="allFilters">
-                                <label class="form-check-label" for="paymentsReceived">Payments Received</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="refunds" name="allFilters">
-                                <label class="form-check-label" for="refunds">Refunds</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="withdrawal" name="allFilters">
-                                <label class="form-check-label" for="withdrawal">Withdrawal</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="deposit" name="allFilters">
-                                <label class="form-check-label" for="deposit">Deposit</label>
+                                <label class="form-check-label" for="paymentsReceived">Chuyển tiền vào</label>
                             </div>
                         </div>
                         <!-- All Filters collapse End -->
@@ -72,15 +60,15 @@
         <!-- All Transactions
         ============================================= -->
         <div class="bg-white shadow-sm rounded py-4 mb-4">
-            <h3 class="text-5 fw-400 d-flex align-items-center px-4 mb-4">All Transactions</h3>
+            <h3 class="text-5 fw-400 d-flex align-items-center px-4 mb-4">Tất cả giao dich</h3>
             <!-- Title
             =============================== -->
             <div class="transaction-title py-2 px-4">
                 <div class="row">
-                    <div class="col-2 col-sm-1 text-center"><span class="">Date</span></div>
-                    <div class="col col-sm-7">Description</div>
-                    <div class="col-auto col-sm-2 d-none d-sm-block text-center">Status</div>
-                    <div class="col-3 col-sm-2 text-end">Amount</div>
+                    <div class="col-2 col-sm-1 text-center"><span class="">Ngày</span></div>
+                    <div class="col col-sm-7">Mô tả</div>
+                    <div class="col-auto col-sm-2 d-none d-sm-block text-center">Trạng thái</div>
+                    <div class="col-3 col-sm-2 text-end">Số tiền</div>
                 </div>
             </div>
             <!-- Title End -->

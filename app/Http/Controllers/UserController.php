@@ -25,6 +25,18 @@ class UserController extends Controller
             "allaccount"=>$allaccount
         ]);
     }
+    public function transacionHistory(){
+
+        $user= auth()->user();
+        $account = $user->firstAccount;
+        $allaccount = $user->Account;
+
+        return view("user.transacion-history",[
+            "account"=>$account,
+            "user"=>$user,
+            "allaccount"=>$allaccount
+        ]);
+    }
     public function veChungToi(){
         return view("user.ve-chung-toi");
     }
@@ -162,11 +174,4 @@ class UserController extends Controller
             "user"=>$user
         ]);
     }
-
-    public function userHome(User $user){
-       return view ("user.user-home",compact("user"));
-    }
-
-
-
 }

@@ -17,4 +17,8 @@ class TransactionHistory extends Model
       "amount",
       "status",
     ];
+
+    public function Account(){
+        return $this->hasMany(Account::class);
+    }
 }

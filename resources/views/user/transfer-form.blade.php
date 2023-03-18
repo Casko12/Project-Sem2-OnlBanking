@@ -91,4 +91,31 @@
     </div>
     <!-- Content end -->
 @endsection
+@section('custom_js')
+    <script>
+    function findName() {
+        var bank = $( "#bank_id" ).val();
+        var account = $("#receiverID").val();
+            $.ajax({
+            url:"/findname"+"?bank_id="+bank+"&account="+account,
+            method:"get",
+            success: function (rs){
+            $("#userName").val(rs.user)
+            }
+         })
+        }
+    function showMoney(){
+        var phi = $("#phi").val()
+        var money = $("#recipientGets").val()
+        var total =
+            $.ajax({
+            url:"/showmoney",
+            method:"get",
+            success: function (rs){
+            var totalmoney = $("#totalMoney").text(money)
+               }
+            })
+    }
 
+    </script>
+@endsection

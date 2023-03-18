@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use App\Models\Bank;
+use App\Models\TransactionHistory;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -29,12 +30,20 @@ class UserController extends Controller
 
         $user= auth()->user();
         $allaccount = $user->Account;
+        $data = TransactionHistory::where("receive_id",$account->id)->orWhere("transfer_id",$account->id)->get();
 
-        return view("user.transacion-history",[
-            "account"=>$account,
-            "user"=>$user,
-            "allaccount"=>$allaccount
-        ]);
+//        dd($data);
+        if($data != false){
+            return view("user.transacion-history",[
+                "account"=>$account,
+                "user"=>$user,
+                "allaccount"=>$allaccount,
+                "data"=>$data
+            ]);
+        }else{
+            return redirect()->back();
+        }
+
     }
     public function veChungToi(){
         return view("user.ve-chung-toi");
@@ -86,6 +95,11 @@ class UserController extends Controller
 
     public function showMoney(Request $request){
     }
+    public function detailHis(Request $request){
+       $his_id = $request->get("transaction_id");
+       dd($his_id);
+    }
+
     public function addToCart(Account $account,Request $request){
 
         return view("user.transfer-form",[

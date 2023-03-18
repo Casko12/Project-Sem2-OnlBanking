@@ -10,3 +10,4 @@ Route::get('/money-transfer/{account}',[App\Http\Controllers\UserController::cla
 //Route::get('/money-transfer/{account}',[App\Http\Controllers\UserController::class,"addToCart"]);
 Route::get('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"transferSuccess"]);
 Route::post('/transfer-success/{account}',[App\Http\Controllers\UserController::class,"checkPin"]);
+Route::get('/detailHis',[App\Http\Controllers\UserController::class,"detailHis"]);

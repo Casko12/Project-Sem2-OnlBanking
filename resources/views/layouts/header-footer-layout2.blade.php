@@ -39,6 +39,9 @@
 </div>
 <!-- Preloader End -->
 
+<!-- Document Wrapper
+============================================= -->
+<div id="main-wrapper">
 <!-- Header
          ============================================= -->
 <header id="header" class="bg-dark-2 header-text-light">
@@ -273,6 +276,9 @@
     </div>
 </footer>
 <!-- Footer end -->
+
+</div>
+<!-- Document Wrapper end -->
 
 <!-- Script -->
 <script src="user/user-page/vendor/jquery/jquery.min.js"></script>

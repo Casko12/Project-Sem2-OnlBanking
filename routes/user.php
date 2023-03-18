@@ -1,6 +1,6 @@
 <?php
 Route::get('/user-info',[App\Http\Controllers\UserController::class,"userInfo"])->name("userInfo");
-Route::get('/transacion-history',[App\Http\Controllers\UserController::class,"transacionHistory"])->name("transacionHistory");
+Route::get('/transacion-history/{account}',[App\Http\Controllers\UserController::class,"transacionHistory"])->name("transacionHistory");
 Route::get('/findname',[App\Http\Controllers\UserController::class,"findName"]);
 Route::get('/changeAccount',[App\Http\Controllers\UserController::class,"changeAccount"]);
 Route::get('/showmoney',[App\Http\Controllers\UserController::class,"showMoney"]);

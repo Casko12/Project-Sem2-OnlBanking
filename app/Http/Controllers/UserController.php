@@ -25,10 +25,9 @@ class UserController extends Controller
             "allaccount"=>$allaccount
         ]);
     }
-    public function transacionHistory(){
+    public function transacionHistory(Account $account){
 
         $user= auth()->user();
-        $account = $user->firstAccount;
         $allaccount = $user->Account;
 
         return view("user.transacion-history",[
@@ -47,7 +46,7 @@ class UserController extends Controller
         return view("user.an-toan");
     }
     public function loan(){
-        return view("user.loan.loan");
+        return view("user.loan");
     }
     public function personal(){
         return view("user.loan.personal");

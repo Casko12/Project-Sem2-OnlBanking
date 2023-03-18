@@ -6,7 +6,7 @@
 
 @section("main_content")
     <div class="col-lg-9">
-        <h2 class="fw-400 mb-3">Lịch sử giao dịch</h2>
+        <h2 class="fw-400 mb-3">Lịch sử giao dịch: {{$account->account_number}}</h2>
 
         <!-- Filter
         ============================================= -->

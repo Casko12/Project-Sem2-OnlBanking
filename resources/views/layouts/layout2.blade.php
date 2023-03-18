@@ -669,7 +669,56 @@
 
                 </aside>
                 <!-- Left Panel End -->
-                @yield("main_content")
+                <div class="col-lg-9">
+
+                    <!-- Personal Details
+                    ============================================= -->
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            @foreach($allaccount as $item)
+
+                                <div class="carousel-item @if($loop->first)active @endif">
+                                    <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
+                                        <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>
+                                        <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
+                                        <h3 class="text-9 fw-400">VNĐ {{number_format($item->balance)}}</h3>
+                                        <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
+                                        <hr class="mx-n3">
+
+                                        <div class="multi-button">
+                                            <button><i class="fas fa-coins"></i> Tiết kiệm</button>
+                                            <form action="{{url("/money-transfer",["account"=>$item->id])}}" method="get">
+                                                <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
+                                            </form>
+                                            <form action="{{url("/transacion-history",["account"=>$item->id])}}" method="get">
+                                                <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-file-invoice-dollar"></i></i> Lịch sử giao dịch</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" style="color: red" aria-hidden="true"><<<</span>
+                            <span class="visually-hidden" >Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"  style="color: red" aria-hidden="true">>>></span>
+                            <span class="visually-hidden-focusable">Next</span>
+                        </button>
+                    </div>
+
+                    <!-- Account Settings
+                    ============================================= -->
+                    @yield("main_content")
+
+                </div>
+
 
             </div>
         </div>

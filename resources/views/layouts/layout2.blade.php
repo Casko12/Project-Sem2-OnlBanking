@@ -241,9 +241,9 @@
                 <!-- Left Panel
                 ============================================= -->
                 <aside class="col-lg-3">
+
                     <!-- Hello + edit
                     =============================== -->
-
                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                         <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" width="100" height="100" src="{{$user->image_face}}" alt="">
                             <div class="profile-thumb-edit bg-primary text-white" data-bs-toggle="tooltip" title="Change Profile Picture"> <i class="fas fa-camera position-absolute"></i>
@@ -252,6 +252,7 @@
                         </div>
                         <p class="text-3 fw-500 mb-2">Xin chào<br> {{$user->name}}</p>
                         <p class="mb-2"><a href="#edit-personal-details" class="text-5 text-light" data-bs-toggle="modal" title="Edit Profile"><i class="fas fa-edit"></i></a></p>
+
                         {{--                        edit personal detail--}}
                         <div id="edit-personal-details" class="modal fade " role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -279,7 +280,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <h3 class="text-5 fw-400 mt-4">Address</h3>
                                             <hr>
                                             <div class="row g-3">
@@ -627,20 +627,18 @@
                                                 </div>
                                                 <div class="col-12 mt-4 d-grid"><button class="btn btn-primary" type="submit">Save Changes</button></div>
                                             </div>
-
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         {{--                        edit personal detail end--}}
-                    </div>
 
+                    </div>
                     <!-- Hello + Edit End -->
 
                     <!-- Profile Details
                    =============================== -->
-
                     <div class="bg-white shadow-sm rounded p-4 mb-4">
                         <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Thông tin cá nhân</h3>
                         <hr class="mx-n4 mb-4">
@@ -681,7 +679,6 @@
                         </div>
                         <div class="carousel-inner">
                             @foreach($allaccount as $item)
-
                                 <div class="carousel-item @if($loop->first)active @endif">
                                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                                         <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>
@@ -689,7 +686,6 @@
                                         <h3 class="text-9 fw-400">VNĐ {{number_format($item->balance)}}</h3>
                                         <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                         <hr class="mx-n3">
-
                                         <div class="multi-button">
                                             <button><i class="fas fa-coins"></i> Tiết kiệm</button>
                                             <form action="{{url("/money-transfer",["account"=>$item->id])}}" method="get">

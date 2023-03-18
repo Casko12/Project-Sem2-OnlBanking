@@ -3,7 +3,6 @@
 @section("title")
     Trang cá nhân
 @endsection
-
 @section("main_content")
     <div class="bg-white shadow-sm rounded p-4 mb-4">
         <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Tuỳ chỉnh<a href="#edit-account-settings" data-bs-toggle="modal" class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Edit</a></h3>

@@ -1,6 +1,6 @@
 @extends("user.layout")
 @section("title")
-    Về chúng tôi
+    Giá trị cốt lõi
 @endsection
 @section("main_content")
     <div class="container">

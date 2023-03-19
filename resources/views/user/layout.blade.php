@@ -200,10 +200,10 @@
                         </div>
                         <div class="footer-link">
                             <ul>
-                                <li><a href="#"> Lĩnh vực kinh doanh cốt lõi của chúng tôi
-                                    </a></li>
-                                <li><a href="#"> Công việc & Nghề nghiệp</a></li>
-                                <li><a href="#"> Trách nhiệm của chúng tôi</a></li>
+                                <li class="nav-item"><a  class="nav-link" href="{{url("/ve-chung-toi")}}">Giới thiệu</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/phat-trien")}}">Phát triển bền vững</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/an-toan")}}">An toàn và bảo mật</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/lien-he")}}">Liên hệ với chúng tôi</a></li>
                             </ul>
                         </div>
                     </div>
@@ -215,10 +215,10 @@
                         </div>
                         <div class="footer-link">
                             <ul>
-                                <li><a href="#"> Tin tức của chúng tôi</a></li>
-                                <li><a href="#"> Thông báo của chúng tôi</a></li>
-                                <li><a href="#"> Lời mời làm việc của chúng tôi</a></li>
-                                <li><a href="#"> Trang web của chúng tôi</a></li>
+                                <li class="nav-item"><a  class="nav-link" href="{{url("/gia-tri-cot-loi")}}">Giá trị cốt lõi</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/phat-trien")}}">Phát triển bền vững</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/an-toan")}}">An toàn và bảo mật</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/lien-he")}}">Liên hệ với chúng tôi</a></li>
                             </ul>
                         </div>
                     </div>

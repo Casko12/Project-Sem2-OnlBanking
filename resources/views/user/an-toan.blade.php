@@ -1,4 +1,7 @@
 @extends("user.layout")
+@section("title")
+    An toàn và bảo mật
+@endsection
 @section("main_content")
     <div style="margin-top: 200px">
 

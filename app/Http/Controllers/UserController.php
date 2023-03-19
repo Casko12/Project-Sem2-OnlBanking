@@ -54,6 +54,9 @@ class UserController extends Controller
     public function anToan(){
         return view("user.an-toan");
     }
+    public function giaTriCotLoi(){
+       return view("user.giatri-cotloi");
+    }
     public function loan(){
         return view("user.loan");
     }

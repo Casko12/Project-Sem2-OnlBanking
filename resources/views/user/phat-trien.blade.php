@@ -1,4 +1,7 @@
 @extends("user.layout")
+@section("title")
+    Phát triển
+@endsection
 @section("main_content")
     <div style="margin-top: 200px">
 
@@ -26,24 +29,6 @@
                             <p style="text-align: justify;">Modern Bank thừa nhận rằng các nguyên tắc tài chính bền vững là một điều kiện tiên quyết cơ bản để quản lý tốt hơn các rủi ro về MT-XH trong Danh mục đầu tư cũng như khám phá các cơ hội kinh doanh mới. Modern Bank luôn đồng hành cùng với Chính phủ và các tổ chức Quốc tế góp phần giải quyết các vấn đề MT-XH quan trọng đối với Trái đất thông qua việc xây dựng chính sách và thực hiện các hành động quản lý rủi ro MT-XH trong hoạt động cấp tín dụng của mình và từng bước phát triển các sản phẩm hỗ trợ tín dụng xanh nhằm loại bỏ các dự án, phương án sản xuất có tác động MT-XH tiêu cực, giảm thiểu dấu chân sinh thái và biến đổi khí hậu, bảo tồn đa dạng sinh học cũng như thực hiện các trách nhiệm xã hội.</p>
                             <p style="text-align: justify;">Tham khảo Danh sách không cấp tín dụng của Modern Bank <a href="/-/media/vpbank-latest/8aboutvpbank/phat-trien-ben-vung/danh-sch-khng-cp-tn-dng-v-mtxh-2022---vpbank.pdf"> tại đây</a>.</p>
                             <p style="text-align: justify;">&nbsp;</p>
-                        </div>
-                        <div class="article-detail-action">
-                            <label for="like-1">
-
-
-                                <input class="button-like" type="radio" name="socials" value="like-1" id="like-1">
-
-                                <span class="icon-thumbs-up"></span>
-
-
-                            </label>
-                            <label for="dislike-1">
-
-
-                                <input class="button-dislike" type="radio" name="socials" value="dislike-1" id="dislike-1">
-                                <span class="icon-thumbs-down"></span>
-
-                            </label>
                         </div>
                     </div>
 

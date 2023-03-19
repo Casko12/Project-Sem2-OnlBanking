@@ -157,25 +157,19 @@
                                 <li class="nav-item"><a  class="nav-link" href="{{url("/ve-chung-toi")}}">Giới thiệu</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url("/phat-trien")}}">Phát triển bền vững</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url("/an-toan")}}">An toàn và bảo mật</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url("/lien-he")}}">Liên hệ với chúng tôi</a></li>
                             </ul>
                         </li>
 
                     </ul>
-                    <a class="theme-btn" href="{{url("/loan")}}">Nhận thêm khoản vay mới</a>
+                    <a class="theme-btn" href="{{url("/loan")}}">Tài khoản của bạn</a>
                 </div>
             </div>
         </nav>
     </div>
 </header>
 <!-- Header end-->
-<div class="container">
-    <div class="row">
-
         @yield("main_content")
-
-    </div>
-
-</div>
 <!-- footer -->
 <footer class="footer footer-3">
     <div class="footer-top  pt-200 pb-lg-115 pb-120">

@@ -421,7 +421,7 @@
 
                             <div class="col-md-5 text-center text-md-end">
                                 <div class="cta-content   text-md-end mt-3 mt-md-0">
-                                    <a href="contact.html"
+                                    <a href="/lien-he"
                                        class="theme-btn theme-btn-alt wow fadeInLeft m-0">Liên hệ chúng tôi</a>
                                 </div>
                             </div>

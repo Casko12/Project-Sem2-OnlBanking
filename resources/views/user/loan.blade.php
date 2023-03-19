@@ -3,21 +3,21 @@
     Khoản vay
 @endsection
 @section("main_content")
-    <section class="loan-deatils-area bg_disable pt-130 pb-120" style="margin-top: 100px">
+    <section class="loan-deatils-area bg_disable pt-130 pb-120" style="margin-top: 80px">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <div class="loan-details-widget bg_white">
                         <form method="post" action="{{url("/addLoan")}}">
                             <div class="row gy-4">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <label class="label" for="loan-amount">Số tiền bạn vay</label>
                                     <div class="input-field">
                                         <span>$</span>
                                         <input type="number" name="money_amount" class="form-control">
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-8">
                                     <label class="label mb-4">Thời gian</label>
                                     <div class="form-check form-check-inline mr-30">
                                         <input class="form-check-input" type="radio" name="date_loan_money"
@@ -47,24 +47,26 @@
                                         <label class="form-check-label" for="inlineRadio5">48 tháng</label>
                                     </div>
                                 </div>
-
                                 <div class="col-md-6">
-                                    <label class="label" for="loan-return">Số tiền cần phải trả khi đến hạn trả nợ</label>
+                                        <label class="label" for="loan-return">Số tiền cần phải thanh toán khi đến hạn: </label>
                                 </div>
-                                <div class="col-md-6">
-                                    <p>Để vay tiền tại ngân hàng chúng tôi hãy uploade ảnh giấy tờ liên quan để chứng minh
-                                    thu nhập vd: Bảng lương, chứng minh thu nhập cá nhân,...</p>
+                                <div class="col-md-2">
+                                        <label class="label" for="loan-return" style="float: right">1000 $</label>
                                 </div>
-                                <div class="col-md-3">
-                                    <label class="label" >Ảnh chụp giấy tờ </label>
+                                <div class="col-md-8">
+                                    <label class="label" for="loan-return">Để vay tiền tại ngân hàng chúng tôi hãy uploade ảnh giấy tờ liên quan để chứng minh
+                                        thu nhập vd: Bảng lương, chứng minh thu nhập cá nhân,...</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <label class="label" >Ảnh chụp giấy tờ 1 </label>
                                     <div class="input-field">
-                                        <input type="file" name="image-loan1" class="form-control">
+                                        <input type="file" name="image-loan1">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-8">
                                     <label class="label" >Ảnh chụp giấy tờ 2 </label>
                                     <div class="input-field">
-                                        <input type="file" name="image-loan2" class="form-control">
+                                        <input type="file"  name="image-loan2" >
                                     </div>
                                 </div>
 
@@ -72,7 +74,11 @@
                             </div>
                             <div class="row  mt-60">
                                 <div class="col-md-12">
-                                    <div class="nav-btn d-flex justify-content-end">
+                                    <div class="nav-btn d-flex flex-wrap justify-content-between">
+                                        <a href="personal-details.html"
+                                           class="prev-btn theme-btn-primary_alt theme-btn"><i
+                                                class="arrow_left"></i>Quay lại
+                                        </a>
                                         <button class=" theme-btn-primary_alt theme-btn next-btn"
                                                 type="submit">Gửi Yêu Cầu<i class="arrow_right"></i></button>
                                     </div>

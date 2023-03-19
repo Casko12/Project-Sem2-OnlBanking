@@ -151,8 +151,11 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="d-grid mt-4 col-md-2"><button class="btn btn-primary" name="status" value="0" type="submit">Đăng kí</button></div>
-                                <div class="d-grid mt-4 col-md-10"><p style="margin-top: 29px;font-size: 16px">Already have an account? <a class="btn-link" href="{{route("login")}}">Log In</a><p></p></div>
+                                <div class="d-grid mt-4 col-md-4"><button class="btn btn-primary" name="status" value="0" type="submit">Đăng kí</button></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="d-grid mt-4 col-md-6"><p style="font-size: 16px">Already have an account? <a class="btn-link" href="{{route("login")}}">Đăng nhập</a><p></p></div>
                             </div>
                         </form>
 

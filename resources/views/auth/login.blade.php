@@ -37,7 +37,7 @@
                     <div class="icheck-primary">
                         <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                         <label for="agreeTerms">
-                           Đồng ý các <a href="#">điều khoản</a>
+                            Đồng ý các <a href="#">điều khoản</a>
                         </label>
                     </div>
                 </div>

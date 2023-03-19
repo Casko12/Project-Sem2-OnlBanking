@@ -57,6 +57,9 @@ class UserController extends Controller
     public function loan(){
         return view("user.loan");
     }
+    public function contact(){
+        return view("user.lien-he");
+    }
     public function personal(){
         return view("user.loan.personal");
 

@@ -26,7 +26,7 @@
                             </div>
                             <a href="#" class="step-dot"></a> </div>
                         <div class="col-4 step disabled">
-                            <div class="step-name">Thành công</div>
+                            <div class="step-name">Trạng thái giao dịch</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                             <hr class="mx-n3 mx-sm-n5 mb-3 mb-sm-4">
-                            <h3 class="text-5 fw-400 mb-3 mb-sm-4">Xác thực Số tiền và Nội dung</h3>
+                            <h3 class="text-5 fw-400 mb-3 mb-sm-4">Xác thực số tiền và nội dung</h3>
                             <hr class="mx-n3 mx-sm-n5 mb-4">
 
                             <p class="mb-1">Số tiền <span class="text-3 float-end">{{number_format($reveice["amount"])}} VNĐ</span></p>

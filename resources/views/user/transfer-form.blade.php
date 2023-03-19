@@ -15,19 +15,19 @@
                 <div class="col-lg-11 mx-auto">
                     <div class="row widget-steps">
                         <div class="col-4 step active">
-                            <div class="step-name">Details</div>
+                            <div class="step-name">Thông tin chuyển khoản</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
                             <a href="#" class="step-dot"></a> </div>
                         <div class="col-4 step disabled">
-                            <div class="step-name">Confirm</div>
+                            <div class="step-name">Xác nhận chuyển khoản</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
                             <a href="#" class="step-dot"></a> </div>
                         <div class="col-4 step disabled">
-                            <div class="step-name">Success</div>
+                            <div class="step-name">Thành công</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
@@ -35,6 +35,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Steps Progress bar End -->
+
             <h2 class="fw-400 text-center mt-3">Chuyển Khoản Qua Số Tài Khoản</h2>
             <p class="lead text-center mb-4">An toàn, Nhanh chóng, Thuận tiện.</p>
             <div class="row">
@@ -80,7 +82,7 @@
                                 <textarea class="form-control" rows="4" name="description"  required placeholder="Nhập nội dung chuyển khoản"></textarea>
                             </div><hr>
 
-                            <p >Tong<span class="float-end" id="totalMoney" ></span></p>
+                            <p >Số tiền bằng chữ<span class="float-end" id="totalMoney" ></span></p>
                             <div class="d-grid"><button type="submit"  class="btn btn-primary">Continue</button></div>
                         </form>
                         <!-- Send Money Form end -->

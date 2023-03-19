@@ -15,19 +15,19 @@
                 <div class="col-lg-11 mx-auto">
                     <div class="row widget-steps">
                         <div class="col-4 step complete">
-                            <div class="step-name">Details</div>
+                            <div class="step-name">Thông tin chuyển khoản</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
                             <span class="step-dot"></span> </div>
                         <div class="col-4 step complete">
-                            <div class="step-name">Confirm</div>
+                            <div class="step-name">Xác nhận chuyển khoản</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
                             <span class="step-dot"></span> </div>
                         <div class="col-4 step complete">
-                            <div class="step-name">Success</div>
+                            <div class="step-name">Thành công</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>

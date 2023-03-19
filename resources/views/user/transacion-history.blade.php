@@ -84,7 +84,7 @@
                         <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">16</span> <span class="d-block text-1 fw-300 text-uppercase">APR</span> </div>
                         <div class="col col-sm-7"> <span class="d-block text-4">HDFC Bank</span> <span class="text-muted">{{$data->receive_id}}</span> </div>
                         <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                        <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$data->amount}}">- {{$data->amount}}</span> <span class="text-2 text-uppercase">(USD)</span> </div>
+                        <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$data->amount}}">- {{$data->amount}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
                     </div>
                 </div>
 

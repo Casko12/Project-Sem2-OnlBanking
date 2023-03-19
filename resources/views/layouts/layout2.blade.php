@@ -359,6 +359,13 @@
                                 <div class="carousel-item @if($loop->first)active @endif">
                                     <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
                                         <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>
+                                            @if($account->status ==1)
+                                                <p class="col-sm-12 text-0"><span class="bg-success text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-check-circle"></i> Active</span></p>
+                                            @elseif($account->status ==2)
+                                                <p class="col-sm-12 text-0"><span class="bg-info text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-exclamation-circle"></i> Pending</span></p>
+                                            @else
+                                                <p class="col-sm-12 text-0"><span class="bg-danger text-white rounded-pill d-inline-block px-2 mb-0"><i class="fas fa-times-circle"></i> Deactive</span></p>
+                                            @endif
                                         <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
                                         <h3 class="text-9 fw-400">VNĐ {{number_format($item->balance)}}</h3>
                                         <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>

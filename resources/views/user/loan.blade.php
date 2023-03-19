@@ -11,6 +11,13 @@
                         <form method="post" action="{{url("/addLoan")}}">
                             <div class="row gy-4">
                                 <div class="col-md-8">
+                                    <label class="label" for="loan-amount">Lý do vay tiền</label>
+                                    <div class="input-field">
+                                        <span></span>
+                                        <input type="number" name="money_amount" class="form-control" placeholder="vay mua nhà, tiêu dùng...">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
                                     <label class="label" for="loan-amount">Số tiền bạn vay</label>
                                     <div class="input-field">
                                         <span>$</span>
@@ -51,7 +58,7 @@
                                         <label class="label" for="loan-return">Số tiền cần phải thanh toán khi đến hạn: </label>
                                 </div>
                                 <div class="col-md-2">
-                                        <label class="label" for="loan-return" style="float: right">1000 $</label>
+                                    <label class="label" for="loan-return" style="float: right">1000 <span>$</span></label>
                                 </div>
                                 <div class="col-md-8">
                                     <label class="label" for="loan-return">Để vay tiền tại ngân hàng chúng tôi hãy uploade ảnh giấy tờ liên quan để chứng minh

@@ -36,6 +36,7 @@ Route::get('/an-toan',[App\Http\Controllers\UserController::class,"anToan"]);
 Route::get('/loan',[App\Http\Controllers\UserController::class,"loan"]);
 Route::post('/addLoan',[App\Http\Controllers\UserController::class,"addLoan"]);
 Route::get('/lien-he',[App\Http\Controllers\UserController::class,"contact"]);
+Route::get('/gia-tri-cot-loi',[App\Http\Controllers\UserController::class,"giaTriCotLoi"]);
 
 
 

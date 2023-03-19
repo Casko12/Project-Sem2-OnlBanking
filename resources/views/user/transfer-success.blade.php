@@ -44,7 +44,8 @@
                         <div class="my-4">
                             <p class="text-success text-20 lh-1"><i class="fas fa-check-circle"></i></p>
                             <p class="text-success text-8 fw-500 lh-1">Thành công!</p>
-                            <p class="lead">Mã giao dịch: tyyuh6wwmcij</p>
+                            <p class="text-muted">Mã giao dịch: tyyuh6wwmcij</p>
+                            <p class="text-muted">Ngày giao dịch: 19/03/2023</p>
                         </div>
                         <p class="text-3 mb-4">Bạn đã chuyển thành công số tiền <span class="text-4 fw-500">{{number_format($reveice["amount"])}}</span> VNĐ tới <span class="fw-500">{{$user->name}}</span>, chi tiết xem tại <a class="btn-link" href="#">Lịch sử giao dịch</a>.</p>
                         <div class="d-grid"><button class="btn btn-primary">Xác nhận</button></div>

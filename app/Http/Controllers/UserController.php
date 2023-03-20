@@ -26,19 +26,37 @@ class UserController extends Controller
             "allaccount"=>$allaccount
         ]);
     }
-    public function transacionHistory(Account $account){
-
+    public function transacionHistory(Account $account,Request $request){
+        $transfer_id = [
+            "transfer_id" => $request->get("transfer_id")
+        ];
+        session(["transfer_id"=>$transfer_id]);
         $user= auth()->user();
         $allaccount = $user->Account;
-        $data = TransactionHistory::where("receive_id",$account->id)->orWhere("transfer_id",$account->id)->get();
+        $data = TransactionHistory::with(["Sender","Receiver"])->where("receive_id",$account->id)->orWhere("transfer_id",$account->id)->get()
+        ->map(function ($item) use ($account) {
+            if ($item->transfer_id == $account->id){
+                $item->amount = - $item->amount;
+            }else{
+                $item->amount = "+".$item->amount;
+            }
+            return $item;
+        });
 
-//        dd($data);
+//        $account_his = $data->Account;
+//dd($account_his);
+//        $user_his = User::find($account_his->user_id);
+//        $bank_his = Bank::find($account_his->bank_id);
+
         if($data != false){
             return view("user.transacion-history",[
                 "account"=>$account,
                 "user"=>$user,
                 "allaccount"=>$allaccount,
-                "data"=>$data
+                "data"=>$data,
+//                "account_his"=>$account_his,
+//                "user_his"=>$user_his,
+//                "bank_his"=>$bank_his
             ]);
         }else{
             return redirect()->back();
@@ -102,10 +120,38 @@ class UserController extends Controller
     public function showMoney(Request $request){
     }
     public function detailHis(TransactionHistory $history,Request $request){
-       $his_id = $history->id;
-       $detail = TransactionHistory::find("id",$his_id);
-       dd($his_id);
-       return response()->json(["detail"=>$detail]);
+        $transfer = session("transfer_id");
+        $history_id = $request->get("id");
+       $detail = TransactionHistory::where("id",$history_id)->first();
+            $account = Account::where("id",$transfer)->first();
+
+       if($detail->transfer_id == $account->id){
+           $account_number = Account::find($detail->receive_id);
+           $bank=Bank::find($account_number->bank_id);
+           $user=User::find($account_number->user_id);
+
+           return response()->json([
+               "detail"=>$detail,
+               "account_number"=>$account_number,
+               "bank"=>$bank,
+               "user"=>$user
+           ]);
+       }elseif ($detail->receive_id == $account->id) {
+           $account_number = Account::find($detail->transfer_id);
+           $bank=Bank::find($account_number->bank_id);
+           $user=User::find($account_number->user_id);
+           return response()->json([
+               "detail"=>$detail,
+               "account_number"=>$account_number,
+               "bank"=>$bank,
+               "user"=>$user
+           ]);
+
+       }
+
+
+
+
     }
 
     public function addToCart(Account $account,Request $request){

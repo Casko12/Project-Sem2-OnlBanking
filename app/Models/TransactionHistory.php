@@ -18,7 +18,10 @@ class TransactionHistory extends Model
       "status",
     ];
 
-    public function Account(){
-        return $this->hasMany(Account::class);
+    public function Sender(){
+        return $this->belongsTo(Account::class,"transfer_id");
+    }
+    public function Receiver(){
+        return $this->belongsTo(Account::class,"receive_id");
     }
 }

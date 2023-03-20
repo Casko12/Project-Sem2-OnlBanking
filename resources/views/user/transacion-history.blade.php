@@ -194,7 +194,7 @@
     });
 </script>
     <script>
-        function detailHis(){
+        function detailHis(x){
             var his_id = $("#transaction_id").val()
             var his_amount = $("#dataAmount").val()
             $.ajax({

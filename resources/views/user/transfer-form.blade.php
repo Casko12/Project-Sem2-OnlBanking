@@ -46,7 +46,7 @@
                         <hr class="mx-n3 mx-sm-n5 mb-4">
                         <!-- Send Money Form
                         ============================ -->
-                        <form id="form-send-money" action="{{url("/transfer-confirm",["account"=>$account->id])}}" method="post">
+                        <form id="form-send-money" action="{{url("/transfer-confirm")}}" method="get">
                             @csrf
                             <div class="mb-3">
                                 <label for="bankID" class="form-label">Chọn Ngân Hàng</label>

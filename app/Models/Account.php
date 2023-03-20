@@ -49,11 +49,11 @@ class Account extends Model
         }
             return $query;
     }
-    public function createHistory($account2,$amount){
+    public function createHistory($account1,$account2,$amount){
         $reveice =session("reveice_id");
 
             DB::table("transaction_history")->insert([
-                "transfer_id"=>$this->id,
+                "transfer_id"=>$account1->id,
                 "receive_id"=>$account2->id,
                 "amount"=>$amount,
                 "created_at"=>now()

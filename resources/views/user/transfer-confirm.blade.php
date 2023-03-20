@@ -43,7 +43,7 @@
                         <hr class="mx-n3 mx-sm-n5 mb-4">
                         <!-- Send Money Confirm
                         ============================================= -->
-                        <form id="form-send-money" action="{{url("/transfer-success",["account"=>$id])}}" method="post">
+                        <form id="form-send-money" action="{{url("/transfer-success")}}" method="get">
                             @csrf
                             <div class="mb-1">
                                 <label for="recieverID" class="form-label">Nhập mã PIN</label>

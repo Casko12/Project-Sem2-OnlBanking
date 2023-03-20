@@ -24,7 +24,6 @@
                         <div class="col-sm-6">
                             <div class="get-touch-box">
                                 <div class="icon">
-
                                     <img src="/user/html/img/contact/mail-open-outline.png" alt="mail icon">
                                 </div>
                                 <div>
@@ -36,7 +35,6 @@
                         <div class="col-sm-6">
                             <div class="get-touch-box mt-30">
                                 <div class="icon">
-
                                     <i class="icon_pin_alt "></i>
                                 </div>
                                 <div>
@@ -80,7 +78,7 @@
                                 </div>
                                 <div class="col-md-12 mt-20">
                                     <label for="form-text">Nội dung</label>
-                                    <textarea cols="30" rows="5" name="message" id="form-text"
+                                    <textarea cols="30" rows="5" name="description" id="form-text"
                                               class="form-control pt-15" placeholder="Hãy để lại ý kiến của bạn ở dưới đây..."
                                               required></textarea>
                                 </div>

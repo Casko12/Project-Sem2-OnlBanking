@@ -254,12 +254,13 @@ class UserController extends Controller
         $transfer = session("transfer_id");
 
         $pin = $request->get("pin");
+
         $account2 = Account::where("account_number",$reveice["receive_id"])->first();
 
        $account1 = Account::where('id',$transfer["transfer_id"])->first();
 
         if($account2!=null){
-            $user = User::find($account2->user_id);
+            $user = User::find($account1->user_id);
         }
         $transfer_amount = $account1->balance -=$reveice["amount"];
         $transfer_receive = $account2->balance +=$reveice["amount"];
@@ -268,6 +269,7 @@ class UserController extends Controller
 
 
         if(Hash::check($pin, $user->pin)){
+
             $account1->update([
                 "balance"=> $transfer_amount
             ]);

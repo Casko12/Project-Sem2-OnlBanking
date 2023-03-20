@@ -302,7 +302,7 @@
                                                     <label for="zipCode" class="form-label">Thay đổi mã PIN</label>
                                                     <input id="zipCode" value="" type="text" class="form-control" required placeholder="Mời điền mã PIN mới">
                                                 </div>
-                                                <div class="col-12 mt-4 d-grid"><button class="btn btn-primary" type="submit">Save Changes</button></div>
+                                                <div class="col-12 mt-4 d-grid"><button class="btn btn-primary" type="submit">Lưu thay đổi</button></div>
                                             </div>
                                         </form>
                                     </div>
@@ -391,8 +391,6 @@
                     @yield("main_content")
 
                 </div>
-
-
             </div>
         </div>
     </div>

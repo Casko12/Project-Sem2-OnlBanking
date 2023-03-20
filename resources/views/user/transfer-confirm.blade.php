@@ -60,8 +60,8 @@
 
                             <hr>
                             <p class="text-4 fw-500">Số tiền bằng chữ<span class="float-end">{{$reveice["amount"]}}</span></p>
-                            <div class="multi-button">
-                                <button class="btn btn-outline-success" onclick="history.go(-1);">Quay lại</button>
+                            <div class="btn-group" style="width:100%">
+                                <button class="btn btn-outline-primary" onclick="history.go(-1);">Quay lại</button>
                                 <button class="btn btn-outline-primary" type="submit" >Tiếp tục</button>
                             </div>
 

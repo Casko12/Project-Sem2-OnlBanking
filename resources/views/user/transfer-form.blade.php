@@ -83,9 +83,9 @@
                             </div><hr>
 
                             <p class="text-4 fw-500">Số tiền bằng chữ<span class="float-end"> đồng</span></p>
-                            <div class="multi-button">
-                                <button class="btn btn-outline-success btn-lg " onclick="history.go(-1);">Quay lại</button>
-                                <button class="btn btn-outline-primary btn-lg " type="submit" >Tiếp tục</button>
+                            <div class="btn-group" style="width:100%">
+                                <button class="btn btn-outline-primary btn-lg" onclick="history.go(-1);">Quay lại</button>
+                                <button class="btn btn-outline-primary btn-lg" type="submit" >Tiếp tục</button>
                             </div>
                         </form>
                         <!-- Send Money Form end -->

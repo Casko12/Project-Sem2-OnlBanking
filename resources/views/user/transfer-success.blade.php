@@ -7,9 +7,7 @@
 
     <!-- Content
     ============================================= -->
-    <div id="content" class="py-4">
         <div class="container">
-
             <!-- Steps Progress bar -->
             <div class="row mt-4 mb-5">
                 <div class="col-lg-11 mx-auto">
@@ -56,6 +54,5 @@
                 </div>
             </div>
         </div>
-    </div>
     <!-- Content end -->
 @endsection

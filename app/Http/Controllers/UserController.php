@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Mail;
 use App\Models\Account;
 use App\Models\Bank;
 use App\Models\TransactionHistory;
@@ -14,6 +14,7 @@ class UserController extends Controller
    public function home(){
        return view("user.home");
    }
+
     public function userInfo(){
 
        $user= auth()->user();
@@ -62,6 +63,9 @@ class UserController extends Controller
     }
     public function contact(){
         return view("user.lien-he");
+    }
+    public function guiTietKiem(){
+       return view("user.gui-tiet-kiem");
     }
     public function personal(){
         return view("user.loan.personal");
@@ -150,6 +154,7 @@ class UserController extends Controller
 //        dd($transfer,$account,$account1);
         if($account!=null){
             $user = User::find($account->user_id);
+
         }
         if($account1->account_number != $receive_id && $account1->balance >=$amount){
             $reveice =  [
@@ -229,6 +234,10 @@ class UserController extends Controller
                 "reveice" => $reveice,
                 "user"=>$user
             ]);
+                Mail::send('mails.newmail',compact('account','user'),function ($email) use($name, $user) {
+                    $email->subject('Email xác nhận chuyển khoản');
+                    $email->to($user->email,$user->name);
+                });
         }
         return redirect()->back();
 

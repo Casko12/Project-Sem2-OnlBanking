@@ -439,6 +439,9 @@
     <!-- Footer end -->
 </div>
 <!-- Document Wrapper end -->
+
+<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+
 <!-- Script -->
 <script src="user/user-page/vendor/jquery/jquery.min.js"></script>
 <script src="user/user-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -446,7 +449,6 @@
 <script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="user/user-page/js/theme.js"></script>
 
-<a id="back-to-top" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 @yield("custom_js")
 </body>
 </html>

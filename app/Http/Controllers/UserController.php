@@ -49,7 +49,7 @@ class UserController extends Controller
 //        $user_his = User::find($account_his->user_id);
 //        $bank_his = Bank::find($account_his->bank_id);
 
-        if($data != false){
+        if($data != null){
             return view("user.transacion-history",[
                 "account"=>$account,
                 "user"=>$user,

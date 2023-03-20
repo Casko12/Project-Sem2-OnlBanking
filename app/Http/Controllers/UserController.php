@@ -63,6 +63,9 @@ class UserController extends Controller
     public function contact(){
         return view("user.lien-he");
     }
+    public function guiTietKiem(){
+       return view("user.gui-tiet-kiem");
+    }
     public function personal(){
         return view("user.loan.personal");
 

@@ -1,4 +1,7 @@
 @extends("user.layout")
+@section("title")
+    Liên hệ với chúng tôi
+@endsection
 @section("main_content")
     <section class="pt-140 pb-140 get-touch-area bg_white" style="margin-top: 80px">
         <div class="container">

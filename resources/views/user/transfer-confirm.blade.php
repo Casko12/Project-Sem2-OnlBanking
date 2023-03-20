@@ -18,7 +18,7 @@
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
-                            <a href="send-money.html" class="step-dot"></a> </div>
+                            <a href="javascript:window.history.back();" class="step-dot"></a> </div>
                         <div class="col-4 step active">
                             <div class="step-name">Xác nhận chuyển khoản</div>
                             <div class="progress">

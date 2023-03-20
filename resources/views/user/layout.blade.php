@@ -137,7 +137,7 @@
                                data-bs-toggle="dropdown"></i>
                         </li>
                         <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="{{url("/gui-tiet-kiem")}}" role="button" data-bs-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
                                 Gửi tiết kiệm
                             </a>
@@ -244,13 +244,12 @@
                 </div>
                 <div class="col-lg-4 text-center text-lg-end ">
                     <div class="social-button">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

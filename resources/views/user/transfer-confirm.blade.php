@@ -6,9 +6,7 @@
 @section("main_content")
     <!-- Content
     ============================================= -->
-    <div id="content" class="py-4">
         <div class="container">
-
             <!-- Steps Progress bar -->
             <div class="row mt-4 mb-5">
                 <div class="col-lg-11 mx-auto">
@@ -18,19 +16,19 @@
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
-                            <a href="send-money.html" class="step-dot"></a> </div>
+                            <a href="javascript:window.history.back();" class="step-dot"></a> </div>
                         <div class="col-4 step active">
                             <div class="step-name">Xác nhận chuyển khoản</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
-                            <a href="#" class="step-dot"></a> </div>
+                            <a href="" class="step-dot"></a> </div>
                         <div class="col-4 step disabled">
                             <div class="step-name">Trạng thái giao dịch</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
-                            <a href="#" class="step-dot"></a> </div>
+                            <a href="" class="step-dot"></a> </div>
                     </div>
                 </div>
             </div>
@@ -60,8 +58,8 @@
 
                             <hr>
                             <p class="text-4 fw-500">Số tiền bằng chữ<span class="float-end">{{$reveice["amount"]}}</span></p>
-                            <div class="multi-button">
-                                <button class="btn btn-outline-success" onclick="history.go(-1);">Quay lại</button>
+                            <div class="btn-group" style="width:100%">
+                                <button class="btn btn-outline-primary" onclick="history.go(-1);">Quay lại</button>
                                 <button class="btn btn-outline-primary" type="submit" >Tiếp tục</button>
                             </div>
 
@@ -71,6 +69,5 @@
                 </div>
             </div>
         </div>
-    </div>
     <!-- Content end -->
 @endsection

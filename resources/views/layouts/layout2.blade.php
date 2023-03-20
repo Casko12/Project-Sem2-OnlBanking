@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/font-awesome/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/vendor/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="user/user-page/vendor/owl.carousel/assets/owl.carousel.min.css" />
     <link rel="stylesheet" type="text/css" href="user/user-page/css/stylesheet.css" />
     <!-- Colors Css -->
     @yield("custom_css")
@@ -348,6 +349,8 @@
 
                     <!-- Personal Details
                     ============================================= -->
+                    <!-- Slideshow
+   ============================================= -->
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -385,6 +388,7 @@
                             <span class="visually-hidden-focusable">Next</span>
                         </button>
                     </div>
+                    <!-- Slideshow end -->
 
                     <!-- Account Settings
                     ============================================= -->

@@ -162,7 +162,7 @@
                         </li>
 
                     </ul>
-                    <a class="theme-btn" href="{{url("/loan")}}">Tài khoản của bạn</a>
+                    <a class="theme-btn" href="{{url("/user-info")}}">Tài khoản của bạn</a>
                 </div>
             </div>
         </nav>

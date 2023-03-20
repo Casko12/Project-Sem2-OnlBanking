@@ -76,7 +76,7 @@
             <!-- Transaction List
             =============================== -->
             @foreach($data as $data)
-            <div class="transaction-list" id="transaction_id" onclick="detailHis()" name="transaction_id" value="{{$data->id}}">
+            <div class="transaction-list" id="transaction_id" onclick="detailHis({{$data->id}})" name="transaction_id">
 
 
                 <div class="transaction-item px-4 py-3" data-bs-toggle="modal"  data-bs-target="#transaction-detail">
@@ -105,7 +105,7 @@
                                     <div class="my-auto text-center">
                                         <div class="text-17 text-white my-3"><i class="fas fa-building"></i></div>
                                         <h3 class="text-4 text-white fw-400 my-3">Vietcombank</h3>
-                                        <div class="text-8 fw-500 text-white my-4">{{$data->amount}}</div>
+                                        <div class="text-8 fw-500 text-white my-4"></div>
                                         <p class="text-white">15 Tháng 3, 2021</p>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                                         <ul class="list-unstyled">
                                             <li class="fw-500">Người nhận:</li>
 {{--                                            nếu là giao dịch Chuyển tiền vào thì đổi "Người nhận" thành "Người gửi--}}
-                                            <li class="text-muted">{{$data->receive_id}}</li>
+                                            <li class="text-muted"></li>
                                         </ul>
                                         <ul class="list-unstyled">
                                             <li class="fw-500">Mã giao dịch:</li>
@@ -198,10 +198,10 @@
             var his_id = $("#transaction_id").val()
             var his_amount = $("#dataAmount").val()
             $.ajax({
-                url: "/detailHis/"+"?id="+his_id,
+                url: "/detailHis/"+"?id="+{{$data->id}},
                 method:"get",
                 success: function (rs) {
-                    $("#amount").text(his_amount)
+                    $("#amount").text(rs.detail)
                 }
             })
         }

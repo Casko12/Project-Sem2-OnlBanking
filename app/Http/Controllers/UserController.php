@@ -101,9 +101,11 @@ class UserController extends Controller
 
     public function showMoney(Request $request){
     }
-    public function detailHis(Request $request){
-       $his_id = $request->get("transaction_id");
+    public function detailHis(TransactionHistory $history,Request $request){
+       $his_id = $history->id;
+       $detail = TransactionHistory::find("id",$his_id);
        dd($his_id);
+       return response()->json(["detail"=>$detail]);
     }
 
     public function addToCart(Account $account,Request $request){

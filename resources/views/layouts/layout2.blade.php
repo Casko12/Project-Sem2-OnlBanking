@@ -688,7 +688,7 @@
                                         <hr class="mx-n3">
                                         <div class="multi-button">
                                             <button><i class="fas fa-coins"></i> Tiết kiệm</button>
-                                            <form action="{{url("/money-transfer",["account"=>$item->id])}}" method="get">
+                                            <form action="{{url("/money-transfer")}}" method="get">
                                                 <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
                                             </form>
                                             <form action="{{url("/transacion-history",["account"=>$item->id])}}" method="get">

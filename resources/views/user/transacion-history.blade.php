@@ -6,7 +6,7 @@
 
 @section("main_content")
     <div class="col-lg-9">
-        <h2 class="fw-400 mb-3">Lịch sử giao dịch:</h2> <h1>{{$account->account_number}}</h1>
+        <h2 class="fw-400 mb-3">Lịch sử giao dịch:</h2> <h1 >{{$account->account_number}}</h1>
 
         <!-- Filter
         ============================================= -->
@@ -75,27 +75,26 @@
 
             <!-- Transaction List
             =============================== -->
-            @foreach($data as $data)
-            <div class="transaction-list" id="transaction_id" onclick="detailHis({{$data->id}})" name="transaction_id">
+            @foreach($data as $item)
 
-
-                <div class="transaction-item px-4 py-3" data-bs-toggle="modal"  data-bs-target="#transaction-detail">
+            <div class="transaction-list" id="transaction_id" onclick="detailHis({{$item->id}})" name="transaction_id">
+                <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
                     <div class="row align-items-center flex-row">
-                        <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">16</span> <span class="d-block text-1 fw-300 text-uppercase">APR</span> </div>
-                        <div class="col col-sm-7"> <span class="d-block text-4">HDFC Bank</span> <span class="text-muted">{{$data->receive_id}}</span> </div>
+                        <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">{{$item->id}}</span> <span class="d-block text-1 fw-300 text-uppercase">APR</span> </div>
+                        <div class="col col-sm-7"> <span class="d-block text-4">HDFC Bank</span> <span class="text-muted">{{$item->Receiver->Bank->name}}</span> </div>
                         <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                        <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$data->amount}}">- {{$data->amount}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
+                        <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$item->amount}}"> {{$item->amount}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
                     </div>
                 </div>
-
-
             </div>
+
             @endforeach
 
             <!-- Transaction List End -->
 
             <!-- Transaction Item Details Modal
             =========================================== -->
+
             <div id="transaction-detail" class="modal fade" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered transaction-details" role="document">
                     <div class="modal-content">
@@ -104,9 +103,10 @@
                                 <div class="col-sm-5 d-flex justify-content-center bg-primary rounded-start py-4">
                                     <div class="my-auto text-center">
                                         <div class="text-17 text-white my-3"><i class="fas fa-building"></i></div>
-                                        <h3 class="text-4 text-white fw-400 my-3">Vietcombank</h3>
+                                        <h3 class="text-4 text-white fw-400 my-3" id="bank_name"></h3>
+                                        <span class="text-3 ms-auto" id="amount1"></span>
                                         <div class="text-8 fw-500 text-white my-4"></div>
-                                        <p class="text-white">15 Tháng 3, 2021</p>
+                                        <p class="text-white" id="created_at"></p>
                                     </div>
                                 </div>
                                 <div class="col-sm-7">
@@ -124,7 +124,7 @@
                                         <ul class="list-unstyled">
                                             <li class="fw-500">Người nhận:</li>
 {{--                                            nếu là giao dịch Chuyển tiền vào thì đổi "Người nhận" thành "Người gửi--}}
-                                            <li class="text-muted"></li>
+                                            <li class="text-muted" ></li>
                                         </ul>
                                         <ul class="list-unstyled">
                                             <li class="fw-500">Mã giao dịch:</li>
@@ -195,13 +195,16 @@
 </script>
     <script>
         function detailHis(x){
-            var his_id = $("#transaction_id").val()
-            var his_amount = $("#dataAmount").val()
+            var id = $("#transaction_id").val()
+            var account_n = $("#account_number").val()
             $.ajax({
-                url: "/detailHis/"+"?id="+{{$data->id}},
+                url: "/detailHis/"+"?id="+x,
                 method:"get",
                 success: function (rs) {
-                    $("#amount").text(rs.detail)
+                $("#amount").text(rs.detail["amount"])
+                  $("#amount1").text(rs.detail["amount"])
+                  $("#bank_name").text(rs.bank["name"])
+                  $("#created_at").text(rs.detail["created_at"])
                 }
             })
         }

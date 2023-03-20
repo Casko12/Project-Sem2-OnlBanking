@@ -82,8 +82,11 @@
                                 <textarea class="form-control" rows="4" name="description"  required placeholder="Nhập nội dung chuyển khoản"></textarea>
                             </div><hr>
 
-                            <p >Số tiền bằng chữ<span class="float-end" id="totalMoney" ></span></p>
-                            <div class="d-grid"><button type="submit"  class="btn btn-primary">Continue</button></div>
+                            <p class="text-4 fw-500">Số tiền bằng chữ<span class="float-end"> đồng</span></p>
+                            <div class="multi-button">
+                                <button class="btn btn-outline-success" onclick="history.go(-1);">Quay lại</button>
+                                <button class="btn btn-outline-primary" type="submit" >Tiếp tục</button>
+                            </div>
                         </form>
                         <!-- Send Money Form end -->
                     </div>
@@ -105,7 +108,7 @@
             $("#userName").val(rs.user)
             }
          })
-        }
+    }
     function showMoney(){
         var phi = $("#phi").val()
         var money = $("#recipientGets").val()
@@ -118,6 +121,6 @@
                }
             })
     }
-
-    </script>
+     </script>
 @endsection
+

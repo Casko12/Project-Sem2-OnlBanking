@@ -24,13 +24,13 @@
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
-                            <a href="#" class="step-dot"></a> </div>
+                            <a href="" class="step-dot"></a> </div>
                         <div class="col-4 step disabled">
                             <div class="step-name">Trạng thái giao dịch</div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
-                            <a href="#" class="step-dot"></a> </div>
+                            <a href="" class="step-dot"></a> </div>
                     </div>
                 </div>
             </div>

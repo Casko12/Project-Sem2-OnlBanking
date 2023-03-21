@@ -33,11 +33,11 @@ Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->nam
 Route::get('/ve-chung-toi',[App\Http\Controllers\UserController::class,"veChungToi"]);
 Route::get('/phat-trien',[App\Http\Controllers\UserController::class,"phatTrien"]);
 Route::get('/an-toan',[App\Http\Controllers\UserController::class,"anToan"]);
-Route::get('/loan',[App\Http\Controllers\UserController::class,"loan"]);
+
 Route::post('/addLoan',[App\Http\Controllers\UserController::class,"addLoan"]);
 Route::get('/lien-he',[App\Http\Controllers\UserController::class,"contact"]);
 Route::get('/gia-tri-cot-loi',[App\Http\Controllers\UserController::class,"giaTriCotLoi"]);
-Route::get('/gui-tiet-kiem',[App\Http\Controllers\UserController::class,"guiTietKiem"]);
+
 
 
 

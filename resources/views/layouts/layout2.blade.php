@@ -240,7 +240,7 @@
 
                 <!-- Left Panel
                 ============================================= -->
-                <aside class="col-lg-3">
+                <aside class="col-lg-4">
 
                     <!-- Hello + edit
                     =============================== -->
@@ -344,7 +344,7 @@
 
                 </aside>
                 <!-- Left Panel End -->
-                <div class="col-lg-9">
+                <div class="col-lg-8">
 
                     <!-- Personal Details
                     ============================================= -->

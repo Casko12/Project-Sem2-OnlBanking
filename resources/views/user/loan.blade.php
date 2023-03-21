@@ -5,7 +5,7 @@
     Khoản vay
 @endsection
 @section("main_content")
-    <div class="bg-white shadow-sm rounded p-4 mb-4">
+    <div class="bg-white shadow-sm rounded p-4 mb-4"style="margin-top: 20px">
         <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Khoản vay</h3>
         <hr class="mx-n4 mb-4">
         <div class="container">

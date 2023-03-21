@@ -2,13 +2,11 @@
 <base href="{{ url("/") }}"/>
 
 @section("title")
-    Danh sách khoản vay
+    Danh sách gửi tiết kiệm
 @endsection
 @section("main_content")
     <div class="bg-white shadow-sm rounded p-4 mb-4"style="margin-top: 25px">
-
-        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Danh sách khoản vay<a href="{{url("/loan")}}" class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Thêm mới</a></h3>
-
+        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Danh sách khoản vay<a href="{{url("/gui-tiet-kiem")}}"  class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Thêm mới</a></h3>
         <hr class="mx-n4 mb-4">
         <div class="container">
             <div class="row">
@@ -69,7 +67,7 @@
                         <div class="transaction-title py-2 px-4">
                             <div class="row">
                                 <div class="col-2 col-sm-1 text-center"><span class="">Ngày</span></div>
-                                <div class="col col-sm-7">Mô tả</div>
+                                <div class="col col-sm-7">Số tài khoản gửi</div>
                                 <div class="col-auto col-sm-2 d-none d-sm-block text-center">Trạng thái</div>
                                 <div class="col-3 col-sm-2 text-end">Số tiền</div>
                             </div>
@@ -79,28 +77,28 @@
                         <!-- Transaction List
                         =============================== -->
 
-                                <div class="transaction-list" id="transaction_id" onclick="detailHis()" name="transaction_id">
-                                    <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
-                                        <div class="row align-items-center flex-row">
-                                            <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300"></span> <span class="d-block text-1 fw-300 text-uppercase"></span> </div>
-                                            <div class="col col-sm-7"> <span class="d-block text-4"></span> <span class="text-muted"></span> </div>
-                                            <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                                            <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value=""> </span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
-                                        </div>
-                                    </div>
+                        <div class="transaction-list" id="transaction_id" onclick="detailHis()" name="transaction_id">
+                            <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
+                                <div class="row align-items-center flex-row">
+                                    <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300"></span> <span class="d-block text-1 fw-300 text-uppercase"></span> </div>
+                                    <div class="col col-sm-7"> <span class="d-block text-4"></span> <span class="text-muted"></span> </div>
+                                    <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
+                                    <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value=""> </span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
                                 </div>
+                            </div>
+                        </div>
 
 
-                                <div class="transaction-list" id="transaction_id" onclick="detailHis()" name="transaction_id">
-                                    <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
-                                        <div class="row align-items-center flex-row">
-                                            <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300"></span> <span class="d-block text-1 fw-300 text-uppercase"></span> </div>
-                                            <div class="col col-sm-7"> <span class="d-block text-4"></span> <span class="text-muted"></span> </div>
-                                            <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                                            <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value=""></span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
-                                        </div>
-                                    </div>
+                        <div class="transaction-list" id="transaction_id" onclick="detailHis()" name="transaction_id">
+                            <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
+                                <div class="row align-items-center flex-row">
+                                    <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300"></span> <span class="d-block text-1 fw-300 text-uppercase"></span> </div>
+                                    <div class="col col-sm-7"> <span class="d-block text-4"></span> <span class="text-muted"></span> </div>
+                                    <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
+                                    <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value=""></span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
                                 </div>
+                            </div>
+                        </div>
 
 
                         <!-- Transaction List End -->
@@ -144,8 +142,8 @@
                                                         <li class="text-muted">26566689645685976589</li>
                                                     </ul>
                                                     <ul class="list-unstyled">
-                                                        <li class="fw-500">Lý do vay:</li>
-                                                        <li class="text-muted">Mua nhà</li>
+                                                        <li class="fw-500">Tiền lãi:</li>
+                                                        <li class="text-muted">$10000</li>
                                                     </ul>
                                                     <ul class="list-unstyled">
                                                         <li class="fw-500">Trạng thái:</li>

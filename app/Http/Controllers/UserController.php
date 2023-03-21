@@ -93,6 +93,18 @@ class UserController extends Controller
             "allaccount"=>$allaccount
         ]);
     }
+    public function dsGuiTietKiem(){
+
+        $user= auth()->user();
+        $account = $user->firstAccount;
+        $allaccount = $user->Account;
+
+        return view("user.danhsach-gui-tiet-kiem",[
+            "account"=>$account,
+            "user"=>$user,
+            "allaccount"=>$allaccount
+        ]);
+    }
     public function contact(){
         return view("user.lien-he");
     }

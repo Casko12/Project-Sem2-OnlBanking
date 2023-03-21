@@ -5,7 +5,7 @@
     Khoản vay
 @endsection
 @section("main_content")
-    <div class="bg-white shadow-sm rounded p-4 mb-4">
+    <div class="bg-white shadow-sm rounded p-4 mb-4" style="margin-top: 10px">
         <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Gửi tiết kiệm</h3>
         <hr class="mx-n4 mb-4">
         <div class="container">
@@ -57,26 +57,18 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <label class="label" for="loan-return">Số tiền cần phải thanh toán khi đến hạn: </label>
+                                    <label class="label" for="loan-return">Số tiền lãi là: </label>
                                 </div>
                                 <div class="col-md-2">
                                     <label class="label" for="loan-return" style="float: right">1000 <span>$</span></label>
                                 </div>
                                 <div class="col-md-10">
-                                    <label class="label" for="loan-return">Để vay tiền tại ngân hàng chúng tôi hãy uploade ảnh giấy tờ liên quan để chứng minh
-                                        thu nhập vd: Bảng lương, chứng minh thu nhập cá nhân,...</label>
-                                </div>
-                                <div class="col-md-10">
-                                    <label class="label" >Ảnh chụp giấy tờ 1 </label>
-                                    <div class="input-field">
-                                        <input type="file" name="image-loan1">
-                                    </div>
-                                </div>
-                                <div class="col-md-10">
-                                    <label class="label" >Ảnh chụp giấy tờ 2 </label>
-                                    <div class="input-field">
-                                        <input type="file"  name="image-loan2" >
-                                    </div>
+                                    <label class="label" >Phương thức đáo hạn gốc
+                                    </label>
+                                    <select class="w-100 form-control">
+                                        <option value="" class="form-check">Tiếp tục gửi thêm kì mới sau khi đáo hạn</option>
+                                        <option value="">Trả tiền về tài khoản khi đáo hạn</option>
+                                    </select>
                                 </div>
 
 

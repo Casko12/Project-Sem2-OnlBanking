@@ -76,18 +76,30 @@
             <!-- Transaction List
             =============================== -->
             @foreach($data as $item)
-
+                @if($account->id == $item->transfer_id)
             <div class="transaction-list" id="transaction_id" onclick="detailHis({{$item->id}})" name="transaction_id">
                 <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
                     <div class="row align-items-center flex-row">
-                        <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">{{$item->id}}</span> <span class="d-block text-1 fw-300 text-uppercase">APR</span> </div>
-                        <div class="col col-sm-7"> <span class="d-block text-4">HDFC Bank</span> <span class="text-muted">{{$item->Receiver->Bank->name}}</span> </div>
+                        <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">{{date_format(date_create($item->created_at),"d")}}</span> <span class="d-block text-1 fw-300 text-uppercase">{{date_format(date_create($item->created_at),"m")}}</span> </div>
+                        <div class="col col-sm-7"> <span class="d-block text-4">{{$item->Receiver->Bank->name}}</span> <span class="text-muted">{{$item->Receiver->account_number}}</span> </div>
                         <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                        <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$item->amount}}"> {{$item->amount}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
+                        <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$item->amount}}"> {{number_format($item->amount)}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
                     </div>
                 </div>
             </div>
 
+                @elseif($account->id == $item->receive_id)
+                        <div class="transaction-list" id="transaction_id" onclick="detailHis({{$item->id}})" name="transaction_id">
+                            <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
+                                <div class="row align-items-center flex-row">
+                                    <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">{{date_format(date_create($item->created_at),"d")}}</span> <span class="d-block text-1 fw-300 text-uppercase">{{date_format(date_create($item->created_at),"m")}}</span> </div>
+                                    <div class="col col-sm-7"> <span class="d-block text-4">{{$item->Sender->Bank->name}}</span> <span class="text-muted">{{$item->Sender->account_number}}</span> </div>
+                                    <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
+                                    <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$item->amount}}">+{{number_format($item->amount)}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
             @endforeach
 
             <!-- Transaction List End -->
@@ -103,7 +115,7 @@
                                 <div class="col-sm-5 d-flex justify-content-center bg-primary rounded-start py-4">
                                     <div class="my-auto text-center">
                                         <div class="text-17 text-white my-3"><i class="fas fa-building"></i></div>
-                                        <h3 class="text-4 text-white fw-400 my-3" id="bank_name"></h3>
+                                        <h3 class="text-4 text-white fw-400 my-3" id="account"></h3>
                                         <span class="text-3 ms-auto" id="amount1"></span>
                                         <div class="text-8 fw-500 text-white my-4"></div>
                                         <p class="text-white" id="created_at"></p>
@@ -116,13 +128,13 @@
                                     <hr>
                                     <div class="px-3">
                                         <ul class="list-unstyled">
-                                            <li class="mb-2">Loại giao dịch <span class="float-end text-3">Chuyển tiền đi</span></li>
+                                            <li class="mb-2">Loại giao dịch <span class="float-end text-3" id="loaigiaodich"></span></li>
                                         </ul>
                                         <hr class="mb-2">
                                         <p class="d-flex align-items-center fw-500 mb-0">Số tiền <span class="text-3 ms-auto" id="amount"></span></p>
                                         <hr class="mb-4 mt-2">
                                         <ul class="list-unstyled">
-                                            <li class="fw-500">Người nhận:</li>
+                                            <li class="fw-500" id="nguoi"></li>
 {{--                                            nếu là giao dịch Chuyển tiền vào thì đổi "Người nhận" thành "Người gửi--}}
                                             <li class="text-muted" ></li>
                                         </ul>
@@ -201,10 +213,13 @@
                 url: "/detailHis/"+"?id="+x,
                 method:"get",
                 success: function (rs) {
-                $("#amount").text(rs.detail["amount"])
-                  $("#amount1").text(rs.detail["amount"])
-                  $("#bank_name").text(rs.bank["name"])
-                  $("#created_at").text(rs.detail["created_at"])
+                $("#amount").text(rs.amount)
+                  $("#amount1").text(rs.amount)
+                  $("#account").text(rs.account)
+                  $("#created_at").text(rs.date)
+                  $("#nguoi").text(rs.nguoi)
+                  $("#loaigiaodich").text(rs.loaigiaodich)
+
                 }
             })
         }

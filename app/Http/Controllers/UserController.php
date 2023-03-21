@@ -39,15 +39,12 @@ class UserController extends Controller
             if ($item->transfer_id == $account->id){
                 $item->amount = - $item->amount;
             }else{
-                $item->amount = "+".$item->amount;
+                $item->amount = $item->amount;
             }
             return $item;
         });
 
-//        $account_his = $data->Account;
-//dd($account_his);
-//        $user_his = User::find($account_his->user_id);
-//        $bank_his = Bank::find($account_his->bank_id);
+
 
         if($data != null){
             return view("user.transacion-history",[
@@ -55,9 +52,7 @@ class UserController extends Controller
                 "user"=>$user,
                 "allaccount"=>$allaccount,
                 "data"=>$data,
-//                "account_his"=>$account_his,
-//                "user_his"=>$user_his,
-//                "bank_his"=>$bank_his
+
             ]);
         }else{
             return redirect()->back();
@@ -123,35 +118,46 @@ class UserController extends Controller
 
     public function showMoney(Request $request){
     }
-    public function detailHis(TransactionHistory $history,Request $request){
+    public function detailHis(TransactionHistory $history,Request $request,Account $account){
         $transfer = session("transfer_id");
         $history_id = $request->get("id");
-       $detail = TransactionHistory::where("id",$history_id)->first();
-            $account = Account::where("id",$transfer)->first();
-
-       if($detail->transfer_id == $account->id){
-           $account_number = Account::find($detail->receive_id);
-           $bank=Bank::find($account_number->bank_id);
-           $user=User::find($account_number->user_id);
+       $detail = TransactionHistory::with(["Sender","Receiver"])->where("id",$history_id)->first();
+        $date = date_format(date_create($detail->created_at),"d-m-yy H:i:s");
+        $user = null;
+        $account = null;
+        $bank = null;
+        $amount = null;
+                if($detail->receive_id == intval($transfer["transfer_id"])){
+                    $account= $detail->Sender->account_number;
+                    $bank= $detail->Sender->Bank->name;
+                    $user= $detail->Sender->User->name;
+                    $amount= "+".$detail->amount;
+                    $nguoi = "nguoi gui";
+                    $loaigiaodich = "Chuyen tien den";
+                }elseif ($detail->transfer_id == intval($transfer["transfer_id"])){
+                    $bank= $detail->Receiver->Bank->name;
+                    $account= $detail->Receiver->account_number;
+                    $user= $detail->Receiver->User->name;
+                    $amount= -$detail->amount;
+                    $nguoi = "nguoi nhan";
+                    $loaigiaodich = "Chuyen tien di";
+                }
 
            return response()->json([
                "detail"=>$detail,
-               "account_number"=>$account_number,
+               "account"=>$account,
                "bank"=>$bank,
-               "user"=>$user
-           ]);
-       }elseif ($detail->receive_id == $account->id) {
-           $account_number = Account::find($detail->transfer_id);
-           $bank=Bank::find($account_number->bank_id);
-           $user=User::find($account_number->user_id);
-           return response()->json([
-               "detail"=>$detail,
-               "account_number"=>$account_number,
-               "bank"=>$bank,
-               "user"=>$user
-           ]);
+               "user"=>$user,
+               "date"=>$date,
+               "nguoi"=>$nguoi,
+               "loaigiaodich"=>$loaigiaodich,
+               "amount"=>$amount,
+               "account"=>$account
 
-       }
+
+               ]);
+
+
 
 
 

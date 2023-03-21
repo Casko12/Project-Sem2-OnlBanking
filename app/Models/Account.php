@@ -47,13 +47,15 @@ class Account extends Model
         }
             return $query;
     }
-    public function createHistory($account1,$account2,$amount){
-        $reveice =session("reveice_id");
+    public function createHistory($account1,$account2,$amount,$description){
 
+            $code = "0123456789asdfghjklzxcvbnmqwertyuiopASDFGHJKLQWERTYUIOPZXCVBNM";
             DB::table("transaction_history")->insert([
                 "transfer_id"=>$account1->id,
                 "receive_id"=>$account2->id,
                 "amount"=>$amount,
+                "description"=>$description,
+                "delivery_code"=>substr(str_shuffle($code),0,12),
                 "created_at"=>now()
             ]);
 

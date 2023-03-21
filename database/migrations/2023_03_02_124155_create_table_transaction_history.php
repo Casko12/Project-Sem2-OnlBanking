@@ -22,6 +22,7 @@ class CreateTableTransactionHistory extends Migration
             $table->integer("amount");
             $table->boolean("status")->default(true);
             $table->string("description");
+            $table->string("delivery_code");
             $table->timestamps();
         });
     }

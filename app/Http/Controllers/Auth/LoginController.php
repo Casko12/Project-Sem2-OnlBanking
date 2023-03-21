@@ -47,7 +47,7 @@ class LoginController extends Controller
             Auth::logout();
         }
 
-        if($user->Admin && $user ->Admin->role == "ADMIN"){
+        if($user->Admin && $user->Admin->role == "ADMIN"){
             return redirect()->to(RouteServiceProvider::ADMIN);
         }
     }

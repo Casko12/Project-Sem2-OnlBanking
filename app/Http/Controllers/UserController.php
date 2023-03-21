@@ -142,6 +142,9 @@ class UserController extends Controller
        $detail = TransactionHistory::with(["Sender","Receiver"])->where("id",$history_id)->first();
 //       dd($history_id,$transfer);
         $date = date_format(date_create($detail->created_at),"d-m-Y H:i:s");
+        $delivery_code = $detail->delivery_code;
+
+        $description = $detail->description;
         $user = null;
         $account = null;
         $bank = null;
@@ -171,6 +174,8 @@ class UserController extends Controller
                "nguoi"=>$nguoi,
                "loaigiaodich"=>$loaigiaodich,
                "amount"=>$amount,
+               "description"=>$description,
+               "delivery_code"=>$delivery_code
 
 
 
@@ -290,6 +295,7 @@ class UserController extends Controller
         $transfer_amount = $account1->balance -=$reveice["amount"];
         $transfer_receive = $account2->balance +=$reveice["amount"];
         $amount = $reveice['amount'];
+        $description = $reveice['description'];
 
 
 
@@ -301,7 +307,7 @@ class UserController extends Controller
             $account2->update([
                 "balance"=> $transfer_receive
             ]);
-            $account1->createHistory($account1,$account2,$amount);
+            $account1->createHistory($account1,$account2,$amount,$description);
             return view("user.transfer-success",[
                 "account" =>$account2,
                 "reveice" => $reveice,

@@ -78,7 +78,7 @@
                 <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
                     <div class="row align-items-center flex-row">
                         <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">{{date_format(date_create($item->created_at),"d")}}</span> <span class="d-block text-1 fw-300 text-uppercase">{{date_format(date_create($item->created_at),"m")}}</span> </div>
-                        <div class="col col-sm-7"> <span class="d-block text-4">{{$item->Receiver->Bank->name}}</span> <span class="text-muted">{{$item->Receiver->account_number}}</span> </div>
+                        <div class="col col-sm-7"> <span class="d-block text-4">{{$item->Receiver->User->name}}</span> <span class="text-muted">{{$item->Receiver->Bank->name}}</span> </div>
                         <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
                         <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$item->amount}}"> {{number_format($item->amount)}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
                     </div>
@@ -90,7 +90,7 @@
                             <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
                                 <div class="row align-items-center flex-row">
                                     <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">{{date_format(date_create($item->created_at),"d")}}</span> <span class="d-block text-1 fw-300 text-uppercase">{{date_format(date_create($item->created_at),"m")}}</span> </div>
-                                    <div class="col col-sm-7"> <span class="d-block text-4">{{$item->Sender->Bank->name}}</span> <span class="text-muted">{{$item->Sender->account_number}}</span> </div>
+                                    <div class="col col-sm-7"> <span class="d-block text-4">{{$item->Sender->User->name}}</span> <span class="text-muted">{{$item->Sender->Bank->name}}</span> </div>
                                     <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
                                     <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$item->amount}}">+{{number_format($item->amount)}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
                                 </div>
@@ -111,9 +111,9 @@
                             <div class="row g-0">
                                 <div class="col-sm-5 d-flex justify-content-center bg-primary rounded-start py-4">
                                     <div class="my-auto text-center">
-                                        <div class="text-17 text-white my-3"><i class="fas fa-building"></i></div>
+                                        <div class="text-8 text-black my-3" id="bank"></div>
                                         <h3 class="text-4 text-white fw-400 my-3" id="account"></h3>
-                                        <span class="text-3 ms-auto" id="amount1"></span>
+                                        <span class="text-3 text-black ms-auto" id="amount1"></span>
                                         <div class="text-8 fw-500 text-white my-4"></div>
                                         <p class="text-white" id="created_at"></p>
                                     </div>
@@ -133,15 +133,15 @@
                                         <ul class="list-unstyled">
                                             <li class="fw-500" id="nguoi"></li>
 {{--                                            nếu là giao dịch Chuyển tiền vào thì đổi "Người nhận" thành "Người gửi--}}
-                                            <li class="text-muted" ></li>
+                                            <li class="text-muted" id="user"></li>
                                         </ul>
                                         <ul class="list-unstyled">
                                             <li class="fw-500">Mã giao dịch:</li>
-                                            <li class="text-muted">26566689645685976589</li>
+                                            <li class="text-muted" id="delivery_code"></li>
                                         </ul>
                                         <ul class="list-unstyled">
                                             <li class="fw-500">Mô tả:</li>
-                                            <li class="text-muted">Chuyển tiền học</li>
+                                            <li class="text-muted" id="description"></li>
                                         </ul>
                                         <ul class="list-unstyled">
                                             <li class="fw-500">Trạng thái:</li>
@@ -216,6 +216,11 @@
                   $("#created_at").text(rs.date)
                   $("#nguoi").text(rs.nguoi)
                   $("#loaigiaodich").text(rs.loaigiaodich)
+                    $("#delivery_code").text(rs.delivery_code)
+                    $("#description").text(rs.description)
+                    $("#user").text(rs.user)
+                    $("#bank").text(rs.bank)
+
 
                 }
             })

@@ -78,16 +78,16 @@ class UserController extends Controller
         return view("user.lien-he");
     }
     public function guiTietKiem(){
-//        $user= auth()->user();
-//        $account = $user->firstAccount;
-//        $allaccount = $user->Account;
-//
-//        return view("user.gui-tiet-kiem",[
-//            "account"=>$account,
-//            "user"=>$user,
-//            "allaccount"=>$allaccount
-//        ]);
-        return view("user.gui-tiet-kiem");
+        $user= auth()->user();
+        $account = $user->firstAccount;
+        $allaccount = $user->Account;
+
+        return view("user.gui-tiet-kiem",[
+            "account"=>$account,
+            "user"=>$user,
+            "allaccount"=>$allaccount
+        ]);
+//        return view("user.gui-tiet-kiem");
     }
     public function personal(){
         return view("user.loan.personal");
@@ -131,7 +131,7 @@ class UserController extends Controller
         $transfer = session("transfer_id");
         $history_id = $request->get("id");
        $detail = TransactionHistory::with(["Sender","Receiver"])->where("id",$history_id)->first();
-        $date = date_format(date_create($detail->created_at),"d-m-yy H:i:s");
+        $date = date_format(date_create($detail->created_at),"d-m-Y H:i:s");
         $user = null;
         $account = null;
         $bank = null;
@@ -141,15 +141,15 @@ class UserController extends Controller
                     $bank= $detail->Sender->Bank->name;
                     $user= $detail->Sender->User->name;
                     $amount= "+".$detail->amount;
-                    $nguoi = "nguoi gui";
-                    $loaigiaodich = "Chuyen tien den";
+                    $nguoi = "Người Gửi";
+                    $loaigiaodich = "Chuyển tiền đến";
                 }elseif ($detail->transfer_id == intval($transfer["transfer_id"])){
                     $bank= $detail->Receiver->Bank->name;
                     $account= $detail->Receiver->account_number;
                     $user= $detail->Receiver->User->name;
                     $amount= -$detail->amount;
-                    $nguoi = "nguoi nhan";
-                    $loaigiaodich = "Chuyen tien di";
+                    $nguoi = "Người Nhận:";
+                    $loaigiaodich = "Chuyển tiền đi";
                 }
 
            return response()->json([
@@ -161,7 +161,7 @@ class UserController extends Controller
                "nguoi"=>$nguoi,
                "loaigiaodich"=>$loaigiaodich,
                "amount"=>$amount,
-               "account"=>$account
+
 
 
                ]);

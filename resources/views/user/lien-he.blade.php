@@ -62,7 +62,8 @@
                 </div>
                 <div class="col-lg-6 offset-lg-1">
                     <div class="contact-form-widget">
-                        <form action="{{url("/lien-he")}}" method="post">
+                        <form action="{{url("/create-contact")}}" role="form" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="f-name">Họ và tên</label>

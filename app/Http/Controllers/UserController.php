@@ -83,7 +83,16 @@ class UserController extends Controller
         return view("user.lien-he");
     }
     public function guiTietKiem(){
-       return view("user.gui-tiet-kiem");
+//        $user= auth()->user();
+//        $account = $user->firstAccount;
+//        $allaccount = $user->Account;
+//
+//        return view("user.gui-tiet-kiem",[
+//            "account"=>$account,
+//            "user"=>$user,
+//            "allaccount"=>$allaccount
+//        ]);
+        return view("user.gui-tiet-kiem");
     }
     public function personal(){
         return view("user.loan.personal");

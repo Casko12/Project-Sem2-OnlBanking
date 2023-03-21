@@ -1,9 +1,6 @@
 @extends("layouts.layout2")
-<base href="{{ url("/") }}"/>
-@section("title")
-    Lịch sử giao dịch
-@endsection
 
+@section("title","Lịch sử giao dịch")
 @section("main_content")
     <div class="col-lg-9">
         <h2 class="fw-400 mb-3">Lịch sử giao dịch:</h2> <h1 >{{$account->account_number}}</h1>

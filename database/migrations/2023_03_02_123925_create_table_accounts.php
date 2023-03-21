@@ -20,11 +20,8 @@ class CreateTableAccounts extends Migration
             $table->foreign("bank_id")->references("id")->on("banks");
             $table->unsignedBigInteger("user_id");
             $table->foreign("user_id")->references("id")->on("users");
-            $table->unsignedBigInteger("account_type_id");
-            $table->foreign("account_type_id")->references("id")->on("account_types");
-            $table->date("date_created");
             $table->integer("balance");
-            $table->tinyInteger("status")->default(2);
+            $table->boolean("status")->default(true);
             $table->timestamps();
         });
     }

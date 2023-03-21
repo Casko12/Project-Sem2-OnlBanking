@@ -15,15 +15,14 @@ class CreateTableLoan extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("account_id");
             $table->integer("money_amount");
-            $table->date("date_loan_money");
             $table->date("date_return_money");
-            $table->boolean("status_loan");
+            $table->tinyInteger("status_loan")->default(2);
+            $table->tinyInteger("period_loan");
             $table->string("image_loan1");
             $table->string("image_loan2");
-            $table->string("interest");
             $table->foreign("account_id")->references("id")->on("accounts");
-            $table->date("date_created_loan");
             $table->timestamps();
         });
     }

@@ -21,6 +21,7 @@ class CreateTableTransactionHistory extends Migration
             $table->foreign("receive_id")->references("id")->on("accounts");
             $table->integer("amount");
             $table->boolean("status")->default(true);
+            $table->string("description");
             $table->timestamps();
         });
     }

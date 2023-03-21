@@ -25,7 +25,7 @@ class CreateTableUser extends Migration
             $table->string("image_face");
             $table->string("image_id1");
             $table->string("image_id2");
-            $table->boolean("status")->default(true);
+            $table->tinyInteger("status")->default(2);
             $table->string("pin")->nullable();
             $table->string("telephone");
             $table->rememberToken();

@@ -16,6 +16,7 @@ class TransactionHistory extends Model
       "receive_id",
       "amount",
       "status",
+        "description",
     ];
 
     public function Sender(){

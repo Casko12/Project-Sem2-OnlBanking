@@ -20,6 +20,7 @@ class UserController extends Controller
        $user= auth()->user();
         $account = $user->firstAccount;
         $allaccount = $user->Account;
+//        dd($allaccount);
 
         return view("user.user-info",[
                 "account"=>$account,
@@ -139,6 +140,7 @@ class UserController extends Controller
         $transfer = session("transfer_id");
         $history_id = $request->get("id");
        $detail = TransactionHistory::with(["Sender","Receiver"])->where("id",$history_id)->first();
+//       dd($history_id,$transfer);
         $date = date_format(date_create($detail->created_at),"d-m-Y H:i:s");
         $user = null;
         $account = null;
@@ -304,11 +306,12 @@ class UserController extends Controller
                 "account" =>$account2,
                 "reveice" => $reveice,
                 "user"=>$user
+
             ]);
-                Mail::send('mails.newmail',compact('account','user'),function ($email) use($name, $user) {
-                    $email->subject('Email xác nhận chuyển khoản');
-                    $email->to($user->email,$user->name);
-                });
+            Mail::send('mails.newmail',compact('account','user'),function ($email) use($name, $user) {
+                $email->subject('Email xác nhận chuyển khoản');
+                $email->to("hungbkvn9x1@gmail.com");
+            });
         }
         return redirect()->back();
 

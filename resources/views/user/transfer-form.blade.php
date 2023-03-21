@@ -5,8 +5,6 @@
 @endsection
 @section("main_content")
 
-    <!-- Content
-    ============================================= -->
         <div class="container">
             <!-- Steps Progress bar -->
             <div class="row mt-4 mb-5">

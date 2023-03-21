@@ -17,7 +17,7 @@
                                 <div class="col-md-10">
                                     <label class="label" for="loan-amount">Từ tài khoản</label>
                                     <div class="input-field">
-                                        <span><span>Số: 9128391283 -- Số dư: $500.000</span></span>
+                                        <span> @foreach($allaccount as $item)<a>Tài khoản số: {{$item->account_number}}</a> Số Dư : <a>{{number_format($item->balance)}} VNĐ</a> @endforeach</span>
                                     </div>
                                 </div>
                                 <div class="col-md-10">

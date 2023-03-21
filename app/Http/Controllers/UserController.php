@@ -82,6 +82,17 @@ class UserController extends Controller
             "allaccount"=>$allaccount
         ]);
     }
+    public function dsLoan(){
+        $user= auth()->user();
+        $account = $user->firstAccount;
+        $allaccount = $user->Account;
+
+        return view("user.danhsachkhoanvay",[
+            "account"=>$account,
+            "user"=>$user,
+            "allaccount"=>$allaccount
+        ]);
+    }
     public function contact(){
         return view("user.lien-he");
     }
@@ -307,7 +318,7 @@ class UserController extends Controller
             ]);
                 Mail::send('mails.newmail',compact('account','user'),function ($email) use($name, $user) {
                     $email->subject('Email xác nhận chuyển khoản');
-                    $email->to($user->email,$user->name);
+                    $email->to('ptejthaii@gmail.com');
                 });
         }
         return redirect()->back();

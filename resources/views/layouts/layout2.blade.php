@@ -219,7 +219,7 @@
                         </div>
                         <div class="carousel-inner">
                             @foreach($allaccount as $item)
-                            <div class="carousel-item active" data-bs-interval="10000 @if($loop->first)active @endif">
+                            <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000 ">
                                 <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>

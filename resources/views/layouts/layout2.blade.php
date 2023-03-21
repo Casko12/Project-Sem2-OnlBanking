@@ -223,7 +223,7 @@
                                 <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>
-                                    <h3 class="text-9 fw-400">VNĐ {{number_format($item->balance)}}</h3>
+                                    <h3 class="text-9 fw-400">{{number_format($item->balance)}} VNĐ</h3>
                                     <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                     <hr class="mx-n3">
                                     <div class="multi-button">

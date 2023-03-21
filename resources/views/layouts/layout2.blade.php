@@ -63,15 +63,15 @@
                         <div id="header-nav" class="collapse navbar-collapse">
                             <ul class="navbar-nav me-auto">
                                 <li><a href="/">TRANG CHỦ</a></li>
-                                <li><a href="loan.html">KHOẢN VAY</a></li>
-                                <li><a href="trans.html">CHUYỂN KHOẢN</a></li>
-                                <li><a href="gui-tiet-kiem.html">GỬI TIẾT KIỆM</a></li>
+                                <li><a href="loan">KHOẢN VAY</a></li>
+                                <li><a href="trans">CHUYỂN KHOẢN</a></li>
+                                <li><a href="gui-tiet-kiem">GỬI TIẾT KIỆM</a></li>
                                 <li class="dropdown active"> <a class="dropdown-toggle" href="#">VỀ CHÚNG TÔI</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="index.html">Giới thiệu</a></li>
-                                        <li><a class="dropdown-item" href="feature-header-dark.html">Phát triển bền vững</a></li>
-                                        <li><a class="dropdown-item" href="feature-header-primary.html">An toàh và bảo mật</a></li>
-                                        <li><a class="dropdown-item" href="index-2.html">Liên hệ với chúng tôi</a></li>
+                                        <li><a class="dropdown-item" href="ve-chung-toi">Giới thiệu</a></li>
+                                        <li><a class="dropdown-item" href="phat-trien">Phát triển bền vững</a></li>
+                                        <li><a class="dropdown-item" href="an-toan">An toàh và bảo mật</a></li>
+                                        <li><a class="dropdown-item" href="lien-he">Liên hệ với chúng tôi</a></li>
                                     </ul>
                                 </li>
                             </ul>

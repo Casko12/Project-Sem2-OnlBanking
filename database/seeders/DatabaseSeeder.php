@@ -24,7 +24,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 //        Bank::factory(10)->create();
 //        User::factory(100)->create();
-//        AccountType::factory(5)->create();
 //        Account::factory(300)->create();
 //        TransactionHistory::factory(300)->create();
     }

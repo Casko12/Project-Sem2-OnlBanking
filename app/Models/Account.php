@@ -16,8 +16,6 @@ class Account extends Model
         "account_number",
         "bank_id",
         "user_id",
-        "account_type_id",
-        "date_created",
         "balance",
         "status",
     ];

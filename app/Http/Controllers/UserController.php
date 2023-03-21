@@ -72,7 +72,15 @@ class UserController extends Controller
        return view("user.giatri-cotloi");
     }
     public function loan(){
-        return view("user.loan");
+        $user= auth()->user();
+        $account = $user->firstAccount;
+        $allaccount = $user->Account;
+
+        return view("user.loan",[
+            "account"=>$account,
+            "user"=>$user,
+            "allaccount"=>$allaccount
+        ]);
     }
     public function contact(){
         return view("user.lien-he");

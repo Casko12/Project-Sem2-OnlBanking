@@ -212,17 +212,19 @@
                     <!-- Personal Details
                     ============================================= -->
                     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-touch="false">
+
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            @for($i=0;$i<count($allaccount)-1;$i++)
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{$i+1}}" aria-label="Slide {{$i+2}}"></button>
+                            @endfor
                         </div>
                         <div class="carousel-inner">
                             @foreach($allaccount as $item)
                             <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000 ">
                                 <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>
+                                    <h2 class="text-7 fw-400">Tài khoản số: {{"$item->account_number"}}</h2>
                                     <h3 class="text-9 fw-400">{{number_format($item->balance)}} VNĐ</h3>
                                     <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                     <hr class="mx-n3">

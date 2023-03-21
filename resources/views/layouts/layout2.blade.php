@@ -50,7 +50,7 @@
                 <div class="header-column justify-content-start">
                     <!-- Logo
                     ============================= -->
-                    <div class="logo me-3"> <a class="d-flex" href="index.html" title="Payyed - HTML Template"><img src="user/user-page/images/logo-light.png" alt="Payyed" /></a> </div>
+                    <div class="logo me-3"> <a class="d-flex" href="/" title="Modern Banking"><img src="user/user-page/images/mbanking-03.png"  /></a> </div>
                     <!-- Logo end -->
                     <!-- Collapse Button
                     ============================== -->
@@ -62,154 +62,16 @@
                     <nav class="primary-menu navbar navbar-expand-lg">
                         <div id="header-nav" class="collapse navbar-collapse">
                             <ul class="navbar-nav me-auto">
-                                <li><a href="landing-page-send.html">Send</a></li>
-                                <li><a href="landing-page-receive.html">Receive</a></li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="fees.html">Fees</a></li>
-                                <li><a href="help.html">Help</a></li>
-                                <li class="dropdown active"> <a class="dropdown-toggle" href="#">Features</a>
+                                <li><a href="/">TRANG CHỦ</a></li>
+                                <li><a href="loan">KHOẢN VAY</a></li>
+                                <li><a href="trans">CHUYỂN KHOẢN</a></li>
+                                <li><a href="gui-tiet-kiem">GỬI TIẾT KIỆM</a></li>
+                                <li class="dropdown active"> <a class="dropdown-toggle" href="#">VỀ CHÚNG TÔI</a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Headers</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="index.html">Light Version (Default)</a></li>
-                                                <li><a class="dropdown-item" href="feature-header-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="feature-header-primary.html">Primary Version</a></li>
-                                                <li><a class="dropdown-item" href="index-2.html">Transparent Version</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Navigation DropDown</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="index.html">Light Version (Default)</a></li>
-                                                <li><a class="dropdown-item" href="feature-navigation-dropdown-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="feature-navigation-dropdown-primary.html">Primary Version</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Second Navigation</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="send-money.html">Default Version</a></li>
-                                                <li><a class="dropdown-item" href="deposit-money.html">Alternate Version</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Page Headers</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="feature-page-header-left-alignment.html">Left Alignment</a></li>
-                                                <li><a class="dropdown-item" href="feature-page-header-center-alignment.html">Center Alignment</a></li>
-                                                <li><a class="dropdown-item" href="feature-page-header-light.html">Light Version</a></li>
-                                                <li><a class="dropdown-item" href="feature-page-header-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="feature-page-header-primary.html">Primary Version</a></li>
-                                                <li><a class="dropdown-item" href="feature-page-header-custom-background.html">Custom Background</a></li>
-                                                <li><a class="dropdown-item" href="feature-page-header-custom-background-with-transparent-header.html">Custom Background 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Footer</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="index.html">Light Version Default</a></li>
-                                                <li><a class="dropdown-item" href="index-2.html">Alternate Version</a></li>
-                                                <li><a class="dropdown-item" href="feature-footer-dark.html">Dark Version</a></li>
-                                                <li><a class="dropdown-item" href="feature-footer-primary.html">Primary Version</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item" href="feature-layout-boxed.html">Layout Boxed</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown dropdown-mega"> <a class="dropdown-toggle" href="#">Pages</a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <div class="dropdown-mega-content">
-                                                <div class="row">
-                                                    <div class="col-lg"> <span class="sub-title">Homepage</Span>
-                                                        <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="index.html">Home Version 1</a></li>
-                                                            <li><a class="dropdown-item" href="index-2.html">Home Version 2</a></li>
-                                                            <li><a class="dropdown-item" href="landing-page-send.html">Landing Page - Send</a></li>
-                                                            <li><a class="dropdown-item" href="landing-page-receive.html">Landing Page - Receive</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-lg"> <span class="sub-title">Account</Span>
-                                                        <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="settings-profile.html">My Profile</a></li>
-                                                            <li><a class="dropdown-item" href="settings-security.html">Security</a></li>
-                                                            <li><a class="dropdown-item" href="settings-payment-methods.html">Payment Methods</a></li>
-                                                            <li><a class="dropdown-item" href="settings-notifications.html">Notifications</a></li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Login</a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="login.html">Login Page 1</a></li>
-                                                                    <li><a class="dropdown-item" href="login-2.html">Login Page 2</a></li>
-                                                                    <li><a class="dropdown-item" href="login-3.html">Login Page 3</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Signup</a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="signup.html">Signup Page 1</a></li>
-                                                                    <li><a class="dropdown-item" href="signup-2.html">Signup Page 2 </a></li>
-                                                                    <li><a class="dropdown-item" href="signup-3.html">Signup Page 3 </a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-lg"> <span class="sub-title">Dashboard</Span>
-                                                        <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
-                                                            <li><a class="dropdown-item" href="transactions.html">Transactions</a></li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Send Money</a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="send-money.html">Send Money</a></li>
-                                                                    <li><a class="dropdown-item" href="send-money-confirm.html">Send Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="send-money-success.html">Send Money Success </a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Request Money</a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="request-money.html">Request Money</a></li>
-                                                                    <li><a class="dropdown-item" href="request-money-confirm.html">Request Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="request-money-success.html">Request Money Success </a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Deposit Money</a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="deposit-money.html">Deposit Money</a></li>
-                                                                    <li><a class="dropdown-item" href="deposit-money-confirm.html">Deposit Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="deposit-money-success.html">Deposit Money Success </a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Withdraw Money</a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="withdraw-money.html">Withdraw Money</a></li>
-                                                                    <li><a class="dropdown-item" href="withdraw-money-confirm.html">Withdraw Money Confirm</a></li>
-                                                                    <li><a class="dropdown-item" href="withdraw-money-success.html">Withdraw Money Success </a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li><a class="dropdown-item" href="notifications.html">Notifications</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-lg"> <span class="sub-title">Blog</Span>
-                                                        <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="blog.html">Blog Standard</a></li>
-                                                            <li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
-                                                            <li><a class="dropdown-item" href="blog-list.html">Blog List</a></li>
-                                                            <li><a class="dropdown-item" href="blog-single.html">Blog Single Right Sidebar</a></li>
-                                                            <li><a class="dropdown-item" href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-lg"> <span class="sub-title">Others</Span>
-                                                        <ul class="dropdown-mega-submenu">
-                                                            <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
-                                                            <li><a class="dropdown-item" href="fees.html">Fees</a></li>
-                                                            <li><a class="dropdown-item" href="help.html">Help</a></li>
-                                                            <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
-                                                            <li><a class="dropdown-item" href="404.html">404</a></li>
-                                                            <li><a class="dropdown-item" href="coming-soon.html" target="_blank">Coming Soon</a></li>
-                                                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Elements</a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a class="dropdown-item" href="elements.html">Elements 1</a></li>
-                                                                    <li><a class="dropdown-item" href="elements-2.html">Elements 2</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                        <li><a class="dropdown-item" href="ve-chung-toi">Giới thiệu</a></li>
+                                        <li><a class="dropdown-item" href="phat-trien">Phát triển bền vững</a></li>
+                                        <li><a class="dropdown-item" href="an-toan">An toàh và bảo mật</a></li>
+                                        <li><a class="dropdown-item" href="lien-he">Liên hệ với chúng tôi</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -222,8 +84,8 @@
                     ============================== -->
                     <nav class="login-signup navbar navbar-expand">
                         <ul class="navbar-nav">
-                            <li><a href="login.html">Login</a> </li>
-                            <li class="align-items-center h-auto ms-sm-3"><a class="btn btn-primary" href="signup.html">Sign Up</a></li>
+                            <li><a href=""></a> </li>
+                            <li class="align-items-center h-auto ms-sm-3"><a class="btn btn-primary" href="signup.html">Đăng xuất</a></li>
                         </ul>
                     </nav>
                     <!-- Login & Signup Link end -->
@@ -303,7 +165,7 @@
                                                     <label for="zipCode" class="form-label">Thay đổi mã PIN</label>
                                                     <input id="zipCode" value="" type="text" class="form-control" required placeholder="Mời điền mã PIN mới">
                                                 </div>
-                                                <div class="col-12 mt-4 d-grid"><button class="btn btn-primary" type="submit">Save Changes</button></div>
+                                                <div class="col-12 mt-4 d-grid"><button class="btn btn-primary" type="submit">Lưu Thay Đổi</button></div>
                                             </div>
                                         </form>
                                     </div>
@@ -349,41 +211,41 @@
 
                     <!-- Personal Details
                     ============================================= -->
-                    <div id="carouselExampleIndicators" class="carousel slide">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-touch="false">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
                             @foreach($allaccount as $item)
-                                <div class="carousel-item @if($loop->first)active @endif">
-                                    <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-                                        <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>
-                                        <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
-                                        <h3 class="text-9 fw-400">VNĐ {{number_format($item->balance)}}</h3>
-                                        <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
-                                        <hr class="mx-n3">
-                                        <div class="multi-button">
-                                            <button><i class="fas fa-coins"></i> Tiết kiệm</button>
-                                            <form action="{{url("/money-transfer")}}" method="get">
-                                                <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
-                                            </form>
-                                            <form action="{{url("/transacion-history",["account"=>$item->id])}}" method="get">
-                                                <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-file-invoice-dollar"></i></i> Lịch sử giao dịch</button>
-                                            </form>
-                                        </div>
+                            <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000 ">
+                                <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2 class="text-7 fw-400">Tài khoản số: {{$item->account_number}}</h2>
+                                    <h3 class="text-9 fw-400">{{number_format($item->balance)}} VNĐ</h3>
+                                    <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
+                                    <hr class="mx-n3">
+                                    <div class="multi-button">
+                                        <button><i class="fas fa-coins"></i> Tiết kiệm</button>
+                                        <form action="{{url("/money-transfer")}}" method="get">
+                                            <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
+                                        </form>
+                                        <form action="{{url("/transacion-history",["account"=>$item->id])}}" method="get">
+                                            <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-file-invoice-dollar"></i></i> Lịch sử giao dịch</button>
+                                        </form>
                                     </div>
                                 </div>
+                            </div>
                             @endforeach
                         </div>
-                        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" style="color: red" aria-hidden="true"><<<</span>
-                            <span class="visually-hidden" >Previous</span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"  style="color: red" aria-hidden="true">>>></span>
-                            <span class="visually-hidden-focusable">Next</span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
                     </div>
 
@@ -426,7 +288,7 @@
             <div class="footer-copyright pt-3 pt-lg-2 mt-2">
                 <div class="row">
                     <div class="col-lg">
-                        <p class="text-center text-lg-start mb-2 mb-lg-0">Copyright &copy; 2022 <a href="#">Payyed</a>. All Rights Reserved.</p>
+                        <p class="text-center text-lg-start mb-2 mb-lg-0">Copyright &copy; 2022 <a href="#">Modern Banking</a>. All Rights Reserved.</p>
                     </div>
                     <div class="col-lg d-lg-flex align-items-center justify-content-lg-end">
                         <ul class="nav justify-content-center">

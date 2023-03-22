@@ -82,10 +82,10 @@
                                                     <label for="recieverID" class="form-label">Nhập mã PIN</label>
 {{--                                                    PIN input--}}
                                                     <div class="pin-wrapper">
-                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
-                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
-                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
-                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="number" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="number" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="number" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="number" data-role="pin" maxlength="1" class="pin-input">
                                                     </div>
 {{--                                                    PIN input end--}}
                                                     <div class="pin"></div>

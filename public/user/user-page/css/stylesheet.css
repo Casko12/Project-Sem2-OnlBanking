@@ -4309,7 +4309,7 @@ button:last-of-type{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:50vh;
+    height:15vh;
 }
 input{
     width: 44px;

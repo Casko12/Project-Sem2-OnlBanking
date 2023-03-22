@@ -46,7 +46,12 @@
                             <div class="mb-1">
                                 <label for="recieverID" class="form-label">Nhập mã PIN</label>
                                 <div class="input-group">
-                                    <input name="pin" type="password" inputmode="number" maxlength="4"/>
+                                    <div class="pin-wrapper">
+                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                    </div>
                                 </div>
                             </div>
                             <hr class="mx-n3 mx-sm-n5 mb-3 mb-sm-4">

@@ -155,6 +155,7 @@
 <script src="user/user-page/vendor/daterangepicker/moment.min.js"></script>
 <script src="user/user-page/vendor/daterangepicker/daterangepicker.js"></script>
 <script src="user/user-page/js/theme.js"></script>
+<script src="user/user-page/js/customJS/pin_input.js"></script>
 @yield("custom_js")
 </body>
 </html>

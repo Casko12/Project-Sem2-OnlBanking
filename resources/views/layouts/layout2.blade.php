@@ -254,12 +254,12 @@
                                     <hr class="mx-n3">
                                     <div class="multi-button align-center">
                                         <form action="{{url("/money-transfer")}}" method="get">
-                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
                                                 <i class="fas fa-hand-holding-usd"></i> Chuyển khoản
                                             </button>
                                         </form>
                                         <form action="{{url("/ds-gui-tiet-kiem")}}" method="get">
-                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm">
+                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm">
                                                 <i class="fas fa-coins"></i> Tiết kiệm
                                             </button>
                                         </form>
@@ -269,7 +269,7 @@
                                             </button>
                                         </form>
                                         <form action="{{url("/transacion-history",["account"=>$item->id])}}" method="get">
-                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
                                                 <i class="fas fa-file-invoice-dollar"></i> Lịch sử giao dịch
                                             </button>
                                         </form>

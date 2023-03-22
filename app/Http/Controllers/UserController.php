@@ -251,6 +251,7 @@ class UserController extends Controller
         $transfer = session("transfer_id");
         $id = $transfer['transfer_id'];
         $account1 = Account::where("id",$transfer["transfer_id"])->first();
+        dd($transfer);
         $account = Account::where("account_number",$receive_id)->first();
 //        dd($transfer,$account,$account1);
         if($account!=null){
@@ -264,6 +265,14 @@ class UserController extends Controller
                 "amount"=>$request->get("money")
             ];
             session(["reveice"=>$reveice]);
+            if($amount>=5000000){
+                return view("user.transfer-confirm",[
+                    "reveice"=>$reveice,
+                    "transfer"=>$transfer,
+                    "user"=>$user,
+                    "id"=>$id
+                ]);
+            }
             return view("user.transfer-confirm",[
                 "reveice"=>$reveice,
                 "transfer"=>$transfer,

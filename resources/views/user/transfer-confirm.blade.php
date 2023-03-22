@@ -115,3 +115,6 @@
         </div>
     <!-- Content end -->
 @endsection
+<script>
+    var docTien = new DocTienBangChu();
+</script>

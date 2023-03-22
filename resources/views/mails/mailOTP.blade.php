@@ -1,2 +1,2 @@
-Mã xác nhân giao dịch của bạn là:{{}}
+Mã xác nhận giao dịch của bạn là:{{session("otp")}}
 Vui lòng không cung cấp mã này cho bất kỳ ai

@@ -1,16 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Mail\OTPMail;
+use App\Mail\ReceiverMail;
+use App\Mail\SenderMail;
 use App\Models\BangLaiTietKiem;
 use Carbon\Carbon;
-use Mail;
 use App\Models\Account;
 use App\Models\Bank;
 use App\Models\TransactionHistory;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Mail;
 class UserController extends Controller
 {
    public function home(){
@@ -246,14 +248,17 @@ class UserController extends Controller
             "money"=>"required|numeric",
             "description"=>"required|string"
         ]);
+        $otp = random_int(1000,9999);
+        session(["otp"=>$otp]);
+
         $receive_id= $request->get("account");
         $amount = $request->get("money");
         $transfer = session("transfer_id");
         $id = $transfer['transfer_id'];
-        $account1 = Account::where("id",$transfer["transfer_id"])->first();
-        dd($transfer);
+        $account1 = Account::with("User")->where("id",$transfer["transfer_id"])->first();
+
         $account = Account::where("account_number",$receive_id)->first();
-//        dd($transfer,$account,$account1);
+
         if($account!=null){
             $user = User::find($account->user_id);
 
@@ -266,12 +271,7 @@ class UserController extends Controller
             ];
             session(["reveice"=>$reveice]);
             if($amount>=5000000){
-                return view("user.transfer-confirm",[
-                    "reveice"=>$reveice,
-                    "transfer"=>$transfer,
-                    "user"=>$user,
-                    "id"=>$id
-                ]);
+                Mail::to($account1->User->email)->send(new OTPMail());
             }
             return view("user.transfer-confirm",[
                 "reveice"=>$reveice,
@@ -316,12 +316,11 @@ class UserController extends Controller
     public function transferSuccess(Request $request){
         $reveice =session("reveice");
         $transfer = session("transfer_id");
-
-        $pin = $request->get("pin");
-
+        $pin = $request->get("pin1").$request->get("pin2").$request->get("pin3").$request->get("pin4");
+        $otp = session("otp");
         $account2 = Account::where("account_number",$reveice["receive_id"])->first();
 
-       $account1 = Account::where('id',$transfer["transfer_id"])->first();
+       $account1 = Account::with("User")->where('id',$transfer["transfer_id"])->first();
 
         if($account2!=null){
             $user = User::find($account1->user_id);
@@ -330,11 +329,32 @@ class UserController extends Controller
         $transfer_receive = $account2->balance +=$reveice["amount"];
         $amount = $reveice['amount'];
         $description = $reveice['description'];
+        session(["account1"=>$account1]);
+        session(["account2"=>$account2]);
 
+        if($amount<5000000){
+            if(Hash::check($pin, $user->pin)){
 
+                $account1->update([
+                    "balance"=> $transfer_amount
+                ]);
+                $account2->update([
+                    "balance"=> $transfer_receive
+                ]);
+                $account1->createHistory($account1,$account2,$amount,$description);
+                Mail::to($account1->User->email)->send(new SenderMail());
+                Mail::to($account2->User->email)->send(new ReceiverMail());
+                session()->forget(["reveice"]);
 
-        if(Hash::check($pin, $user->pin)){
-
+                return view("user.transfer-success",[
+                    "account" =>$account2,
+                    "reveice" => $reveice,
+                    "user"=>$user
+                ]);
+            }
+            return redirect()->back();
+        } else{
+            if($pin == $otp){
             $account1->update([
                 "balance"=> $transfer_amount
             ]);
@@ -342,17 +362,19 @@ class UserController extends Controller
                 "balance"=> $transfer_receive
             ]);
             $account1->createHistory($account1,$account2,$amount,$description);
+            Mail::to($account1->User->email)->send(new SenderMail());
+            Mail::to($account2->User->email)->send(new ReceiverMail());
+            session()->forget(["otp","reveice"]);
+
             return view("user.transfer-success",[
                 "account" =>$account2,
                 "reveice" => $reveice,
                 "user"=>$user
             ]);
-                Mail::send('mails.newmail',compact('account','user'),function ($email) use($name, $user) {
-                    $email->subject('Email xác nhận chuyển khoản');
-                    $email->to('ptejthaii@gmail.com');
-                });
         }
-        return redirect()->back();
+            return redirect()->back();
+        }
+
 
 
 

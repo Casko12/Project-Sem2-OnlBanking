@@ -85,8 +85,12 @@
                     ============================== -->
                     <nav class="login-signup navbar navbar-expand">
                         <ul class="navbar-nav">
-                            <li><a href=""></a> </li>
-                            <li class="align-items-center h-auto ms-sm-3"><a class="btn btn-primary" href="signup.html">Đăng xuất</a></li>
+                            @auth
+                                <form action="{{route("logout")}}" method="post">
+                                    @csrf
+                                    <button class="btn btn-primary" class="align-items-center h-auto ms-sm-3" style="color: #bbc0c4">Đăng xuất</button>
+                                </form>
+                            @endauth
                         </ul>
                     </nav>
                     <!-- Login & Signup Link end -->

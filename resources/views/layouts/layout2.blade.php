@@ -84,8 +84,12 @@
                     ============================== -->
                     <nav class="login-signup navbar navbar-expand">
                         <ul class="navbar-nav">
-                            <li><a href=""></a> </li>
-                            <li class="align-items-center h-auto ms-sm-3"><a class="btn btn-primary" href="signup.html">Đăng xuất</a></li>
+                            @auth
+                                <form action="{{route("logout")}}" method="post">
+                                    @csrf
+                                    <button class="btn btn-primary" class="align-items-center h-auto ms-sm-3" style="color: #bbc0c4">Đăng xuất</button>
+                                </form>
+                            @endauth
                         </ul>
                     </nav>
                     <!-- Login & Signup Link end -->
@@ -221,11 +225,11 @@
                         </div>
                         <div class="carousel-inner">
                             @foreach($allaccount as $item)
-                            <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000 ">
+                            <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000">
                                 <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h2 class="text-7 fw-400">Tài khoản số: {{"$item->account_number"}}</h2>
-                                    <h3 class="text-9 fw-400">{{number_format($item->balance)}} VNĐ</h3>
+                                    <h2 class="text-7 fw-300">Tài khoản số: {{"$item->account_number"}}</h2>
+                                    <h3 class="text-8 fw-400">{{number_format($item->balance)}} VNĐ</h3>
                                     <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                     <hr class="mx-n3">
                                     <div class="multi-button">

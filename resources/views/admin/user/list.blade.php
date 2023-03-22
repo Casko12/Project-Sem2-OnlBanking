@@ -57,7 +57,9 @@
                         @else
                             <td>Active</td>
                         @endif
-                        <td><a class="btn-link" href="{{url("/admin/detailuser",["user"=>$item->id])}}">Chi tiết</a></td>
+                        <form action="{{url("/admin/detailuser",["user"=>$item->id])}}" method="get">
+                        <td><button class="btn btn-primary" name="id" value="{{$item->id}}">Chi tiết</button></td>
+                        </form>
 
                     </tr>
                 @endforeach

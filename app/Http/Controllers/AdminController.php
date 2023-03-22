@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,34 @@ class AdminController extends Controller
     public function admin_ql(){
         return view("admin.admin");
     }
+    public function createAccount(Request $request,User $user){
+        $user_id = session("user_id");
 
+        $account= Account::all();
+        $number = random_int(1000000000,9999999999);
+        foreach ($account as $item){
+            if ($number == $item->account_number){
+                $number = random_int(1000000000,9999999999);
+            }else{
+                $user->update([
+                    "status"=>1,
+                ]);
+                Account::create([
+                    "account_number"=>$number,
+                    "bank_id"=>1,
+                    "user_id"=>$user_id,
+                    "balance"=>0,
+                    "status"=>1
+
+
+                ]);
+                return redirect()->to("admin/listuser");
+            }
+        }
+                return redirect()->back();
+
+
+    }
     public function listStaff(Request $request){
         $search =$request->get("search");
         $data = User::orderBy("id","desc")
@@ -90,7 +118,9 @@ class AdminController extends Controller
         ]);
         return redirect()->to("admin/liststaff");
     }
-    public function detailStaff(User $user){
+    public function detailStaff(User $user,Request $request){
+        $user_id = $request->get("id");
+        session(["user_id"=>$user_id]);
         return view("admin.user.detail",compact("user"));
     }
     public function listUser(Request $request){

@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="d-grid mt-4 col-md-4"><button class="btn btn-primary" name="status" value="0" type="submit">Đăng kí</button></div>
+                                <div class="d-grid mt-4 col-md-4"><button class="btn btn-primary" name="status" value="2" type="submit">Đăng kí</button></div>
 
                             </div>
                             <div class="row">

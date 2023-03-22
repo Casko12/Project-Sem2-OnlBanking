@@ -5,6 +5,7 @@ Route::get('/admin/editstaff/{user}',[App\Http\Controllers\AdminController::clas
 Route::post('/admin/editstaff/{user}',[App\Http\Controllers\AdminController::class,"update"]);
 Route::get('/admin/detailstaff/{user}',[App\Http\Controllers\AdminController::class,"detailStaff"]);
 Route::post('/admin/detailstaff/{user}',[App\Http\Controllers\AdminController::class,"updateStatusStaff"]);
+Route::get('/createAccount',[App\Http\Controllers\AdminController::class,"createAccount"]);
 
 Route::get('/admin/listuser',[App\Http\Controllers\AdminController::class,"listUser"]);
 Route::get('/admin/createuser',[App\Http\Controllers\AdminController::class,"createUser"]);

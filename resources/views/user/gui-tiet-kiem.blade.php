@@ -21,64 +21,104 @@
                                     </div>
                                 </div>
                                 <div class="col-md-10">
+                                    <label class="label" for="loan-name">Ten so</label>
+                                    <div class="input-field">
+                                        <input type="text" name="tenso"  class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
                                     <label class="label" for="loan-amount">Số tiền muốn gửi</label>
                                     <div class="input-field">
-                                        <input type="number" name="money_amount" class="form-control" placeholder="$">
+                                        <input type="number" name="amount" id="amount" class="form-control" placeholder="$">
                                     </div>
                                 </div>
                                 <div class="col-md-10">
-                                    <label class="label mb-4">Kỳ hạn</label><br>
-                                    <div class="form-check form-check-inline mr-30">
-                                        <input class="form-check-input" type="radio" name="date_loan_money"
-                                               value="dateloan1">
-                                        <label class="form-check-label" for="inlineRadio1">12 tháng</label>
-                                    </div>
-                                    <div class="form-check form-check-inline mr-30">
-                                        <input class="form-check-input" type="radio" name="date_loan_money"
-                                               value="dateloan2">
-                                        <label class="form-check-label" for="inlineRadio2">18 tháng</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline mr-30">
-                                        <input class="form-check-input" type="radio" name="date_loan_money"
-                                               value="dateloan3">
-                                        <label class="form-check-label" for="inlineRadio3">24 tháng</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline mr-30">
-                                        <input class="form-check-input" type="radio" name="date_loan_money"
-                                               value="dateloan4">
-                                        <label class="form-check-label" for="inlineRadio4">36 tháng</label>
-                                    </div>
-                                    <div class="form-check form-check-inline mr-30">
-                                        <input class="form-check-input" type="radio" name="date_loan_money"
-                                               value="dateloan5">
-                                        <label class="form-check-label" for="inlineRadio5">48 tháng</label>
-                                    </div>
+                                    <select class="form-select" id="thoihan" onclick="laiSuat()" aria-label="Default select example">
+                                        <option selected>Vui Lòng Chọn Kỳ Hạn</option>
+                                        @foreach($banglai as $bl)
+                                            <option name="thoihan" value="{{$bl->id}}" >{{$bl->ky_han}} tháng</option>
+                                        @endforeach
+                                    </select>
+{{--                                    @foreach($banglai as $bl)--}}
+{{--                                    <div class="form-check form-check-inline mr-30">--}}
+{{--                                        <input class="form-check-input" type="radio" onclick="laiSuat()" name="thoihan"--}}
+{{--                                               value="{{$bl->id}}" id="thoihan">--}}
+{{--                                        <label class="form-check-label" for="inlineRadio1">{{$bl->ky_han}} tháng</label>--}}
+{{--                                    </div>--}}
+{{--                                    @endforeach--}}
                                 </div>
+                                <div class="col-md-10">
+
+                                    <div class="row align-items-center flex-row">
+                                                <div class="col-6 col-sm-4 text-left"> <span class="d-block text-4 fw-300" id="showThoihan">1 Tháng</span> <span class="d-block text-1 fw-500 text-uppercase" id="date_end">{{date_format(date_create(now()->addMonth()),"d-m-Y")}}</span> </div>
+                                                <div class="col-3 col-sm-2 text-right text-4"> <span class="text-nowrap" id="dataAmount" value="">Lãi Suất </span> <span class="text-2 text-uppercase"id="lai_suat">5.9%/Nam</span> </div>
+                                    </div>
+                                    </div>
                                 <div class="col-md-8">
-                                    <label class="label" for="loan-return">Số tiền lãi là: </label>
+                                    <label class="label" for="loan-return" >Số tiền lãi là: </label>
                                 </div>
                                 <div class="col-md-2">
-                                    <label class="label" for="loan-return" style="float: right">1000 <span>$</span></label>
+                                    <label class="label" for="loan-return" style="float: right"><span id="tienlai">0 VND</span></label>
                                 </div>
-                                <div class="col-md-10">
-                                    <label class="label" >Phương thức đáo hạn gốc
-                                    </label>
-                                    <select class="w-100 form-control">
-                                        <option value="" class="form-check">Tiếp tục gửi thêm kì mới sau khi đáo hạn</option>
-                                        <option value="">Trả tiền về tài khoản khi đáo hạn</option>
-                                    </select>
-                                </div>
-
-
                             </div>
-                            <div class="d-grid  mt-4 col-md-10"><button class="btn btn-primary" type="submit">Xác nhận gửi</button></div>
+                            <!-- Button trigger modal -->
+
+
+                            <!-- Modal -->
+
+                            <div class="d-grid  mt-4 col-md-10">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Xác nhận gửi
+                                </button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Nhập Mã Pin</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-1">
+                                                    <label for="recieverID" class="form-label">Nhập mã PIN</label>
+                                                    <div class="input-group">
+                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
+                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
+                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
+                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Xác nhận</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+@endsection
+@section("custom_js")
+    <script>
+        function laiSuat(){
+            var thoihan = $("#thoihan").val()
+            var amount = $("#amount").val()
+            $.ajax({
+                url:"/saving/"+"?thoihan="+thoihan+"&amount="+amount,
+                method:"get",
+                success:function (rs){
+                    $("#showThoihan").text(rs.kyhan)
+                    $("#date_end").text(rs.date_end)
+                    $("#lai_suat").text(rs.lai)
+                    $("#tienlai").text(rs.tienlai)
+                }
+            })
+        }
+    </script>
 @endsection
 

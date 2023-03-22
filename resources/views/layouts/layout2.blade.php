@@ -229,7 +229,9 @@
                                     <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                     <hr class="mx-n3">
                                     <div class="multi-button">
+                                        <form action="{{url("/ds-gui-tiet-kiem")}}" method="get">
                                         <button><i class="fas fa-coins"></i> Tiết kiệm</button>
+                                        </form>
                                         <form action="{{url("/money-transfer")}}" method="get">
                                             <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
                                         </form>

@@ -10,7 +10,7 @@
 
             <div class="row gy-4">
                 <div class="col-md-6">
-                    <label class="label text-danger" for="fName">Ảnh đại diện:*</label>
+                    <label class="label text-danger" for="fName" >Ảnh đại diện:*</label>
                     <img width="200" src="{{$user->image_face}}">
 
                 </div>
@@ -49,14 +49,18 @@
                     <h3 class="label ">{{$user->telephone}}</h3>
                 </div>
                 <div class="col-md-6">
+                    @if($user->status ==2)
+                        <label class="label text-danger" for="inputPhoneNumber" name="id" id="id" value="{{$user->id}}">Chỉnh sửa trạng thái*</label>
+                        <button type="button" onclick=""  class="btn btn-danger">tao tai khoan</button>
+                    @endif
                     <form action="{{url("/admin/detailstaff",["user"=>$user->id])}}" method="post">
                         @csrf
                         <div class="col-md-6">
                             <label class="label text-danger" for="inputPhoneNumber">Chỉnh sửa trạng thái*</label>
                             @if($user->status ==1)
-                                <button type="submit" value="0" name="passed"  class="btn btn-danger">Khoá</button>
+                                <button type="submit" value="0" name="passed"  class="btn btn-danger">Block</button>
                             @elseif($user->status ==0)
-                                <button type="submit" value="1" name="passed"  class="btn btn-primary">Mở</button>
+                                <button type="submit" value="1" name="passed"  class="btn btn-primary">Active</button>
                             @endif
                         </div>
                     </form>
@@ -79,3 +83,14 @@
         </div>
     </div>
 @endsection
+@section("custom_js")
+    <script>
+        function createAccount(){
+            var id = $("#id").val()
+            $.ajax({
+                url:"/createAccount",
+                method: "get"
+            })
+        }
+
+    </script>

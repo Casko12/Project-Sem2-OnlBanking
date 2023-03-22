@@ -132,7 +132,7 @@
                                         <hr class="mb-4 mt-2">
                                         <ul class="list-unstyled">
                                             <li class="fw-500" id="nguoi"></li>
-{{--                                            nếu là giao dịch Chuyển tiền vào thì đổi "Người nhận" thành "Người gửi--}}
+
                                             <li class="text-muted" id="user"></li>
                                         </ul>
                                         <ul class="list-unstyled">
@@ -204,8 +204,7 @@
 </script>
     <script>
         function detailHis(x){
-            var id = $("#transaction_id").val()
-            var account_n = $("#account_number").val()
+
             $.ajax({
                 url: "/detailHis/"+"?id="+x,
                 method:"get",

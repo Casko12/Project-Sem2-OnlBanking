@@ -15,7 +15,7 @@ class CreateTableAccounts extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
-            $table->integer("account_number")->unique();
+            $table->unsignedBigInteger("account_number")->unique();
             $table->unsignedBigInteger("bank_id");
             $table->foreign("bank_id")->references("id")->on("banks");
             $table->unsignedBigInteger("user_id");

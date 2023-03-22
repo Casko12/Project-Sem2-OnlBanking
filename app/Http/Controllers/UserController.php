@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\BangLaiTietKiem;
+use Carbon\Carbon;
 use Mail;
 use App\Models\Account;
 use App\Models\Bank;
@@ -112,11 +114,13 @@ class UserController extends Controller
         $user= auth()->user();
         $account = $user->firstAccount;
         $allaccount = $user->Account;
+        $banglai = BangLaiTietKiem::all();
 
         return view("user.gui-tiet-kiem",[
             "account"=>$account,
             "user"=>$user,
-            "allaccount"=>$allaccount
+            "allaccount"=>$allaccount,
+            "banglai"=>$banglai
         ]);
 //        return view("user.gui-tiet-kiem");
     }
@@ -343,6 +347,29 @@ class UserController extends Controller
 
 
 
+
+    }
+
+    public function saving(Request $request){
+       $thoihan = $request->get("thoihan");
+       $amount = $request->get("amount");
+//        dd($amount);
+       $data = BangLaiTietKiem::where("id",$thoihan)->first();
+//       dd($data);
+
+       $date_end = date_format(date_create(Carbon::now()->addMonth($data->ky_han)),"d-m-Y");
+       $lai = $data->lai_suat."%/Năm";
+       $kyhan = $data->ky_han." Tháng";
+       $day = now()->diffInDays($date_end);
+
+        $tienlai = number_format((($data->lai_suat/365)*$day)*$amount/100)." VND" ;
+//        dd($tienlai);
+       return response()->json([
+           "date_end"=>$date_end,
+           "lai"=>$lai,
+           "kyhan"=>$kyhan,
+           "tienlai"=>$tienlai
+       ]);
 
     }
 }

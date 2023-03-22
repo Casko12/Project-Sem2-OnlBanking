@@ -80,12 +80,15 @@
                                             <div class="modal-body">
                                                 <div class="mb-1">
                                                     <label for="recieverID" class="form-label">Nhập mã PIN</label>
-                                                    <div class="input-group">
-                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
-                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
-                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
-                                                        <input name="pin" type="password" size="1" inputmode="number" maxlength="1"/>
+{{--                                                    PIN input--}}
+                                                    <div class="pin-wrapper">
+                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="text" data-role="pin" maxlength="1" class="pin-input">
                                                     </div>
+{{--                                                    PIN input end--}}
+                                                    <div class="pin"></div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">

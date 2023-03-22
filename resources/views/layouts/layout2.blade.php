@@ -176,6 +176,22 @@
                                 </div>
                             </div>
                         </div>
+{{--                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">--}}
+{{--                            <div class="modal-dialog modal-dialog-centered">--}}
+{{--                                <div class="modal-content">--}}
+{{--                                    <div class="modal-header">--}}
+{{--                                        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>--}}
+{{--                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="modal-body">--}}
+{{--                                        Hide this modal and show the first with the button below.--}}
+{{--                                    </div>--}}
+{{--                                    <div class="modal-footer">--}}
+{{--                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         {{--                        edit personal detail end--}}
 
                     </div>
@@ -236,15 +252,26 @@
                                     <h3 class="text-8 fw-400">{{number_format($item->balance)}} VNĐ</h3>
                                     <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                     <hr class="mx-n3">
-                                    <div class="multi-button">
-                                        <form action="{{url("/ds-gui-tiet-kiem")}}" method="get">
-                                        <button><i class="fas fa-coins"></i> Tiết kiệm</button>
-                                        </form>
+                                    <div class="multi-button align-center">
                                         <form action="{{url("/money-transfer")}}" method="get">
-                                            <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-hand-holding-usd"></i> Chuyển khoản</button>
+                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                                <i class="fas fa-hand-holding-usd"></i> Chuyển khoản
+                                            </button>
+                                        </form>
+                                        <form action="{{url("/ds-gui-tiet-kiem")}}" method="get">
+                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm">
+                                                <i class="fas fa-coins"></i> Tiết kiệm
+                                            </button>
+                                        </form>
+                                        <form action="{{url("/ds-loan")}}" method="get">
+                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm">
+                                                <i class="fas fa-money-check-alt"></i> Khoản vay
+                                            </button>
                                         </form>
                                         <form action="{{url("/transacion-history",["account"=>$item->id])}}" method="get">
-                                            <button type="submit" name="transfer_id" value="{{$item->id}}"><i class="fas fa-file-invoice-dollar"></i></i> Lịch sử giao dịch</button>
+                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                                <i class="fas fa-file-invoice-dollar"></i> Lịch sử giao dịch
+                                            </button>
                                         </form>
                                     </div>
                                 </div>

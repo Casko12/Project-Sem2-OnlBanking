@@ -84,8 +84,12 @@
                     ============================== -->
                     <nav class="login-signup navbar navbar-expand">
                         <ul class="navbar-nav">
-                            <li><a href=""></a> </li>
-                            <li class="align-items-center h-auto ms-sm-3"><a class="btn btn-primary" href="signup.html">Đăng xuất</a></li>
+                            @auth
+                                <form action="{{route("logout")}}" method="post">
+                                    @csrf
+                                    <button class="btn btn-primary" class="align-items-center h-auto ms-sm-3" style="color: #bbc0c4">Đăng xuất</button>
+                                </form>
+                            @endauth
                         </ul>
                     </nav>
                     <!-- Login & Signup Link end -->
@@ -129,16 +133,16 @@
                                             <div class="row g-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label for="firstName" class="form-label">Họ và tên</label>
-                                                    <input type="button" value="Nguyễn Văn A" class="form-control" data-bv-field="firstName" id="firstName" required placeholder="Họ và tên">
+                                                    <input type="button" value="{{$user->name}}" class="form-control" data-bv-field="firstName" id="firstName" required placeholder="Họ và tên">
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="lastName" class="form-label">Số CCCD</label>
-                                                    <input type="button" value="001010011111" class="form-control" data-bv-field="lastName" id="lastName" required placeholder="Số CCCD">
+                                                    <input type="button" value="{{$user->national_id}}" class="form-control" data-bv-field="lastName" id="lastName" required placeholder="Số CCCD">
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="birthDate" class="form-label">Ngày sinh</label>
                                                     <div class="position-relative">
-                                                        <input id="birthDate" value="12-09-1982" type="button" class="form-control" required placeholder="Date of Birth">
+                                                        <input id="birthDate" value="{{$user->birthday}}" type="button" class="form-control" required placeholder="Date of Birth">
                                                         <span class="icon-inside"><i class="fas fa-calendar-alt"></i></span>
                                                     </div>
                                                 </div>
@@ -147,15 +151,15 @@
                                             <div class="row g-3">
                                                 <div class="col-12">
                                                     <label for="address" class="form-label">Địa chỉ</label>
-                                                    <input type="button" value="Số 8 Tôn Thất Thuyết" class="form-control" data-bv-field="address" id="address" required placeholder="Địa chỉ">
+                                                    <input type="button" value="{{$user->address}}" class="form-control" data-bv-field="address" id="address" required placeholder="Địa chỉ">
                                                 </div>
                                                 <div class="col-12 col-sm-6">
-                                                    <label for="city" class="form-label">Thay đổi Email</label>
-                                                    <input type="text" id="city" value="abc@gmail.com" type="text" class="form-control" required placeholder="City">
+                                                    <label for="city" class="form-label">Email</label>
+                                                    <input type="button" id="city" value="{{$user->email}}" type="text" class="form-control" required placeholder="City">
                                                 </div>
                                                 <div class="col-12 col-sm-6">
-                                                    <label for="zipCode" class="form-label">Thay đổi số điện thoại</label>
-                                                    <input id="zipCode" value="22434" type="text" class="form-control" required placeholder="Số điện thoại">
+                                                    <label for="zipCode" class="form-label">Số điện thoại</label>
+                                                    <input id="zipCode" value="{{$user->telephone}}" type="button" class="form-control" required placeholder="Số điện thoại">
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="zipCode" class="form-label">Thay đổi mật khẩu</label>
@@ -221,11 +225,15 @@
                         </div>
                         <div class="carousel-inner">
                             @foreach($allaccount as $item)
-                            <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000 ">
+                            <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000">
+                                @if($account->status ==1)
                                 <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
+                                @else
+                                    <img src="user/user-page/images/account1.jpg" class="d-block w-100" alt="...">
+                                @endif
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h2 class="text-7 fw-400">Tài khoản số: {{"$item->account_number"}}</h2>
-                                    <h3 class="text-9 fw-400">{{number_format($item->balance)}} VNĐ</h3>
+                                    <h2 class="text-7 fw-300">Tài khoản số: {{"$item->account_number"}}</h2>
+                                    <h3 class="text-8 fw-400">{{number_format($item->balance)}} VNĐ</h3>
                                     <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
                                     <hr class="mx-n3">
                                     <div class="multi-button">

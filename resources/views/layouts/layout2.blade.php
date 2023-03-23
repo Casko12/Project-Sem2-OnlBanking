@@ -242,39 +242,46 @@
                         <div class="carousel-inner">
                             @foreach($allaccount as $item)
                             <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="10000">
-                                @if($account->status ==1)
+                                @if($item->status ==1)
                                 <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
-                                @else
-                                    <img src="user/user-page/images/account.jpg" class="d-block w-100" alt="...">
-                                @endif
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h2 class="text-7 fw-300">Tài khoản số: {{"$item->account_number"}}</h2>
-                                    <h3 class="text-8 fw-400">{{number_format($item->balance)}} VNĐ</h3>
-                                    <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
-                                    <hr class="mx-n3">
-                                    <div class="multi-button align-center">
-                                        <form action="{{url("/money-transfer")}}" method="get">
-                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
-                                                <i class="fas fa-hand-holding-usd"></i> Chuyển khoản
-                                            </button>
-                                        </form>
-                                        <form action="{{url("/ds-gui-tiet-kiem")}}" method="get">
-                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
-                                                <i class="fas fa-coins"></i> Tiết kiệm
-                                            </button>
-                                        </form>
-                                        <form action="{{url("/ds-loan")}}" method="get">
-                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
-                                                <i class="fas fa-money-check-alt"></i> Khoản vay
-                                            </button>
-                                        </form>
-                                        <form action="{{url("/transacion-history")}}" method="get">
-                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
-                                                <i class="fas fa-file-invoice-dollar"></i> Lịch sử giao dịch
-                                            </button>
-                                        </form>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h2 class="text-7 fw-300">Tài khoản số: {{"$item->account_number"}}</h2>
+                                        <h3 class="text-8 fw-400">{{number_format($item->balance)}} VNĐ</h3>
+                                        <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
+                                        <hr class="mx-n3">
+                                        <div class="multi-button align-center">
+                                            <form action="{{url("/money-transfer")}}" method="get">
+                                                <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                                    <i class="fas fa-hand-holding-usd"></i> Chuyển khoản
+                                                </button>
+                                            </form>
+                                            <form action="{{url("/ds-gui-tiet-kiem")}}" method="get">
+                                                <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                                    <i class="fas fa-coins"></i> Tiết kiệm
+                                                </button>
+                                            </form>
+                                            <form action="{{url("/ds-loan")}}" method="get">
+                                                <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                                    <i class="fas fa-money-check-alt"></i> Khoản vay
+                                                </button>
+                                            </form>
+                                            <form action="{{url("/transacion-history")}}" method="get">
+                                                <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
+                                                    <i class="fas fa-file-invoice-dollar"></i> Lịch sử giao dịch
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
+                                @else
+                                    <img src="user/user-page/images/account1.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h2 class="text-7 fw-300">Tài khoản số: {{"$item->account_number"}}</h2>
+                                        <h3 class="text-8 fw-400">{{number_format($item->balance)}} VNĐ</h3>
+                                        <p class="mb-2 text-muted opacity-8">Số dư tài khoản chính</p>
+                                        <hr class="mx-n3">
+                                    </div>
+                                @endif
+
                             </div>
                             @endforeach
                         </div>

@@ -14,4 +14,14 @@ Route::post('/admin/edituser/{user}',[App\Http\Controllers\AdminController::clas
 Route::get('/admin/detailuser/{user}',[App\Http\Controllers\AdminController::class,"detailStaff"]);
 Route::post('/admin/detailuser/{user}',[App\Http\Controllers\AdminController::class,"updateStatusUser"]);
 
+Route::get('/admin/danhsach-khoanvay',[App\Http\Controllers\AdminController::class,"listKhoanvay"]);
+Route::get('/admin/danhsach-khoanvay-create',[App\Http\Controllers\AdminController::class,"createLaiSuatKhoanvay"]);
+Route::get('/admin/danhsach-khoanvay-edit',[App\Http\Controllers\AdminController::class,"editLaiSuatKhoanvay"]);
+
+
+
+
+
+Route::get('/admin/danhsach-guitietkiem',[App\Http\Controllers\AdminController::class,"listGuitietkiem"]);
+
 

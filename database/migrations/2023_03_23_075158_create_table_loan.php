@@ -16,13 +16,18 @@ class CreateTableLoan extends Migration
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("account_id");
-            $table->integer("money_amount");
-            $table->date("date_return_money");
-            $table->tinyInteger("status_loan")->default(2);
-            $table->tinyInteger("period_loan");
+            $table->unsignedBigInteger("user_id");
+            $table->unsignedBigInteger("banglaivay_id");
+            $table->integer("amount");
+            $table->timestamp("date_end");
+            $table->tinyInteger("status")->default(2);
+            $table->float("period");
             $table->string("image_loan1");
             $table->string("image_loan2");
+            $table->string("description");
             $table->foreign("account_id")->references("id")->on("accounts");
+            $table->foreign("user_id")->references("id")->on("users");
+            $table->foreign("banglaivay_id")->references("id")->on("banglaivays");
             $table->timestamps();
         });
     }

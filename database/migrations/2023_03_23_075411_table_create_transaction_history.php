@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableTransactionHistory extends Migration
+class TableCreateTransactionHistory extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTableTransactionHistory extends Migration
      */
     public function up()
     {
-        Schema::create('transaction_history', function (Blueprint $table) {
+        Schema::create('transaction_historys', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("transfer_id");
             $table->foreign("transfer_id")->references("id")->on("accounts");
@@ -35,6 +35,6 @@ class CreateTableTransactionHistory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction_history');
+        Schema::dropIfExists('transaction_historys');
     }
 }

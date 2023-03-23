@@ -8,13 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Loan extends Model
 {
     use HasFactory;
+
+    public $table = "loans";
     public $fillable=[
-        "money_amount",
-        "date_return_money",
-        "period_loan",
+        "account_id",
+        "user_id",
+        "banglaivay_id",
+        "amount",
+        "date_end",
+        "status",
+        "period",
         "image_loan1",
         "image_loan2",
-        "status_loan",
+        "description",
+
 
     ];
     public function Account()

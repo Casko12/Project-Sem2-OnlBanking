@@ -259,16 +259,16 @@
                                             </button>
                                         </form>
                                         <form action="{{url("/ds-gui-tiet-kiem")}}" method="get">
-                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm">
+                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
                                                 <i class="fas fa-coins"></i> Tiết kiệm
                                             </button>
                                         </form>
                                         <form action="{{url("/ds-loan")}}" method="get">
-                                            <button type="submit" class="btn mb-3 btn-round text-left w-10 btn-sm">
+                                            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
                                                 <i class="fas fa-money-check-alt"></i> Khoản vay
                                             </button>
                                         </form>
-                                        <form action="{{url("/transacion-history",["account"=>$item->id])}}" method="get">
+                                        <form action="{{url("/transacion-history")}}" method="get">
                                             <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$item->id}}">
                                                 <i class="fas fa-file-invoice-dollar"></i> Lịch sử giao dịch
                                             </button>

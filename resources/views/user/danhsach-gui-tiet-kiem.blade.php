@@ -6,7 +6,12 @@
 @endsection
 @section("main_content")
     <div class="bg-white shadow-sm rounded p-4 mb-4"style="margin-top: 25px">
-        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Danh sách khoản vay<a href="{{url("/gui-tiet-kiem")}}"  class="ms-auto text-2 text-uppercase btn-link"><span class="me-1"><i class="fas fa-edit"></i></span>Thêm mới</a></h3>
+        <h3 class="text-5 fw-400 d-flex align-items-center mb-4">Danh sách khoản vay</h3>
+        <form action="{{url("/gui-tiet-kiem")}}" method="get">
+            <button type="submit" name="transfer_id" class="btn mb-3 btn-round text-left w-10 btn-sm" value="{{$account->id}}">
+                Them moi
+            </button>
+        </form>
         <hr class="mx-n4 mb-4">
         <div class="container">
             <div class="row">

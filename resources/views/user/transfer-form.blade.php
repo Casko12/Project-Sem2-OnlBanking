@@ -78,7 +78,7 @@
                                 <textarea class="form-control" rows="4" name="description"  required placeholder="Nhập nội dung chuyển khoản"></textarea>
                             </div><hr>
 
-                            <p class="text-4 fw-500">Số tiền bằng chữ<span class="float-end"> đồng</span></p>
+                            <p class="text-4 fw-500">Tổng số tiền<span class="float-end">{{number_format($reveice["amount"])}} Đồng</span></p>
                             <div class="btn-group" style="width:100%">
                                 <button class="btn btn-outline-primary btn-lg" onclick="history.go(-1);">Quay lại</button>
                                 <button class="btn btn-outline-primary btn-lg" type="submit" >Tiếp tục</button>

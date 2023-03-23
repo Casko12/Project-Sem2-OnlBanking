@@ -63,7 +63,7 @@
                             <p class="mb-1">Nội dung chuyển khoản <span class="text-3 float-end">{{$reveice["description"]}}</span></p>
 
                             <hr>
-                            <p class="text-4 fw-500">Số tiền bằng chữ<span class="float-end">{{$reveice["amount"]}}</span></p>
+                            <p class="text-4 fw-500">Tổng số tiền<span class="float-end">{{number_format($reveice["amount"])}}</span></p>
                             <div class="btn-group" style="width:100%">
                                 <button class="btn btn-outline-primary" onclick="history.go(-1);">Quay lại</button>
                                 <button class="btn btn-outline-primary" type="submit" >Tiếp tục</button>

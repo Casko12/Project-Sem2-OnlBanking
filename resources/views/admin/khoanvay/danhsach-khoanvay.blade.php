@@ -38,7 +38,7 @@
                         <td>12 tháng</td>
                         <td>3,1%</td>
                         <td>Mở</td>
-                        <td><a class="btn-link" href="">Chỉnh sửa</a></td>
+                        <td><a class="btn-link" href="{{url("/admin/danhsach-khoanvay-edit")}}">Chỉnh sửa</a></td>
                     </tr>
                 </tbody>
             </table>

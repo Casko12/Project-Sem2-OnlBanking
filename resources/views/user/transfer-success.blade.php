@@ -45,7 +45,7 @@
                             <p class="text-muted">Mã giao dịch: tyyuh6wwmcij</p>
                             <p class="text-muted">Ngày giao dịch: 19/03/2023</p>
                         </div>
-                        <p class="text-3 mb-4">Bạn đã chuyển thành công số tiền <span class="text-4 fw-500">{{number_format($reveice["amount"])}}</span> VNĐ tới <span class="fw-500">{{$user->name}}</span>, chi tiết xem tại <a class="btn-link" href="#">Lịch sử giao dịch</a>.</p>
+                        <p class="text-3 mb-4">Bạn đã chuyển thành công số tiền <span class="text-4 fw-500">{{number_format($reveice["amount"])}}</span> VNĐ tới <span class="fw-500">{{$user2->name}}</span>, chi tiết xem tại <a class="btn-link" href="#">Lịch sử giao dịch</a>.</p>
                         <div class="btn-group" style="width:100%">
                             <a class="btn btn-outline-primary btn-lg " type="button" href="/user-info" >Xác nhận</a>
                             <a class="btn btn-outline-primary btn-lg " type="button" href="#" >Tiếp tục chuyển khoản</a>

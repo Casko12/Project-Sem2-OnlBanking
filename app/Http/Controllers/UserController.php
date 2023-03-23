@@ -332,12 +332,13 @@ class UserController extends Controller
         $transfer = session("transfer_id");
         $pin = $request->get("pin1").$request->get("pin2").$request->get("pin3").$request->get("pin4");
         $otp = session("otp");
-        $account2 = Account::where("account_number",$reveice["receive_id"])->first();
+        $account2 = Account::with("User")->where("account_number",$reveice["receive_id"])->first();
 
        $account1 = Account::with("User")->where('id',$transfer["transfer_id"])->first();
 
         if($account2!=null){
-            $user = User::find($account1->user_id);
+            $user2 = User::find($account2->user_id);
+            $user1 = User::find($account1->user_id);
         }
         $transfer_amount = $account1->balance -=$reveice["amount"];
         $transfer_receive = $account2->balance +=$reveice["amount"];
@@ -347,7 +348,7 @@ class UserController extends Controller
         session(["account2"=>$account2]);
 
         if($amount<5000000){
-            if(Hash::check($pin, $user->pin)){
+            if(Hash::check($pin, $user1->pin)){
 
                 $account1->update([
                     "balance"=> $transfer_amount
@@ -363,7 +364,8 @@ class UserController extends Controller
                 return view("user.transfer-success",[
                     "account" =>$account2,
                     "reveice" => $reveice,
-                    "user"=>$user
+                    "user1"=>$user1,
+                    "user2"=>$user2,
                 ]);
             }
             return redirect()->back();
@@ -383,7 +385,8 @@ class UserController extends Controller
             return view("user.transfer-success",[
                 "account" =>$account2,
                 "reveice" => $reveice,
-                "user"=>$user
+                "user1"=>$user1,
+                "user2"=>$user2
             ]);
         }
             return redirect()->back();

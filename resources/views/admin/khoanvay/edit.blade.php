@@ -6,7 +6,6 @@
 
     <div style="margin-top: 200px;margin-bottom: 100px">
         <h3 style="text-align: center">Chỉnh sửa lãi suất khoản vay</h3>
-
         <div class="loan-details-widget bg_white">
             <form action="document-upload.html">
                 <div class="row">

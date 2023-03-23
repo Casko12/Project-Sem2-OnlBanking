@@ -62,6 +62,7 @@ class AdminController extends Controller
         return view("admin.khoanvay.create");
     }
     public function editLaiSuatKhoanvay(){
+
         return view("admin.khoanvay.edit");
     }
     public function listGuitietkiem(){

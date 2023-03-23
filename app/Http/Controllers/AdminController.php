@@ -55,6 +55,15 @@ class AdminController extends Controller
     public function createStaff(){
         return view("admin.nhanvien.create");
     }
+    public function listKhoanvay(){
+        return view("admin.khoanvay.danhsach-khoanvay");
+    }
+    public function createLaiSuatKhoanvay(){
+        return view("admin.khoanvay.create");
+    }
+    public function listGuitietkiem(){
+        return view("admin.tietkiem.danhsach-guitietkiem");
+    }
 
     public function editStaff(User $user,Request $request){
         return view("admin.nhanvien.edit",compact("user"));

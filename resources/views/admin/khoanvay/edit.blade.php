@@ -15,7 +15,6 @@
                             <label class="label" for="fName">Kì hạn<span class="text-danger">*</span></label>
                             <input id='fName' class="form-control" type="text" required>
                         </div>
-
                         <div class="mb-3">
                             <label class="label" for="lName">Lãi suất<span class="text-danger">*</span></label>
                             <input id='lName' class="form-control" type="number" required>

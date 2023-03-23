@@ -89,7 +89,7 @@
                                                     <label for="recieverID" class="form-label">Nhập mã PIN</label>
 {{--                                                    PIN input--}}
                                                     <div class="pin-wrapper">
-                                                        <input type="password" name="pin1" data-role="pin" maxlength="1" class="pin-input">
+                                                        <input type="password" name="pin1" data-role="number" maxlength="1" class="pin-input">
                                                         <input type="password" name="pin2" data-role="number" maxlength="1" class="pin-input">
                                                         <input type="password" name="pin3" data-role="number" maxlength="1" class="pin-input">
                                                         <input type="password" name="pin4" data-role="number" maxlength="1" class="pin-input">

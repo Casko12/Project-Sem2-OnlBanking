@@ -82,30 +82,22 @@
                         <!-- Transaction List
                         =============================== -->
 
-                        <div class="transaction-list" id="transaction_id" onclick="detailHis()" name="transaction_id">
-                            <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
-                                <div class="row align-items-center flex-row">
-                                    <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300"></span> <span class="d-block text-1 fw-300 text-uppercase"></span> </div>
-                                    <div class="col col-sm-7"> <span class="d-block text-4"></span> <span class="text-muted"></span> </div>
-                                    <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                                    <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value=""> </span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
+
+                        @foreach($tietkiem as $tk)
+
+                            <div class="transaction-list" id="transaction_id" onclick="detailHis({{$tk->id}})" name="transaction_id">
+                                <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
+                                    <div class="row align-items-center flex-row">
+                                        <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300">{{date_format(date_create($tk->created_at),"d")}}</span> <span class="d-block text-1 fw-300 text-uppercase">{{date_format(date_create($tk->created_at),"m")}}</span> </div>
+                                        <div class="col col-sm-7"> <span class="d-block text-4">{{$tk->account_id}}</span> <span class="text-muted">{{$tk->name}}</span> </div>
+                                        <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
+                                        <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value="{{$tk->amount}}"> {{number_format($tk->amount)}}</span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <div class="transaction-list" id="transaction_id" onclick="detailHis()" name="transaction_id">
-                            <div class="transaction-item px-4 py-3" data-bs-toggle="modal" data-bs-target="#transaction-detail">
-                                <div class="row align-items-center flex-row">
-                                    <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 fw-300"></span> <span class="d-block text-1 fw-300 text-uppercase"></span> </div>
-                                    <div class="col col-sm-7"> <span class="d-block text-4"></span> <span class="text-muted"></span> </div>
-                                    <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-bs-toggle="tooltip" title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                                    <div class="col-3 col-sm-2 text-end text-4"> <span class="text-nowrap" id="dataAmount" value=""></span> <span class="text-2 text-uppercase">(VNĐ)</span> </div>
-                                </div>
-                            </div>
-                        </div>
-
-
+                        @endforeach
                         <!-- Transaction List End -->
 
                         <!-- Transaction Item Details Modal

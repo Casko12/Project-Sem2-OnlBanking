@@ -6,6 +6,7 @@ use App\Mail\ReceiverMail;
 use App\Mail\SenderMail;
 use App\Models\BangLaiTietKiem;
 use App\Models\BanglaiVay;
+use App\Models\Loan;
 use App\Models\Saving;
 use Carbon\Carbon;
 use App\Models\Account;
@@ -95,11 +96,13 @@ class UserController extends Controller
         $user= auth()->user();
         $account = $user->firstAccount;
         $allaccount = $user->Account;
+        $loan = Loan::all();
 
         return view("user.danhsachkhoanvay",[
             "account"=>$account,
             "user"=>$user,
-            "allaccount"=>$allaccount
+            "allaccount"=>$allaccount,
+            "loan"=>$loan
         ]);
     }
     public function dsGuiTietKiem(Request $request){
@@ -107,7 +110,7 @@ class UserController extends Controller
         $user= auth()->user();
         $account = $user->firstAccount;
         $allaccount = $user->Account;
-
+        $tietkiem = Saving::all();
         $transfer_id = [
             "transfer_id" => $request->get("transfer_id")
         ];
@@ -116,7 +119,8 @@ class UserController extends Controller
         return view("user.danhsach-gui-tiet-kiem",[
             "account"=>$account,
             "user"=>$user,
-            "allaccount"=>$allaccount
+            "allaccount"=>$allaccount,
+            "tietkiem"=>$tietkiem
         ]);
     }
     public function contact(){
@@ -405,7 +409,7 @@ class UserController extends Controller
        $day = now()->diffInDays($date_end);
 
         $tienlai = number_format((($data->lai_suat/365)*$day)*$amount/100)." VND" ;
-        $tien = (($data->lai_suat/365)*$day)*$amount/100 ;
+        $tien = (($data->lai_suat/365)*$day)*$amount/100;
         $saving = [
             "date_end"=>$date,
             "tienlai"=>$tien
@@ -439,22 +443,30 @@ class UserController extends Controller
         $transfer = session("transfer_id");
 
        $addsave = session("addsave");
+
        $saving = session("saving");
        $amount = $addsave["amount"];
         $account = Account::with("User")->where('id',$transfer["transfer_id"])->first();
 
         $pin = $request->get("pin1").$request->get("pin2").$request->get("pin3").$request->get("pin4");
         if(Hash::check($pin,$account->User->pin)){
-            $account->update([
-                "balance" => $account->balance -= $amount,
-            ]);
-           Saving::create([
-               "save_id"=>$account->id,
-               "save_amount"=>$amount,
-               "date_end"=>$saving["date_end"],
-               "period_save"=>$saving["tienlai"]
-           ]);
-           return view("/ds-gui-tiet-kiem'");
+            if($account->balance >= $amount){
+                $account->update([
+                    "balance" => $account->balance -= $amount,
+                ]);
+                Saving::create([
+                    "account_id"=>$account->id,
+                    "banglaitietkiem_id"=>$addsave["thoihan"],
+                    "name"=>$addsave["tenso"],
+                    "amount"=>$amount,
+                    "date_end"=>$saving["date_end"],
+                    "period"=>$saving["tienlai"],
+//                    "description"=>$addsave["description"],
+                    "status"=>1,
+                ]);
+            }
+
+           return redirect()->to("/ds-gui-tiet-kiem");
         }
         return redirect()->back();
     }
@@ -518,15 +530,17 @@ class UserController extends Controller
             $account->update([
                 "balance" => $account->balance -= $amount,
             ]);
-            Saving::create([
-                "account_id"=>$loans["account_id"],
+            Loan::create([
+                "account_id"=>$addloans["account_id"],
                 "user_id"=>$account->User->id,
+                "banglaivay_id"=>$addloans["thoihan"],
                 "money_amount"=>$amount,
                 "date_return_money"=>$loans["date_end"],
                 "period_save"=>$loans["tienlai"],
+                "descriptions"=>$addloans["description"],
                 "status"=>2
             ]);
-            return view("/ds-loan");
+            return redirect()->to("/ds-loan");
         }
         return redirect()->back();
     }

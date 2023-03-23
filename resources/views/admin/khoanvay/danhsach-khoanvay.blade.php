@@ -24,13 +24,22 @@
 
             <table class="table table-bordered">
                 <thead>
-                <tr>
-                    <th style="width: 10px">ID</th>
-                    <th style="width: 300px">Kỳ hạn</th>
-                    <th style="width: 300px">Lãi suất</th>
-                    <th style="width: 300px">Trạng thái</th>
-                    <th style="width: 100px">Edit</th>
-                </tr>
+                @foreach ($data as $item)
+                    <tr>
+                        <td>{{$item->id}}</td>
+                        <td>{{$item->ky_han}}</td>
+                        <td>{{$item->lai_xuat}}</td>
+                        <td>{{$item->created_at}}</td>
+                        <td>{{$item->updated_at}}</td>
+                        <td>
+                            @if($item->status)
+                                <span class="badge bg-success">Active</span>
+                            @else
+                                <span class="badge bg-warning">Inactive</span>
+                            @endif
+                        </td>
+                    </tr>
+                @endforeach
                 </thead>
                 <tbody>
                     <tr>

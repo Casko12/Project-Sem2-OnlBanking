@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use App\Models\BanglaiVay;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -56,9 +57,12 @@ class AdminController extends Controller
         return view("admin.nhanvien.create");
     }
     public function listKhoanvay(){
-        return view("admin.khoanvay.danhsach-khoanvay");
+        $khoanvay = BanglaiVay::all();
+        return view("admin.khoanvay.danhsach-khoanvay",compact($khoanvay));
     }
-    public function createLaiSuatKhoanvay(){
+    public function store(Request $request){
+        $data = $request->all();
+        BanglaiVay::created($data);
         return view("admin.khoanvay.create");
     }
     public function editLaiSuatKhoanvay(){

@@ -8,7 +8,7 @@
         <h3 style="text-align: center">Tạo mới lãi suất khoản vay</h3>
 
         <div class="loan-details-widget bg_white">
-            <form action="document-upload.html">
+            <form action="{{url("/admin/khoanvay/create")}}">
                 <div class="row">
                     <div class="col-md-9 col-lg-7 col-xl-6 mx-auto">
                     <div class="mb-3">

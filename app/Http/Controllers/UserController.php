@@ -41,6 +41,7 @@ class UserController extends Controller
         session(["transfer_id"=>$transfer_id]);
         $user= auth()->user();
         $allaccount = $user->Account;
+$account = $user->firstAccount;
         $data = TransactionHistory::with(["Sender","Receiver"])->where("receive_id",$account->id)->orWhere("transfer_id",$account->id)->get()
         ->map(function ($item) use ($account) {
             if ($item->transfer_id == $account->id){

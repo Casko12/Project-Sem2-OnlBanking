@@ -367,6 +367,7 @@ $account = $user->firstAccount;
                     "reveice" => $reveice,
                     "user1"=>$user1,
                     "user2"=>$user2,
+                    "account1"=>$account1
                 ]);
             }
             return redirect()->back();
@@ -387,7 +388,8 @@ $account = $user->firstAccount;
                 "account" =>$account2,
                 "reveice" => $reveice,
                 "user1"=>$user1,
-                "user2"=>$user2
+                "user2"=>$user2,
+                "account1"=>$account1
             ]);
         }
             return redirect()->back();

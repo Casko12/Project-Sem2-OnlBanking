@@ -3,7 +3,7 @@
 @section("title","Lịch sử giao dịch")
 @section("main_content")
     <div class="col-lg-9">
-        <h2 class="fw-400 mb-3">Lịch sử giao dịch:</h2> <h1 >{{$account->account_number}}</h1>
+        <h3 class="fw-400 mb-3">Lịch sử giao dịch tài khoản:</h3> <h2 >{{$account->account_number}}</h2>
 
         <!-- Filter
         ============================================= -->
